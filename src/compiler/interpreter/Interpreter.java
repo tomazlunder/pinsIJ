@@ -69,8 +69,8 @@ public class Interpreter {
 		}
 	
 		//stM(sp + frame.oldFPoffset, fp); //TODO: MAYBE
-                stM(sp + frame.oldFPoffset(), fp); //TODO: MAYBE
-		fp = sp;
+        stM(sp + frame.oldFPoffset(), fp); //TODO: MAYBE
+ 		fp = sp;
 		sp = sp - frame.size();
 		if (debug) {
 			System.out.println("[FP=" + fp + "]");
@@ -143,6 +143,7 @@ public class Interpreter {
 				return (((Integer) fstSubValue).intValue() * ((Integer) sndSubValue).intValue());
 			case ImcBINOP.DIV:
 				return (((Integer) fstSubValue).intValue() / ((Integer) sndSubValue).intValue());
+			//TODO: MOD LOGIC
 			//case ImcBINOP.MOD:
 			//	return (((Integer) fstSubValue).intValue() % ((Integer) sndSubValue).intValue());
                         /*

@@ -305,6 +305,11 @@ public class TypeChecker implements Visitor {
             
             SymbDesc.setType(acceptor, semFunType.resultType);
         }
+
+        //Če je klicana funkcija predefinirana je tipa void
+        else if(globPrelet == 4 && Interpreter.isPredefined(acceptor.name)){
+            SymbDesc.setType(acceptor, VOID);
+        }
     }
     
     /*

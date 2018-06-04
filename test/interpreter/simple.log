@@ -12,6 +12,7 @@ AbsDefs 6:1-8:6:
     AbsExprs 7:6-8:5:
       #typed as INTEGER
       AbsFunCall 7:6-7:14: putInt
+        #typed as VOID
         AbsAtomConst 7:13-7:13: INTEGER(3)
           #typed as INTEGER
       AbsAtomConst 8:5-8:5: INTEGER(3)

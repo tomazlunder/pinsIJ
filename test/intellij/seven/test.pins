@@ -1,0 +1,17 @@
+typ int : integer;
+
+var GLOBAL1 : int;
+var GLOBAL2 : int;
+
+fun neki1 (x : integer, y : integer) : integer = 
+	({if x + GLOBAL1 < y + GLOBAL2 then {z = foo(x,y)} else {z = bar(y,x)}}, z) 
+	{where fun foo(a : integer, b : integer) : integer = a * b;
+			fun bar(a : integer, b : integer) : integer = a - b;
+			var z : int};
+			
+fun zanka1(x : int) : int = ({while x > 0 : ({y = y+x}, {x = x-1})}, y) {where var y : int};
+fun zanka2(x : int) : int = ({for i = 0, x, 1 : {y = y+x}}, y) {where var y : int; var i : int};
+
+fun main(arg : int) : int = (neki1(5, 9), zanka1(5), zanka2(9))
+			
+			

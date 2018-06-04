@@ -114,7 +114,7 @@ public class ImcCodeGen implements Visitor {
                 leftSide = new ImcMEM(leftSide);
             }
             
-            ImcBINOP binop = new ImcBINOP(AbsBinExpr.ADD,(ImcExpr) leftSide, new ImcCONST(locAccess.offset));
+            ImcBINOP binop = new ImcBINOP(ImcBINOP.ADD,(ImcExpr) leftSide, new ImcCONST(locAccess.offset));
             result = new ImcMEM(binop);
         }
         //Parameter
@@ -130,7 +130,7 @@ public class ImcCodeGen implements Visitor {
                 leftSide = new ImcMEM(leftSide);
             }
             
-            ImcBINOP binop = new ImcBINOP(AbsBinExpr.ADD,(ImcExpr) leftSide, new ImcCONST(parAccess.offset));
+            ImcBINOP binop = new ImcBINOP(ImcBINOP.ADD,(ImcExpr) leftSide, new ImcCONST(parAccess.offset));
             result = new ImcMEM(binop);        
         }
         

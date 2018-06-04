@@ -39,7 +39,16 @@ public class FrmEvaluator implements Visitor {
         
         //Ustvarimo okvir
         FrmFrame frame = new FrmFrame(acceptor, stack.size());
-        frame.label = FrmLabel.newLabel(acceptor.name);
+
+        //Če je funkcija definirana znotraj funkcije mora imeti anonimno labelo
+        if(SymbDesc.getScope(acceptor) > 0){
+            frame.label = FrmLabel.newLabel();
+        }
+        //V nasprotnem primeru dobi poimenovano labelo
+        else{
+            frame.label = FrmLabel.newLabel(acceptor.name);
+        }
+
         frame.numPars = acceptor.numPars();
         
         //Okvir porinemo na sklad
