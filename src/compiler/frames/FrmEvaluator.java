@@ -81,7 +81,7 @@ public class FrmEvaluator implements Visitor {
     @Override
     public void visit(AbsPar acceptor) {
         FrmParAccess frmParAccess = new FrmParAccess(acceptor, stack.peek());
-        stack.peek().sizePars += SymbDesc.getType(acceptor).size();
+        //stack.peek().sizePars += SymbDesc.getType(acceptor).size();
         FrmDesc.setAccess(acceptor, frmParAccess);
     }
     

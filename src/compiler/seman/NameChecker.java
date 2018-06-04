@@ -160,7 +160,6 @@ public class NameChecker implements Visitor {
     public void visit(AbsVarName acceptor) {
         AbsDef definicija = SymbTable.fnd(acceptor.name); //Preverimo, če je spremenljivka definiran
         SymbDesc.setNameDef(acceptor, definicija);
-
     }
 
     /**OSTALO.

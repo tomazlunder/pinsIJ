@@ -25,7 +25,7 @@ AbsDefs 1:1-17:12:
         #typed as INTEGER
     AbsPar 6:25-6:35: y
       #typed as INTEGER
-      #accesed as PAR(y: offset=12)
+      #accesed as PAR(y: offset=8)
       AbsAtomType 6:29-6:35: INTEGER
         #typed as INTEGER
     AbsAtomType 6:40-6:46: INTEGER
@@ -96,7 +96,7 @@ AbsDefs 1:1-17:12:
               #typed as INTEGER
           AbsPar 8:33-8:43: b
             #typed as INTEGER
-            #accesed as PAR(b: offset=12)
+            #accesed as PAR(b: offset=8)
             AbsAtomType 8:37-8:43: INTEGER
               #typed as INTEGER
           AbsAtomType 8:48-8:54: INTEGER
@@ -119,7 +119,7 @@ AbsDefs 1:1-17:12:
               #typed as INTEGER
           AbsPar 9:34-9:44: b
             #typed as INTEGER
-            #accesed as PAR(b: offset=12)
+            #accesed as PAR(b: offset=8)
             AbsAtomType 9:38-9:44: INTEGER
               #typed as INTEGER
           AbsAtomType 9:49-9:55: INTEGER
@@ -302,7 +302,7 @@ CODE CHUNK: label=L1
         MEM
           BINOP op=+
             TEMP name=T2
-            CONST value=12
+            CONST value=8
       TEMP name=T3
 CODE CHUNK: label=L2
   FRAME(bar: level=1,label=L2,sizeLocs=0,sizeArgs=0,size=8,FP=T4,RV=T5)
@@ -316,7 +316,7 @@ CODE CHUNK: label=L2
         MEM
           BINOP op=+
             TEMP name=T4
-            CONST value=12
+            CONST value=8
       TEMP name=T5
 CODE CHUNK: label=_neki1
   FRAME(neki1: level=0,label=_neki1,sizeLocs=4,sizeArgs=12,size=24,FP=T0,RV=T1)
@@ -334,7 +334,7 @@ CODE CHUNK: label=_neki1
           MEM
             BINOP op=+
               TEMP name=T0
-              CONST value=12
+              CONST value=8
           MEM
             NAME label=_GLOBAL2
     LABEL label=L10
@@ -351,7 +351,7 @@ CODE CHUNK: label=_neki1
       MEM
         BINOP op=+
           TEMP name=T0
-          CONST value=12
+          CONST value=8
     MOVE
       TEMP name=T14
       MEM
@@ -391,7 +391,7 @@ CODE CHUNK: label=_neki1
       MEM
         BINOP op=+
           TEMP name=T0
-          CONST value=12
+          CONST value=8
     MOVE
       TEMP name=T18
       MEM
@@ -435,7 +435,7 @@ CODE CHUNK: label=_neki1
       MEM
         BINOP op=+
           TEMP name=T0
-          CONST value=12
+          CONST value=8
     MOVE
       TEMP name=T36
       TEMP name=T20
@@ -475,7 +475,7 @@ CODE CHUNK: label=_neki1
       MEM
         BINOP op=+
           TEMP name=T0
-          CONST value=12
+          CONST value=8
     MOVE
       TEMP name=T40
       TEMP name=T24
