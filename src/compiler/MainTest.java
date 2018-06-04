@@ -45,8 +45,10 @@ public class MainTest {
         String sourceFileName = "test/"+fazaPrev+"/"+pravilnost+"/"+testName+".pins";
         //sourceFileName = "test/sliva/tipi/test.pins";
         //sourceFileName = "test/v2/koda/test1.pins";
-        //sourceFileName = "test/interpreter/simple.pins";
-        sourceFileName = "test/intellij/seven/test.pins";
+        sourceFileName = "test/interpreter/simple.pins";
+        //sourceFileName = "test/intellij/seven/test.pins";
+        boolean interpret = true;
+        boolean interpretDbg = false;
 
             Report.openDumpFile(sourceFileName);
             
@@ -101,25 +103,26 @@ public class MainTest {
             System.out.printf("TEST: Intermediatecode chunkified\n");
 
             //**INTERPRETER TESTING**//
-            
-            //Najde definicijo funkcije main ali pa konča izvajanje, če definicije ne najde
-        /*
-            AbsDef mainDef = SymbTable.fnd("main");
-            
-            //Če definicija ni funkcija (npr. globalana spremenljiva)
-            if(!(mainDef instanceof AbsFunDef)) Report.error("Main mora biti funkcija.");
-            AbsFunDef mainFunDef = (AbsFunDef) mainDef;
-            
-            //Najde okvir funkcije main
-            FrmFrame mainFrame = FrmDesc.getFrame((AbsFunDef) mainDef);
-            
-            Interpreter.debug = true;
-            
-            //Argument main funkcije nastavimo na 0 (1000 - začetna vrednost FP, FP+4 naj bi bil prvi argument main funkcije)
-            Interpreter.stM(1000 + 4, new ImcCONST(0));
-            
-            new Interpreter(mainFrame, ImcCodeGen.linearCode.get(mainDef));
-            */
+            if(interpret) {
+                //Najde definicijo funkcije main ali pa konča izvajanje, če definicije ne najde
+
+                AbsDef mainDef = SymbTable.fnd("main");
+
+                //Če definicija ni funkcija (npr. globalana spremenljiva)
+                if (!(mainDef instanceof AbsFunDef)) Report.error("Main mora biti funkcija.");
+                AbsFunDef mainFunDef = (AbsFunDef) mainDef;
+
+                //Najde okvir funkcije main
+                FrmFrame mainFrame = FrmDesc.getFrame((AbsFunDef) mainDef);
+
+                Interpreter.debug = interpretDbg;
+
+                //Argument main funkcije nastavimo na 0 (1000 - začetna vrednost FP, FP+4 naj bi bil prvi argument main funkcije)
+                Interpreter.stM(1000 + 4, new ImcCONST(0));
+
+                new Interpreter(mainFrame, ImcCodeGen.linearCode.get(mainDef));
+            }
+
             Report.closeDumpFile();  
     }    
 }

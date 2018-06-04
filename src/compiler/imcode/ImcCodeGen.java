@@ -198,6 +198,7 @@ public class ImcCodeGen implements Visitor {
         
         if(Interpreter.isPredefined(acceptor.name)){
             ImcCALL call = new ImcCALL(FrmLabel.newLabel("Lsys::"+acceptor.name));
+            call.args.addAll(args); //Predefinirani funkciji dodamo argumente
             code.put(acceptor,call);
             return;
         }
