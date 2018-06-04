@@ -17,7 +17,7 @@ AbsDefs 1:1-17:12:
       #typed as INTEGER
   AbsFunDef 6:1-10:25: neki1
     #typed as FUN(INTEGER,INTEGER:INTEGER)
-    #framed as FRAME(neki1: level=0,label=_neki1,sizeLocs=4,sizeArgs=12,size=24,FP=T0,RV=T1)
+    #framed as FRAME(neki1: level=1,label=_neki1,sizeLocs=4,sizeArgs=12,size=24,FP=T0,RV=T1)
     AbsPar 6:12-6:22: x
       #typed as INTEGER
       #accesed as PAR(x: offset=4)
@@ -88,7 +88,7 @@ AbsDefs 1:1-17:12:
       AbsDefs 8:12-10:23:
         AbsFunDef 8:12-8:63: foo
           #typed as FUN(INTEGER,INTEGER:INTEGER)
-          #framed as FRAME(foo: level=1,label=L1,sizeLocs=0,sizeArgs=0,size=8,FP=T2,RV=T3)
+          #framed as FRAME(foo: level=2,label=L0,sizeLocs=0,sizeArgs=0,size=8,FP=T2,RV=T3)
           AbsPar 8:20-8:30: a
             #typed as INTEGER
             #accesed as PAR(a: offset=4)
@@ -111,7 +111,7 @@ AbsDefs 1:1-17:12:
               #typed as INTEGER
         AbsFunDef 9:13-9:64: bar
           #typed as FUN(INTEGER,INTEGER:INTEGER)
-          #framed as FRAME(bar: level=1,label=L2,sizeLocs=0,sizeArgs=0,size=8,FP=T4,RV=T5)
+          #framed as FRAME(bar: level=2,label=L1,sizeLocs=0,sizeArgs=0,size=8,FP=T4,RV=T5)
           AbsPar 9:21-9:31: a
             #typed as INTEGER
             #accesed as PAR(a: offset=4)
@@ -140,7 +140,7 @@ AbsDefs 1:1-17:12:
             #typed as INTEGER
   AbsFunDef 12:1-12:92: zanka1
     #typed as FUN(INTEGER:INTEGER)
-    #framed as FRAME(zanka1: level=0,label=_zanka1,sizeLocs=4,sizeArgs=0,size=12,FP=T6,RV=T7)
+    #framed as FRAME(zanka1: level=1,label=_zanka1,sizeLocs=4,sizeArgs=0,size=12,FP=T6,RV=T7)
     AbsPar 12:12-12:18: x
       #typed as INTEGER
       #accesed as PAR(x: offset=4)
@@ -202,7 +202,7 @@ AbsDefs 1:1-17:12:
             #typed as INTEGER
   AbsFunDef 13:1-13:96: zanka2
     #typed as FUN(INTEGER:INTEGER)
-    #framed as FRAME(zanka2: level=0,label=_zanka2,sizeLocs=8,sizeArgs=0,size=16,FP=T8,RV=T9)
+    #framed as FRAME(zanka2: level=1,label=_zanka2,sizeLocs=8,sizeArgs=0,size=16,FP=T8,RV=T9)
     AbsPar 13:12-13:18: x
       #typed as INTEGER
       #accesed as PAR(x: offset=4)
@@ -259,7 +259,7 @@ AbsDefs 1:1-17:12:
             #typed as INTEGER
   AbsFunDef 15:1-17:12: main
     #typed as FUN(INTEGER:INTEGER)
-    #framed as FRAME(main: level=0,label=_main,sizeLocs=0,sizeArgs=12,size=20,FP=T10,RV=T11)
+    #framed as FRAME(main: level=1,label=_main,sizeLocs=0,sizeArgs=12,size=20,FP=T10,RV=T11)
     AbsPar 15:10-15:18: arg
       #typed as INTEGER
       #accesed as PAR(arg: offset=4)
@@ -290,8 +290,8 @@ AbsDefs 1:1-17:12:
           #typed as INTEGER
 DATA CHUNK: label=_GLOBAL1 size=4
 DATA CHUNK: label=_GLOBAL2 size=4
-CODE CHUNK: label=L1
-  FRAME(foo: level=1,label=L1,sizeLocs=0,sizeArgs=0,size=8,FP=T2,RV=T3)
+CODE CHUNK: label=L0
+  FRAME(foo: level=2,label=L0,sizeLocs=0,sizeArgs=0,size=8,FP=T2,RV=T3)
   SEQ
     MOVE
       BINOP op=*
@@ -304,8 +304,8 @@ CODE CHUNK: label=L1
             TEMP name=T2
             CONST value=8
       TEMP name=T3
-CODE CHUNK: label=L2
-  FRAME(bar: level=1,label=L2,sizeLocs=0,sizeArgs=0,size=8,FP=T4,RV=T5)
+CODE CHUNK: label=L1
+  FRAME(bar: level=2,label=L1,sizeLocs=0,sizeArgs=0,size=8,FP=T4,RV=T5)
   SEQ
     MOVE
       BINOP op=-
@@ -319,9 +319,9 @@ CODE CHUNK: label=L2
             CONST value=8
       TEMP name=T5
 CODE CHUNK: label=_neki1
-  FRAME(neki1: level=0,label=_neki1,sizeLocs=4,sizeArgs=12,size=24,FP=T0,RV=T1)
+  FRAME(neki1: level=1,label=_neki1,sizeLocs=4,sizeArgs=12,size=24,FP=T0,RV=T1)
   SEQ
-    CJUMP labels=L7,L10
+    CJUMP labels=L3,L6
       BINOP op=<
         BINOP op=+
           MEM
@@ -337,11 +337,11 @@ CODE CHUNK: label=_neki1
               CONST value=8
           MEM
             NAME label=_GLOBAL2
-    LABEL label=L10
-    JUMP label=L9
-    LABEL label=L9
-    JUMP label=L6
     LABEL label=L6
+    JUMP label=L5
+    LABEL label=L5
+    JUMP label=L2
+    LABEL label=L2
     MOVE
       TEMP name=T12
       MEM
@@ -369,7 +369,7 @@ CODE CHUNK: label=_neki1
       TEMP name=T14
     MOVE
       TEMP name=T31
-      CALL label=L2
+      CALL label=L1
         TEMP name=T28
         TEMP name=T29
         TEMP name=T30
@@ -409,7 +409,7 @@ CODE CHUNK: label=_neki1
       TEMP name=T18
     MOVE
       TEMP name=T35
-      CALL label=L2
+      CALL label=L1
         TEMP name=T32
         TEMP name=T33
         TEMP name=T34
@@ -418,8 +418,8 @@ CODE CHUNK: label=_neki1
       TEMP name=T35
     EXP
       TEMP name=T19
-    JUMP label=L8
-    LABEL label=L7
+    JUMP label=L4
+    LABEL label=L3
     MOVE
       TEMP name=T20
       MEM
@@ -447,7 +447,7 @@ CODE CHUNK: label=_neki1
       TEMP name=T22
     MOVE
       TEMP name=T39
-      CALL label=L1
+      CALL label=L0
         TEMP name=T36
         TEMP name=T37
         TEMP name=T38
@@ -487,7 +487,7 @@ CODE CHUNK: label=_neki1
       TEMP name=T26
     MOVE
       TEMP name=T43
-      CALL label=L1
+      CALL label=L0
         TEMP name=T40
         TEMP name=T41
         TEMP name=T42
@@ -496,7 +496,7 @@ CODE CHUNK: label=_neki1
       TEMP name=T43
     EXP
       TEMP name=T27
-    LABEL label=L8
+    LABEL label=L4
     MOVE
       MEM
         BINOP op=+
@@ -504,20 +504,20 @@ CODE CHUNK: label=_neki1
           CONST value=-4
       TEMP name=T1
 CODE CHUNK: label=_zanka1
-  FRAME(zanka1: level=0,label=_zanka1,sizeLocs=4,sizeArgs=0,size=12,FP=T6,RV=T7)
+  FRAME(zanka1: level=1,label=_zanka1,sizeLocs=4,sizeArgs=0,size=12,FP=T6,RV=T7)
   SEQ
-    CJUMP labels=L13,L16
+    CJUMP labels=L9,L12
       BINOP op=>
         MEM
           BINOP op=+
             TEMP name=T6
             CONST value=4
         CONST value=0
-    LABEL label=L16
-    JUMP label=L15
-    LABEL label=L15
-    JUMP label=L14
-    LABEL label=L13
+    LABEL label=L12
+    JUMP label=L11
+    LABEL label=L11
+    JUMP label=L10
+    LABEL label=L9
     MOVE
       MEM
         BINOP op=+
@@ -560,8 +560,8 @@ CODE CHUNK: label=_zanka1
             TEMP name=T6
             CONST value=4
         CONST value=1
-    JUMP label=L12
-    LABEL label=L14
+    JUMP label=L8
+    LABEL label=L10
     MOVE
       MEM
         BINOP op=+
@@ -569,23 +569,23 @@ CODE CHUNK: label=_zanka1
           CONST value=-4
       TEMP name=T7
 CODE CHUNK: label=_zanka2
-  FRAME(zanka2: level=0,label=_zanka2,sizeLocs=8,sizeArgs=0,size=16,FP=T8,RV=T9)
+  FRAME(zanka2: level=1,label=_zanka2,sizeLocs=8,sizeArgs=0,size=16,FP=T8,RV=T9)
   SEQ
     MOVE
       MEM
         TEMP name=T60
       CONST value=0
-    LABEL label=L18
-    CJUMP labels=L19,L21
+    LABEL label=L14
+    CJUMP labels=L15,L17
       BINOP op=<=
         TEMP name=T60
         MEM
           BINOP op=+
             TEMP name=T8
             CONST value=4
-    LABEL label=L21
-    JUMP label=L20
-    LABEL label=L19
+    LABEL label=L17
+    JUMP label=L16
+    LABEL label=L15
     MOVE
       MEM
         BINOP op=+
@@ -610,8 +610,8 @@ CODE CHUNK: label=_zanka2
           BINOP op=+
             TEMP name=T8
             CONST value=4
-    JUMP label=L18
-    LABEL label=L20
+    JUMP label=L14
+    LABEL label=L16
     MOVE
       MEM
         BINOP op=+
@@ -619,11 +619,12 @@ CODE CHUNK: label=_zanka2
           CONST value=-4
       TEMP name=T9
 CODE CHUNK: label=_main
-  FRAME(main: level=0,label=_main,sizeLocs=0,sizeArgs=12,size=20,FP=T10,RV=T11)
+  FRAME(main: level=1,label=_main,sizeLocs=0,sizeArgs=12,size=20,FP=T10,RV=T11)
   SEQ
     MOVE
       TEMP name=T61
-      CONST value=1100110011
+      MEM
+        TEMP name=T10
     MOVE
       TEMP name=T62
       CONST value=5
@@ -640,7 +641,8 @@ CODE CHUNK: label=_main
       TEMP name=T64
     MOVE
       TEMP name=T65
-      CONST value=1100110011
+      MEM
+        TEMP name=T10
     MOVE
       TEMP name=T66
       CONST value=5
@@ -653,7 +655,8 @@ CODE CHUNK: label=_main
       TEMP name=T67
     MOVE
       TEMP name=T68
-      CONST value=1100110011
+      MEM
+        TEMP name=T10
     MOVE
       TEMP name=T69
       CONST value=9
