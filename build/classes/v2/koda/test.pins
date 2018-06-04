@@ -1,0 +1,15 @@
+#Ta funkcija uporabi element arraya z konstanto
+fun f1(i:integer,j:integer):integer =
+  (i+j,-1-i,b[3]-1,+1+j,k) {where var k:integer;var a:arr[10]integer;var z:integer};
+
+#Ta funkcija uporabi elemente arraya z parametrom, lokalno in globalno spr.
+fun f2(j:integer):integer =
+    (b[i] + b[j] + b[k]) {where var k:integer};
+
+#Ta funkcija klice na nivo n in na nivo n+1
+#A2 klice na nivo n-1
+fun a1(x:integer):integer =
+    (a2(1) + f2(3)) {where fun a2(y:integer):integer = (x+y+a1(0)+3)};
+
+var i:integer;
+var b:arr[10] integer

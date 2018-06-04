@@ -1,0 +1,62 @@
+AbsDefs 1:1-25:23:
+  AbsTypeDef 1:1-1:17: int
+    AbsAtomType 1:11-1:17: INTEGER
+  AbsTypeDef 2:1-2:14: int2
+    AbsTypeName 2:12-2:14: int
+      #defined at 1:1-1:17
+  AbsVarDef 4:1-4:15: a
+    AbsAtomType 4:9-4:15: INTEGER
+  AbsVarDef 5:1-5:15: b
+    AbsAtomType 5:9-5:15: INTEGER
+  AbsFunDef 7:1-9:2: fun1
+    AbsPar 7:10-7:20: x
+      AbsAtomType 7:14-7:20: INTEGER
+    AbsAtomType 7:25-7:31: INTEGER
+    AbsExprs 8:5-8:5:
+      AbsAtomConst 8:5-8:5: INTEGER(1)
+  AbsFunDef 11:1-13:2: fun2
+    AbsPar 11:10-11:16: x
+      AbsTypeName 11:14-11:16: int
+        #defined at 1:1-1:17
+    AbsTypeName 11:21-11:23: int
+      #defined at 1:1-1:17
+    AbsExprs 12:5-12:5:
+      AbsAtomConst 12:5-12:5: INTEGER(2)
+  AbsFunDef 15:1-25:23: main
+    AbsPar 15:10-15:19: args
+      AbsArrType 15:17-15:19:
+        [1]
+        AbsAtomType 15:25-15:30: STRING
+    AbsTypeName 15:35-15:37: int
+      #defined at 1:1-1:17
+    AbsWhere 25:3-25:23:
+      AbsExprs 16:5-24:5:
+        AbsBinExpr 16:7-16:11: ASSIGN
+          AbsVarName 16:7-16:7: a
+            #defined at 4:1-4:15
+          AbsAtomConst 16:11-16:11: INTEGER(3)
+        AbsBinExpr 17:7-17:11: ASSIGN
+          AbsVarName 17:7-17:7: b
+            #defined at 5:1-5:15
+          AbsAtomConst 17:11-17:11: INTEGER(3)
+        AbsBinExpr 19:7-19:17: ASSIGN
+          AbsVarName 19:7-19:7: a
+            #defined at 4:1-4:15
+          AbsFunCall 19:11-19:17: fun1
+            #defined at 7:1-9:2
+            AbsAtomConst 19:16-19:16: INTEGER(0)
+        AbsBinExpr 20:7-20:17: ASSIGN
+          AbsVarName 20:7-20:7: b
+            #defined at 5:1-5:15
+          AbsFunCall 20:11-20:17: fun2
+            #defined at 11:1-13:2
+            AbsAtomConst 20:16-20:16: INTEGER(0)
+        AbsBinExpr 22:7-22:11: ASSIGN
+          AbsVarName 22:7-22:7: c
+            #defined at 25:11-25:21
+          AbsAtomConst 22:11-22:11: INTEGER(2)
+        AbsAtomConst 24:5-24:5: INTEGER(0)
+      AbsDefs 25:11-25:21:
+        AbsVarDef 25:11-25:21: c
+          AbsTypeName 25:19-25:21: int
+            #defined at 1:1-1:17

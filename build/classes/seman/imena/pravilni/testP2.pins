@@ -1,0 +1,8 @@
+typ int : integer;
+var array : arr[10] int;
+var j : int;
+fun mul ( a : int, b : int) : int = 
+(mul(a, b),
+{if a < b then {for i = 0, i != b & i != a, {array[i] = i * j - j} : !true }
+else {while true * 5 < false | true >= false : {a = b+a-j*j/b%a}}}) 
+{where var i : int}

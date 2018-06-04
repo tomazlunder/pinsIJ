@@ -1,0 +1,17 @@
+AbsDefs 1:1-8:7:
+  AbsTypeDef 1:1-1:13: a
+    AbsAtomType 1:7-1:13: INTEGER
+  AbsTypeDef 2:1-2:7: b
+    AbsTypeName 2:7-2:7: a
+      #defined at 1:1-1:13
+  AbsTypeDef 4:1-4:7: c
+    AbsTypeName 4:7-4:7: d
+      #defined at 5:1-5:12
+  AbsTypeDef 5:1-5:12: d
+    AbsAtomType 5:7-5:12: STRING
+  AbsTypeDef 7:1-7:9: e
+    AbsArrType 7:7-7:9: [10]
+      AbsAtomType 7:14-7:20: INTEGER
+  AbsTypeDef 8:1-8:7: f
+    AbsTypeName 8:7-8:7: a
+      #defined at 1:1-1:13

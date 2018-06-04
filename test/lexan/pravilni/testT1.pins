@@ -1,0 +1,6 @@
+logical True true
+logical False false
+integer a 5
+integer A 556
+string neki 'kr en cudn string'
+a+A != 600

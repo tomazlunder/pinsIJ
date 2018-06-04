@@ -1,0 +1,9 @@
+typ a:integer;
+typ b:a;
+
+typ c:d;
+typ d:string;
+
+typ e:arr[10]integer;
+typ f:a
+#typ g:arr[10]

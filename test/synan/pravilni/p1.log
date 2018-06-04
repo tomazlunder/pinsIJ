@@ -1,0 +1,53 @@
+[1:1-1:3] TYP:typ
+[1:5-1:7] IDENTIFIER:int
+[1:9-1:9] COLON::
+[1:11-1:17] INTEGER:integer
+[1:18-1:18] SEMIC:;
+[2:1-2:3] TYP:typ
+[2:5-2:8] IDENTIFIER:int2
+[2:10-2:10] COLON::
+[2:12-2:14] IDENTIFIER:int
+[2:15-2:15] SEMIC:;
+[4:1-4:3] TYP:typ
+[4:5-4:14] IDENTIFIER:int_10_arr
+[4:16-4:16] COLON::
+[4:18-4:20] ARR:arr
+[4:22-4:22] LBRACKET:[
+[4:24-4:25] INT_CONST:10
+[4:27-4:27] RBRACKET:]
+[4:29-4:31] IDENTIFIER:int
+[4:32-4:32] SEMIC:;
+[5:1-5:3] TYP:typ
+[5:5-5:17] IDENTIFIER:int_10_20_arr
+[5:19-5:19] COLON::
+[5:21-5:23] ARR:arr
+[5:25-5:25] LBRACKET:[
+[5:27-5:28] INT_CONST:10
+[5:30-5:30] RBRACKET:]
+[5:32-5:34] ARR:arr
+[5:36-5:36] LBRACKET:[
+[5:38-5:39] INT_CONST:20
+[5:41-5:41] RBRACKET:]
+[5:43-5:45] IDENTIFIER:int
+EOF:
+source -> definitions
+definitions -> definition definitions'
+definition -> type_definition
+type_definition -> typ identifier : type
+type -> integer
+definitions' -> ; definition definitions'
+definition -> type_definition
+type_definition -> typ identifier : type
+type -> identifier
+definitions' -> ; definition definitions'
+definition -> type_definition
+type_definition -> typ identifier : type
+type -> arr [ int_constant ] type
+type -> identifier
+definitions' -> ; definition definitions'
+definition -> type_definition
+type_definition -> typ identifier : type
+type -> arr [ int_constant ] type
+type -> arr [ int_constant ] type
+type -> identifier
+definitions' -> ε

@@ -1,0 +1,13 @@
+fun f0(x:integer):integer =
+    (({y = 2}), ({y = 3}), 0);
+
+fun f1(x:integer):integer =
+    ({if(x > 3) then (y + 3) else (y + 1)}, 10);
+
+fun f2(x:integer):integer =
+    ({for y = 1, 10, 1, (x+1)}, 20);
+
+fun f3(x:integer):integer =
+    ({while (x > 5) : ({y = x-1})}, 30);
+
+var y : integer

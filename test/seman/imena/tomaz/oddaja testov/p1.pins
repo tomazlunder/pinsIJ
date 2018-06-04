@@ -1,0 +1,24 @@
+typ int : integer;
+
+var a : integer;
+var b : integer;
+
+fun fun1(x : integer) : integer = (
+	1
+);
+
+fun fun2(x : int) : int = (
+	2
+);
+
+fun main(args : arr [1] string) : int = (
+	{ a = 3 },
+	{ b = 3 },
+
+	{ a = fun1(0) },
+	{ b = fun2(0) },
+
+	{ c = 2 },
+
+	0
+) { where var c : int }

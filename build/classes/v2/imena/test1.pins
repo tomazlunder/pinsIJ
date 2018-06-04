@@ -1,0 +1,19 @@
+
+fun f(a:m,b:integer):integer=(f(a+b,0),i);
+
+fun f2(par1:at1):integer=(1);
+
+var i:string;
+var j:integer;
+typ c : m;
+typ m: integer;
+
+var arrbefore:at1;
+
+var arrvar:arr[10]integer;
+
+typ at1:arr[10]integer;
+
+var av1: at1
+
+

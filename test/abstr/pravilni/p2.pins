@@ -1,0 +1,19 @@
+typ int : integer;
+typ bool : logical;
+
+fun square(x : int, negative : bool) : int = (
+    { result = x * x },
+    { if negative then { result = -{ x = result } } else x[++++++true] },
+    result
+) { where var result : int };
+
+fun square(x : int) : int = square(x, false);
+
+var two_squared : int;
+var two_neg_squared : int;
+
+fun main(args : arr [1] string) : int = (
+    { two_squared = square(2) },
+    { two_neg_squared = square(2, true) },
+    0
+)

@@ -1,0 +1,10 @@
+fun test(x : int) : int = (
+    (2 + 3) * (4 + 5),
+    (2 + x) / (num + 5),
+    num - bool,
+    (
+        +1,
+        !text,
+        {  for bool = ----num, !num[10][20], num < 10 : !test = '123'  } # << ni veljavno # prirejanje izven braces
+    )
+) { where var num : int; var bool : logical; var text : string }

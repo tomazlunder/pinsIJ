@@ -1,0 +1,6 @@
+#fun returnInput(x:integer):integer =
+#	(x);
+
+fun main(i:integer):integer =
+	(putInt(3),
+	3)

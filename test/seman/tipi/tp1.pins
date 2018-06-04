@@ -1,0 +1,14 @@
+typ int1 : integer;
+typ int2 : int1;
+typ int3 : int2;
+
+typ lol1 : arr [10] integer;
+typ lol2 : arr [10] int1;
+
+fun main(args : arr [1] string) : integer = (
+	{ a = 10 },
+	{ b = 20 },
+	{ c = 30 },
+
+	0
+) { where var a : integer; var b : int1; var c : int2 }

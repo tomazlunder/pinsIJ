@@ -1,0 +1,36 @@
+AbsDefs 1:1-5:35:
+  AbsVarDef 1:1-1:15: c
+    AbsAtomType 1:9-1:15: INTEGER
+  AbsTypeDef 2:1-2:17: int
+    AbsAtomType 2:11-2:17: INTEGER
+  AbsFunDef 3:1-5:35: mul
+    AbsPar 3:11-3:21: a
+      AbsAtomType 3:15-3:21: INTEGER
+    AbsPar 3:24-3:34: b
+      AbsAtomType 3:28-3:34: INTEGER
+    AbsAtomType 3:39-3:45: INTEGER
+    AbsWhere 4:1-5:35:
+      AbsExprs 3:50-3:57:
+        AbsBinExpr 3:51-3:57: ASSIGN
+          AbsVarName 3:51-3:51: c
+            #defined at 1:1-1:15
+          AbsBinExpr 3:55-3:57: MUL
+            AbsVarName 3:55-3:55: a
+              #defined at 3:11-3:21
+            AbsVarName 3:57-3:57: b
+              #defined at 3:24-3:34
+      AbsDefs 4:9-5:34:
+        AbsFunDef 4:9-4:35: f
+          AbsPar 4:15-4:19: i
+            AbsTypeName 4:17-4:19: int
+          AbsTypeName 4:24-4:27: inta
+          AbsFunCall 4:31-4:34: g
+            #defined at 5:9-5:34
+            AbsVarName 4:33-4:33: i
+        AbsFunDef 5:9-5:34: g
+          AbsPar 5:15-5:19: i
+            AbsTypeName 5:17-5:19: int
+          AbsTypeName 5:24-5:26: int
+          AbsFunCall 5:30-5:33: f
+            #defined at 4:9-4:35
+            AbsVarName 5:32-5:32: i

@@ -1,0 +1,80 @@
+AbsDefs 1:1-5:0:
+  AbsFunDef 1:1-5:0: f
+    #typed as FUN(INTEGER:INTEGER)
+    #framed as FRAME(f: level=0,label=_f,sizeLocs=4,sizeArgs=12,size=24,FP=T0,RV=T1)
+    AbsPar 1:7-1:15: i
+      #typed as INTEGER
+      #accesed as PAR(i: offset=4)
+      AbsAtomType 1:9-1:15: INTEGER
+        #typed as INTEGER
+    AbsAtomType 1:18-1:24: INTEGER
+      #typed as INTEGER
+    AbsExprs 2:6-4:53:
+      #typed as INTEGER
+      AbsWhere 2:22-4:53:
+        #typed as INTEGER
+        AbsExprs 2:7-2:19:
+          #typed as INTEGER
+          AbsBinExpr 2:7-2:19: ADD
+            #typed as INTEGER
+            AbsBinExpr 2:7-2:12: ADD
+              #typed as INTEGER
+              AbsVarName 2:7-2:7: i
+                #defined at 1:7-1:15
+                #typed as INTEGER
+              AbsFunCall 2:9-2:12: f
+                #defined at 1:1-5:0
+                #typed as INTEGER
+                AbsVarName 2:11-2:11: i
+                  #defined at 1:7-1:15
+                  #typed as INTEGER
+            AbsFunCall 2:14-2:19: g
+              #defined at 4:6-4:52
+              #typed as INTEGER
+              AbsVarName 2:16-2:16: i
+                #defined at 1:7-1:15
+                #typed as INTEGER
+              AbsVarName 2:18-2:18: j
+                #defined at 3:6-3:18
+                #typed as INTEGER
+        AbsDefs 3:6-4:52:
+          AbsVarDef 3:6-3:18: j
+            #typed as INTEGER
+            #accesed as LOC(j: offset=-4)
+            AbsAtomType 3:12-3:18: INTEGER
+              #typed as INTEGER
+          AbsFunDef 4:6-4:52: g
+            #typed as FUN(INTEGER,INTEGER:INTEGER)
+            #framed as FRAME(g: level=1,label=_g,sizeLocs=0,sizeArgs=8,size=16,FP=T2,RV=T3)
+            AbsPar 4:12-4:20: i
+              #typed as INTEGER
+              #accesed as PAR(i: offset=12)
+              AbsAtomType 4:14-4:20: INTEGER
+                #typed as INTEGER
+            AbsPar 4:22-4:30: j
+              #typed as INTEGER
+              AbsAtomType 4:24-4:30: INTEGER
+                #typed as INTEGER
+            AbsAtomType 4:33-4:39: INTEGER
+              #typed as INTEGER
+            AbsBinExpr 4:41-4:50: ADD
+              #typed as INTEGER
+              AbsBinExpr 4:41-4:43: ADD
+                #typed as INTEGER
+                AbsVarName 4:41-4:41: i
+                  #defined at 4:12-4:20
+                  #typed as INTEGER
+                AbsVarName 4:43-4:43: j
+                  #defined at 4:22-4:30
+                  #typed as INTEGER
+              AbsFunCall 4:45-4:50: f
+                #defined at 1:1-5:0
+                #typed as INTEGER
+                AbsBinExpr 4:47-4:49: ADD
+                  #typed as INTEGER
+                  AbsVarName 4:47-4:47: i
+                    #defined at 4:12-4:20
+                    #typed as INTEGER
+                  AbsVarName 4:49-4:49: j
+                    #defined at 4:22-4:30
+                    #typed as INTEGER

@@ -1,0 +1,13 @@
+typ a : integer;
+
+fun f1(par1:a,par2:a):a = (l+3){where var l:a};
+
+fun f2(par1:b,par2:b):b = (l+3){where var l:b};
+
+
+#fun f2(par1:a,par2:b):b = (3){where var l:b};
+
+var global : b;
+
+typ b : a
+

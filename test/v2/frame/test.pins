@@ -1,0 +1,12 @@
+var c : int;
+typ int : integer;
+
+fun f0(x:int):int = g(x) {where fun g(y:int):int = c};
+
+#fun f1(x:int):int = g(x) {where fun g(y:int):int = h(y) {where fun h(z:int):int = z}};
+
+#fun f2(x:int):int = ({a=1},{b=2},{c=3}, (a+b+c+f1(a))) {where var a:int; var b:int};
+
+#fun f3(x:int,y:int,z:int):int = (f2(x) + f2(y) + f2(z));
+
+#fun f4(p:int):int = ({a=4},{b=5},{c=6}, (f3(a,b,c))) {where var a:int; var b:int}

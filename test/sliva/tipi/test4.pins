@@ -1,0 +1,4 @@
+fun f(a:integer,b:integer):integer=(f(a+b,0),i);
+var i:string;
+var j:integer
+

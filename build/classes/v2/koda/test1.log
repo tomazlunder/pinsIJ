@@ -1,0 +1,283 @@
+AbsDefs 1:1-13:15:
+  AbsFunDef 1:1-2:30: f0
+    #typed as FUN(INTEGER:INTEGER)
+    #framed as FRAME(f0: level=0,label=_f0,sizeLocs=0,sizeArgs=0,size=8,FP=T0,RV=T1)
+    AbsPar 1:8-1:16: x
+      #typed as INTEGER
+      #accesed as PAR(x: offset=4)
+      AbsAtomType 1:10-1:16: INTEGER
+        #typed as INTEGER
+    AbsAtomType 1:19-1:25: INTEGER
+      #typed as INTEGER
+    AbsExprs 2:6-2:28:
+      #typed as INTEGER
+      AbsExprs 2:7-2:12:
+        #typed as INTEGER
+        AbsBinExpr 2:8-2:12: ASSIGN
+          #typed as INTEGER
+          AbsVarName 2:8-2:8: y
+            #defined at 13:1-13:15
+            #typed as INTEGER
+          AbsAtomConst 2:12-2:12: INTEGER(2)
+            #typed as INTEGER
+      AbsExprs 2:18-2:23:
+        #typed as INTEGER
+        AbsBinExpr 2:19-2:23: ASSIGN
+          #typed as INTEGER
+          AbsVarName 2:19-2:19: y
+            #defined at 13:1-13:15
+            #typed as INTEGER
+          AbsAtomConst 2:23-2:23: INTEGER(3)
+            #typed as INTEGER
+      AbsAtomConst 2:28-2:28: INTEGER(0)
+        #typed as INTEGER
+  AbsFunDef 4:1-5:48: f1
+    #typed as FUN(INTEGER:INTEGER)
+    #framed as FRAME(f1: level=0,label=_f1,sizeLocs=0,sizeArgs=0,size=8,FP=T2,RV=T3)
+    AbsPar 4:8-4:16: x
+      #typed as INTEGER
+      #accesed as PAR(x: offset=4)
+      AbsAtomType 4:10-4:16: INTEGER
+        #typed as INTEGER
+    AbsAtomType 4:19-4:25: INTEGER
+      #typed as INTEGER
+    AbsExprs 5:6-5:46:
+      #typed as INTEGER
+      AbsIfThenElse 5:7-5:33:
+        #typed as INTEGER
+        AbsExprs 5:10-5:14:
+          #typed as LOGICAL
+          AbsBinExpr 5:10-5:14: GTH
+            #typed as LOGICAL
+            AbsVarName 5:10-5:10: x
+              #defined at 4:8-4:16
+              #typed as INTEGER
+            AbsAtomConst 5:14-5:14: INTEGER(3)
+              #typed as INTEGER
+        AbsExprs 5:23-5:27:
+          #typed as INTEGER
+          AbsBinExpr 5:23-5:27: ADD
+            #typed as INTEGER
+            AbsVarName 5:23-5:23: y
+              #defined at 13:1-13:15
+              #typed as INTEGER
+            AbsAtomConst 5:27-5:27: INTEGER(3)
+              #typed as INTEGER
+        AbsExprs 5:36-5:40:
+          #typed as INTEGER
+          AbsBinExpr 5:36-5:40: ADD
+            #typed as INTEGER
+            AbsVarName 5:36-5:36: y
+              #defined at 13:1-13:15
+              #typed as INTEGER
+            AbsAtomConst 5:40-5:40: INTEGER(1)
+              #typed as INTEGER
+      AbsAtomConst 5:45-5:46: INTEGER(10)
+        #typed as INTEGER
+  AbsFunDef 7:1-8:36: f2
+    #typed as FUN(INTEGER:INTEGER)
+    #framed as FRAME(f2: level=0,label=_f2,sizeLocs=0,sizeArgs=0,size=8,FP=T4,RV=T5)
+    AbsPar 7:8-7:16: x
+      #typed as INTEGER
+      #accesed as PAR(x: offset=4)
+      AbsAtomType 7:10-7:16: INTEGER
+        #typed as INTEGER
+    AbsAtomType 7:19-7:25: INTEGER
+      #typed as INTEGER
+    AbsExprs 8:6-8:34:
+      #typed as INTEGER
+      AbsFor 8:7-8:28:
+        #typed as VOID
+        AbsVarName 8:7-8:9: y
+          #defined at 13:1-13:15
+          #typed as INTEGER
+        AbsAtomConst 8:15-8:15: INTEGER(1)
+          #typed as INTEGER
+        AbsAtomConst 8:18-8:19: INTEGER(10)
+          #typed as INTEGER
+        AbsAtomConst 8:22-8:22: INTEGER(1)
+          #typed as INTEGER
+        AbsExprs 8:26-8:28:
+          #typed as INTEGER
+          AbsBinExpr 8:26-8:28: ADD
+            #typed as INTEGER
+            AbsVarName 8:26-8:26: x
+              #defined at 7:8-7:16
+              #typed as INTEGER
+            AbsAtomConst 8:28-8:28: INTEGER(1)
+              #typed as INTEGER
+      AbsAtomConst 8:33-8:34: INTEGER(20)
+        #typed as INTEGER
+  AbsFunDef 10:1-11:40: f3
+    #typed as FUN(INTEGER:INTEGER)
+    #framed as FRAME(f3: level=0,label=_f3,sizeLocs=0,sizeArgs=0,size=8,FP=T6,RV=T7)
+    AbsPar 10:8-10:16: x
+      #typed as INTEGER
+      #accesed as PAR(x: offset=4)
+      AbsAtomType 10:10-10:16: INTEGER
+        #typed as INTEGER
+    AbsAtomType 10:19-10:25: INTEGER
+      #typed as INTEGER
+    AbsExprs 11:6-11:38:
+      #typed as INTEGER
+      AbsWhileName 11:7-11:31:
+        #typed as VOID
+        AbsExprs 11:14-11:18:
+          #typed as LOGICAL
+          AbsBinExpr 11:14-11:18: GTH
+            #typed as LOGICAL
+            AbsVarName 11:14-11:14: x
+              #defined at 10:8-10:16
+              #typed as INTEGER
+            AbsAtomConst 11:18-11:18: INTEGER(5)
+              #typed as INTEGER
+        AbsExprs 11:24-11:31:
+          #typed as INTEGER
+          AbsBinExpr 11:25-11:31: ASSIGN
+            #typed as INTEGER
+            AbsVarName 11:25-11:25: y
+              #defined at 13:1-13:15
+              #typed as INTEGER
+            AbsBinExpr 11:29-11:31: SUB
+              #typed as INTEGER
+              AbsVarName 11:29-11:29: x
+                #defined at 10:8-10:16
+                #typed as INTEGER
+              AbsAtomConst 11:31-11:31: INTEGER(1)
+                #typed as INTEGER
+      AbsAtomConst 11:37-11:38: INTEGER(30)
+        #typed as INTEGER
+  AbsVarDef 13:1-13:15: y
+    #typed as INTEGER
+    #accesed as VAR(y: label=_y)
+    AbsAtomType 13:9-13:15: INTEGER
+      #typed as INTEGER
+CODE CHUNK: label=_f0
+  FRAME(f0: level=0,label=_f0,sizeLocs=0,sizeArgs=0,size=8,FP=T0,RV=T1)
+  MOVE
+    ESEQ
+      SEQ
+        EXP
+          ESEQ
+            SEQ
+            ESEQ
+              MOVE
+                MEM
+                  NAME label=_y
+                CONST value=2
+              CONST value=2
+        EXP
+          ESEQ
+            SEQ
+            ESEQ
+              MOVE
+                MEM
+                  NAME label=_y
+                CONST value=3
+              CONST value=3
+      CONST value=0
+    TEMP name=T1
+CODE CHUNK: label=_f1
+  FRAME(f1: level=0,label=_f1,sizeLocs=0,sizeArgs=0,size=8,FP=T2,RV=T3)
+  MOVE
+    ESEQ
+      SEQ
+        SEQ
+          SEQ
+            CJUMP labels=L5,L7
+              BINOP op=>
+                MEM
+                  BINOP op=<=
+                    TEMP name=T2
+                    CONST value=4
+                CONST value=3
+            LABEL label=L7
+            JUMP label=L4
+          LABEL label=L4
+          SEQ
+            EXP
+              BINOP op=+
+                MEM
+                  NAME label=_y
+                CONST value=1
+          JUMP label=L6
+          LABEL label=L5
+          SEQ
+            EXP
+              BINOP op=+
+                MEM
+                  NAME label=_y
+                CONST value=3
+          LABEL label=L6
+      CONST value=10
+    TEMP name=T3
+CODE CHUNK: label=_f2
+  FRAME(f2: level=0,label=_f2,sizeLocs=0,sizeArgs=0,size=8,FP=T4,RV=T5)
+  MOVE
+    ESEQ
+      SEQ
+        SEQ
+          MOVE
+            MEM
+              TEMP name=T8
+            CONST value=1
+          LABEL label=L8
+          CJUMP labels=L9,L10
+            BINOP op=<=
+              TEMP name=T8
+              CONST value=10
+          LABEL label=L9
+          EXP
+            ESEQ
+              SEQ
+              BINOP op=+
+                MEM
+                  BINOP op=<=
+                    TEMP name=T4
+                    CONST value=4
+                CONST value=1
+          JUMP label=L8
+          LABEL label=L10
+      CONST value=20
+    TEMP name=T5
+CODE CHUNK: label=_f3
+  FRAME(f3: level=0,label=_f3,sizeLocs=0,sizeArgs=0,size=8,FP=T6,RV=T7)
+  MOVE
+    ESEQ
+      SEQ
+        SEQ
+          SEQ
+            CJUMP labels=L12,L14
+              BINOP op=>
+                MEM
+                  BINOP op=<=
+                    TEMP name=T6
+                    CONST value=4
+                CONST value=5
+            LABEL label=L14
+            JUMP label=L13
+          LABEL label=L12
+          EXP
+            ESEQ
+              SEQ
+              ESEQ
+                MOVE
+                  MEM
+                    NAME label=_y
+                  BINOP op=-
+                    MEM
+                      BINOP op=<=
+                        TEMP name=T6
+                        CONST value=4
+                    CONST value=1
+                BINOP op=-
+                  MEM
+                    BINOP op=<=
+                      TEMP name=T6
+                      CONST value=4
+                  CONST value=1
+          JUMP label=L11
+          LABEL label=L13
+      CONST value=30
+    TEMP name=T7
+DATA CHUNK: label=_y size=4

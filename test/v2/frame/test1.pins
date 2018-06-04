@@ -1,0 +1,6 @@
+fun f(i:integer,j:integer):integer =
+  (g(i)+j) {where var k:integer;
+  				  fun g(i:integer):integer = (i+1)
+  			};
+
+var i:integer

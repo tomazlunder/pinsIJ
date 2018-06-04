@@ -1,0 +1,8 @@
+var a : integer;
+var b : integer;
+
+fun main(args : arr [1] string) : int = (
+	{ a = 3 },
+	{ b = 3},
+	0
+)

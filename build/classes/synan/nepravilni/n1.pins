@@ -1,0 +1,5 @@
+typ int : integer;
+typ int2 : int;
+
+typ int_10_arr : arr [ 10 ] int;
+typ int_10_20_arr : arr [ '123' ]; # ni int_constant

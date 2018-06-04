@@ -1,0 +1,29 @@
+AbsDefs 6:1-8:6:
+  AbsFunDef 6:1-8:6: main
+    #typed as FUN(INTEGER:INTEGER)
+    #framed as FRAME(main: level=0,label=_main,sizeLocs=0,sizeArgs=5,size=13,FP=T0,RV=T1)
+    AbsPar 6:10-6:18: i
+      #typed as INTEGER
+      #accesed as PAR(i: offset=4)
+      AbsAtomType 6:12-6:18: INTEGER
+        #typed as INTEGER
+    AbsAtomType 6:21-6:27: INTEGER
+      #typed as INTEGER
+    AbsExprs 7:6-8:5:
+      #typed as INTEGER
+      AbsFunCall 7:6-7:14: putInt
+        AbsAtomConst 7:13-7:13: INTEGER(3)
+          #typed as INTEGER
+      AbsAtomConst 8:5-8:5: INTEGER(3)
+        #typed as INTEGER
+CODE CHUNK: label=_main
+  FRAME(main: level=0,label=_main,sizeLocs=0,sizeArgs=5,size=13,FP=T0,RV=T1)
+  SEQ
+    MOVE
+      TEMP name=T2
+      CALL label=_Lsys::putInt
+    EXP
+      TEMP name=T2
+    MOVE
+      CONST value=3
+      TEMP name=T1

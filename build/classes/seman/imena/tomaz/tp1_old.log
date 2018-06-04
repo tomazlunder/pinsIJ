@@ -1,0 +1,55 @@
+AbsDefs 1:1-24:23:
+  AbsTypeDef 1:1-1:17: int
+    AbsAtomType 1:11-1:17: INTEGER
+  AbsVarDef 3:1-3:15: a
+    AbsAtomType 3:9-3:15: 
+  AbsVarDef 4:1-4:15: b
+    AbsAtomType 4:9-4:15: INTEGER
+  AbsFunDef 6:1-8:2: fun1
+    AbsPar 6:10-6:20: x
+      AbsAtomType 6:14-6:20: INTEGER
+    AbsAtomType 6:25-6:31: INTEGER
+    AbsExprs 7:5-7:5:
+      AbsAtomConst 7:5-7:5: INTEGER(1)
+  AbsFunDef 10:1-12:2: fun2
+    AbsPar 10:10-10:16: x
+      AbsTypeName 10:14-10:16: int
+    AbsTypeName 10:21-10:23: int
+    AbsExprs 11:5-11:5:
+      AbsAtomConst 11:5-11:5: INTEGER(2)
+  AbsFunDef 14:1-24:23: main
+    AbsPar 14:10-14:19: args
+      AbsArrType 14:17-14:19:
+        [1]
+        AbsAtomType 14:25-14:30: STRING
+    AbsTypeName 14:35-14:37: int
+    AbsWhere 24:3-24:23:
+      AbsExprs 15:5-23:5:
+        AbsBinExpr 15:7-15:11: ASSIGN
+          AbsVarName 15:7-15:7: a
+            #defined at 3:1-3:15
+          AbsAtomConst 15:11-15:11: INTEGER(3)
+        AbsBinExpr 16:7-16:11: ASSIGN
+          AbsVarName 16:7-16:7: b
+            #defined at 4:1-4:15
+          AbsAtomConst 16:11-16:11: INTEGER(3)
+        AbsBinExpr 18:7-18:17: ASSIGN
+          AbsVarName 18:7-18:7: a
+            #defined at 3:1-3:15
+          AbsFunCall 18:11-18:17: fun1
+            #defined at 6:1-8:2
+            AbsAtomConst 18:16-18:16: INTEGER(0)
+        AbsBinExpr 19:7-19:17: ASSIGN
+          AbsVarName 19:7-19:7: b
+            #defined at 4:1-4:15
+          AbsFunCall 19:11-19:17: fun2
+            #defined at 10:1-12:2
+            AbsAtomConst 19:16-19:16: INTEGER(0)
+        AbsBinExpr 21:7-21:11: ASSIGN
+          AbsVarName 21:7-21:7: c
+            #defined at 24:11-24:21
+          AbsAtomConst 21:11-21:11: INTEGER(2)
+        AbsAtomConst 23:5-23:5: INTEGER(0)
+      AbsDefs 24:11-24:21:
+        AbsVarDef 24:11-24:21: c
+          AbsTypeName 24:19-24:21: int

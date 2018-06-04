@@ -1,0 +1,6 @@
+fun test(x : integer, y : integer, z: integer) : integer = (
+    a + b + c,
+    x + (y + z),
+    a + b * c,
+    x * y + z
+) { where var a : integer; var b : integer; var c : integer }

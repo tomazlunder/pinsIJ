@@ -1,0 +1,315 @@
+AbsDefs 3:1-19:9:
+  AbsFunDef 3:1-4:84: f1
+    #typed as FUN(INTEGER,INTEGER:INTEGER)
+    #framed as FRAME(f1: level=0,label=_f1,sizeLocs=48,sizeArgs=0,size=56,FP=T0,RV=T1)
+    AbsPar 3:8-3:16: i
+      #typed as INTEGER
+      #accesed as PAR(i: offset=4)
+      AbsAtomType 3:10-3:16: INTEGER
+        #typed as INTEGER
+    AbsPar 3:18-3:26: j
+      #typed as INTEGER
+      #accesed as PAR(j: offset=12)
+      AbsAtomType 3:20-3:26: INTEGER
+        #typed as INTEGER
+    AbsAtomType 3:29-3:35: INTEGER
+      #typed as INTEGER
+    AbsWhere 4:28-4:84:
+      #typed as INTEGER
+      AbsExprs 4:4-4:25:
+        #typed as INTEGER
+        AbsBinExpr 4:4-4:6: ADD
+          #typed as INTEGER
+          AbsVarName 4:4-4:4: i
+            #defined at 3:8-3:16
+            #typed as INTEGER
+          AbsVarName 4:6-4:6: j
+            #defined at 3:18-3:26
+            #typed as INTEGER
+        AbsBinExpr 4:8-4:11: SUB
+          #typed as INTEGER
+          AbsUnExpr 4:8-4:9: SUB
+            #typed as INTEGER
+            AbsAtomConst 4:9-4:9: INTEGER(1)
+              #typed as INTEGER
+          AbsVarName 4:11-4:11: i
+            #defined at 3:8-3:16
+            #typed as INTEGER
+        AbsBinExpr 4:13-4:18: SUB
+          #typed as INTEGER
+          AbsBinExpr 4:13-4:15: ARR
+            #typed as INTEGER
+            AbsVarName 4:13-4:13: b
+              #defined at 19:1-19:9
+              #typed as ARR(10,INTEGER)
+            AbsAtomConst 4:15-4:15: INTEGER(3)
+              #typed as INTEGER
+          AbsAtomConst 4:18-4:18: INTEGER(1)
+            #typed as INTEGER
+        AbsBinExpr 4:20-4:23: ADD
+          #typed as INTEGER
+          AbsUnExpr 4:20-4:21: ADD
+            #typed as INTEGER
+            AbsAtomConst 4:21-4:21: INTEGER(1)
+              #typed as INTEGER
+          AbsVarName 4:23-4:23: j
+            #defined at 3:18-3:26
+            #typed as INTEGER
+        AbsVarName 4:25-4:25: k
+          #defined at 4:35-4:47
+          #typed as INTEGER
+      AbsDefs 4:35-4:82:
+        AbsVarDef 4:35-4:47: k
+          #typed as INTEGER
+          #accesed as LOC(k: offset=-4)
+          AbsAtomType 4:41-4:47: INTEGER
+            #typed as INTEGER
+        AbsVarDef 4:49-4:57: a
+          #typed as ARR(10,INTEGER)
+          #accesed as LOC(a: offset=-44)
+          AbsArrType 4:55-4:57: [10]
+            #typed as ARR(10,INTEGER)
+            AbsAtomType 4:62-4:68: INTEGER
+              #typed as INTEGER
+        AbsVarDef 4:70-4:82: z
+          #typed as INTEGER
+          #accesed as LOC(z: offset=-48)
+          AbsAtomType 4:76-4:82: INTEGER
+            #typed as INTEGER
+  AbsFunDef 8:1-9:47: f2
+    #typed as FUN(INTEGER:INTEGER)
+    #framed as FRAME(f2: level=0,label=_f2,sizeLocs=4,sizeArgs=0,size=12,FP=T2,RV=T3)
+    AbsPar 8:8-8:16: j
+      #typed as INTEGER
+      #accesed as PAR(j: offset=4)
+      AbsAtomType 8:10-8:16: INTEGER
+        #typed as INTEGER
+    AbsAtomType 8:19-8:25: INTEGER
+      #typed as INTEGER
+    AbsWhere 9:26-9:47:
+      #typed as INTEGER
+      AbsExprs 9:6-9:22:
+        #typed as INTEGER
+        AbsBinExpr 9:6-9:22: ADD
+          #typed as INTEGER
+          AbsBinExpr 9:6-9:15: ADD
+            #typed as INTEGER
+            AbsBinExpr 9:6-9:8: ARR
+              #typed as INTEGER
+              AbsVarName 9:6-9:6: b
+                #defined at 19:1-19:9
+                #typed as ARR(10,INTEGER)
+              AbsVarName 9:8-9:8: i
+                #defined at 18:1-18:13
+                #typed as INTEGER
+            AbsBinExpr 9:13-9:15: ARR
+              #typed as INTEGER
+              AbsVarName 9:13-9:13: b
+                #defined at 19:1-19:9
+                #typed as ARR(10,INTEGER)
+              AbsVarName 9:15-9:15: j
+                #defined at 8:8-8:16
+                #typed as INTEGER
+          AbsBinExpr 9:20-9:22: ARR
+            #typed as INTEGER
+            AbsVarName 9:20-9:20: b
+              #defined at 19:1-19:9
+              #typed as ARR(10,INTEGER)
+            AbsVarName 9:22-9:22: k
+              #defined at 9:33-9:45
+              #typed as INTEGER
+      AbsDefs 9:33-9:45:
+        AbsVarDef 9:33-9:45: k
+          #typed as INTEGER
+          #accesed as LOC(k: offset=-4)
+          AbsAtomType 9:39-9:45: INTEGER
+            #typed as INTEGER
+  AbsFunDef 15:1-16:70: a1
+    #typed as FUN(INTEGER:INTEGER)
+    #framed as FRAME(a1: level=0,label=_a1,sizeLocs=0,sizeArgs=8,size=16,FP=T4,RV=T5)
+    AbsPar 15:8-15:16: x
+      #typed as INTEGER
+      #accesed as PAR(x: offset=4)
+      AbsAtomType 15:10-15:16: INTEGER
+        #typed as INTEGER
+    AbsAtomType 15:19-15:25: INTEGER
+      #typed as INTEGER
+    AbsWhere 16:21-16:70:
+      #typed as INTEGER
+      AbsExprs 16:6-16:18:
+        #typed as INTEGER
+        AbsBinExpr 16:6-16:18: ADD
+          #typed as INTEGER
+          AbsFunCall 16:6-16:10: a2
+            #defined at 16:28-16:69
+            #typed as INTEGER
+            AbsAtomConst 16:9-16:9: INTEGER(1)
+              #typed as INTEGER
+          AbsFunCall 16:14-16:18: f2
+            #defined at 8:1-9:47
+            #typed as INTEGER
+            AbsAtomConst 16:17-16:17: INTEGER(3)
+              #typed as INTEGER
+      AbsDefs 16:28-16:69:
+        AbsFunDef 16:28-16:69: a2
+          #typed as FUN(INTEGER:INTEGER)
+          #framed as FRAME(a2: level=1,label=_a2,sizeLocs=0,sizeArgs=8,size=16,FP=T6,RV=T7)
+          AbsPar 16:35-16:43: y
+            #typed as INTEGER
+            #accesed as PAR(y: offset=4)
+            AbsAtomType 16:37-16:43: INTEGER
+              #typed as INTEGER
+          AbsAtomType 16:46-16:52: INTEGER
+            #typed as INTEGER
+          AbsExprs 16:57-16:67:
+            #typed as INTEGER
+            AbsBinExpr 16:57-16:67: ADD
+              #typed as INTEGER
+              AbsBinExpr 16:57-16:65: ADD
+                #typed as INTEGER
+                AbsBinExpr 16:57-16:59: ADD
+                  #typed as INTEGER
+                  AbsVarName 16:57-16:57: x
+                    #defined at 15:8-15:16
+                    #typed as INTEGER
+                  AbsVarName 16:59-16:59: y
+                    #defined at 16:35-16:43
+                    #typed as INTEGER
+                AbsFunCall 16:61-16:65: a1
+                  #defined at 15:1-16:70
+                  #typed as INTEGER
+                  AbsAtomConst 16:64-16:64: INTEGER(0)
+                    #typed as INTEGER
+              AbsAtomConst 16:67-16:67: INTEGER(3)
+                #typed as INTEGER
+  AbsVarDef 18:1-18:13: i
+    #typed as INTEGER
+    #accesed as VAR(i: label=_i)
+    AbsAtomType 18:7-18:13: INTEGER
+      #typed as INTEGER
+  AbsVarDef 19:1-19:9: b
+    #typed as ARR(10,INTEGER)
+    #accesed as VAR(b: label=_b)
+    AbsArrType 19:7-19:9: [10]
+      #typed as ARR(10,INTEGER)
+      AbsAtomType 19:15-19:21: INTEGER
+        #typed as INTEGER
+CODE CHUNK: label=_f1
+  FRAME(f1: level=0,label=_f1,sizeLocs=48,sizeArgs=0,size=56,FP=T0,RV=T1)
+  MOVE
+    ESEQ
+      SEQ
+        EXP
+          BINOP op=+
+            MEM
+              BINOP op=<=
+                TEMP name=T0
+                CONST value=4
+            MEM
+              BINOP op=<=
+                TEMP name=T0
+                CONST value=12
+        EXP
+          BINOP op=-
+            BINOP op=-
+              CONST value=0
+              CONST value=1
+            MEM
+              BINOP op=<=
+                TEMP name=T0
+                CONST value=4
+        EXP
+          BINOP op=-
+            MEM
+              BINOP op=+
+                MEM
+                  NAME label=_b
+                BINOP op=*
+                  CONST value=3
+                  CONST value=4
+            CONST value=1
+        EXP
+          BINOP op=+
+            CONST value=1
+            MEM
+              BINOP op=<=
+                TEMP name=T0
+                CONST value=12
+      MEM
+        BINOP op=<=
+          TEMP name=T0
+          CONST value=-4
+    TEMP name=T1
+CODE CHUNK: label=_f2
+  FRAME(f2: level=0,label=_f2,sizeLocs=4,sizeArgs=0,size=12,FP=T2,RV=T3)
+  MOVE
+    ESEQ
+      SEQ
+      BINOP op=+
+        BINOP op=+
+          MEM
+            BINOP op=+
+              MEM
+                NAME label=_b
+              BINOP op=*
+                MEM
+                  NAME label=_i
+                CONST value=4
+          MEM
+            BINOP op=+
+              MEM
+                NAME label=_b
+              BINOP op=*
+                MEM
+                  BINOP op=<=
+                    TEMP name=T2
+                    CONST value=4
+                CONST value=4
+        MEM
+          BINOP op=+
+            MEM
+              NAME label=_b
+            BINOP op=*
+              MEM
+                BINOP op=<=
+                  TEMP name=T2
+                  CONST value=-4
+              CONST value=4
+    TEMP name=T3
+CODE CHUNK: label=_a2
+  FRAME(a2: level=1,label=_a2,sizeLocs=0,sizeArgs=8,size=16,FP=T6,RV=T7)
+  MOVE
+    ESEQ
+      SEQ
+      BINOP op=+
+        BINOP op=+
+          BINOP op=+
+            MEM
+              BINOP op=<=
+                TEMP name=T4
+                CONST value=4
+            MEM
+              BINOP op=<=
+                TEMP name=T6
+                CONST value=4
+          CALL label=_a1
+            CONST value=1100110011
+            CONST value=0
+        CONST value=3
+    TEMP name=T7
+CODE CHUNK: label=_a1
+  FRAME(a1: level=0,label=_a1,sizeLocs=0,sizeArgs=8,size=16,FP=T4,RV=T5)
+  MOVE
+    ESEQ
+      SEQ
+      BINOP op=+
+        CALL label=_a2
+          MEM
+            TEMP name=T4
+          CONST value=1
+        CALL label=_f2
+          CONST value=1100110011
+          CONST value=3
+    TEMP name=T5
+DATA CHUNK: label=_i size=4
+DATA CHUNK: label=_b size=40

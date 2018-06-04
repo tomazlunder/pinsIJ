@@ -1,0 +1,3 @@
+typ a:arr[10]integer;
+typ b:a;
+typ c:arr[10]b

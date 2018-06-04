@@ -1,0 +1,351 @@
+[1:1-1:3] TYP:typ
+[1:5-1:7] IDENTIFIER:int
+[1:9-1:9] COLON::
+[1:11-1:17] INTEGER:integer
+[1:18-1:18] SEMIC:;
+[2:1-2:3] TYP:typ
+[2:5-2:8] IDENTIFIER:bool
+[2:10-2:10] COLON::
+[2:12-2:18] LOGICAL:logical
+[2:19-2:19] SEMIC:;
+[4:1-4:3] FUN:fun
+[4:5-4:10] IDENTIFIER:square
+[4:11-4:11] LPARENT:(
+[4:12-4:12] IDENTIFIER:x
+[4:14-4:14] COLON::
+[4:16-4:18] IDENTIFIER:int
+[4:19-4:19] COMMA:,
+[4:21-4:28] IDENTIFIER:negative
+[4:30-4:30] COLON::
+[4:32-4:35] IDENTIFIER:bool
+[4:36-4:36] RPARENT:)
+[4:38-4:38] COLON::
+[4:40-4:42] IDENTIFIER:int
+[4:44-4:44] ASSIGN:=
+[4:46-4:46] LPARENT:(
+[5:5-5:5] LBRACE:{
+[5:7-5:12] IDENTIFIER:result
+[5:14-5:14] ASSIGN:=
+[5:16-5:16] IDENTIFIER:x
+[5:18-5:18] MUL:*
+[5:20-5:20] IDENTIFIER:x
+[5:22-5:22] RBRACE:}
+[5:23-5:23] COMMA:,
+[6:5-6:5] LBRACE:{
+[6:7-6:8] IF:if
+[6:10-6:17] IDENTIFIER:negative
+[6:19-6:22] THEN:then
+[6:24-6:24] LBRACE:{
+[6:26-6:31] IDENTIFIER:result
+[6:33-6:33] ASSIGN:=
+[6:35-6:35] SUB:-
+[6:36-6:36] LBRACE:{
+[6:38-6:38] IDENTIFIER:x
+[6:40-6:40] ASSIGN:=
+[6:42-6:47] IDENTIFIER:result
+[6:49-6:49] RBRACE:}
+[6:51-6:51] RBRACE:}
+[6:53-6:56] ELSE:else
+[6:58-6:58] IDENTIFIER:x
+[6:59-6:59] ADD:+
+[6:60-6:60] LBRACKET:[
+[6:61-6:61] ADD:+
+[6:62-6:62] ADD:+
+[6:63-6:63] ADD:+
+[6:64-6:64] ADD:+
+[6:65-6:65] ADD:+
+[6:66-6:66] ADD:+
+[6:67-6:70] LOG_CONST:true
+[6:71-6:71] RBRACKET:]
+[6:73-6:73] RBRACE:}
+[6:74-6:74] COMMA:,
+[7:5-7:10] IDENTIFIER:result
+[8:1-8:1] RPARENT:)
+[8:3-8:3] LBRACE:{
+[8:5-8:9] WHERE:where
+[8:11-8:13] VAR:var
+[8:15-8:20] IDENTIFIER:result
+[8:22-8:22] COLON::
+[8:24-8:26] IDENTIFIER:int
+[8:28-8:28] RBRACE:}
+[8:29-8:29] SEMIC:;
+[10:1-10:3] FUN:fun
+[10:5-10:10] IDENTIFIER:square
+[10:11-10:11] LPARENT:(
+[10:12-10:12] IDENTIFIER:x
+[10:14-10:14] COLON::
+[10:16-10:18] IDENTIFIER:int
+[10:19-10:19] RPARENT:)
+[10:21-10:21] COLON::
+[10:23-10:25] IDENTIFIER:int
+[10:27-10:27] ASSIGN:=
+[10:29-10:34] IDENTIFIER:square
+[10:35-10:35] LPARENT:(
+[10:36-10:36] IDENTIFIER:x
+[10:37-10:37] COMMA:,
+[10:39-10:43] LOG_CONST:false
+[10:44-10:44] RPARENT:)
+[10:45-10:45] SEMIC:;
+[12:1-12:3] VAR:var
+[12:5-12:15] IDENTIFIER:two_squared
+[12:17-12:17] COLON::
+[12:19-12:21] IDENTIFIER:int
+[12:22-12:22] SEMIC:;
+[13:1-13:3] VAR:var
+[13:5-13:19] IDENTIFIER:two_neg_squared
+[13:21-13:21] COLON::
+[13:23-13:25] IDENTIFIER:int
+[13:26-13:26] SEMIC:;
+[15:1-15:3] FUN:fun
+[15:5-15:8] IDENTIFIER:main
+[15:9-15:9] LPARENT:(
+[15:10-15:13] IDENTIFIER:args
+[15:15-15:15] COLON::
+[15:17-15:19] ARR:arr
+[15:21-15:21] LBRACKET:[
+[15:22-15:22] INT_CONST:1
+[15:23-15:23] RBRACKET:]
+[15:25-15:30] STRING:string
+[15:31-15:31] RPARENT:)
+[15:33-15:33] COLON::
+[15:35-15:37] IDENTIFIER:int
+[15:39-15:39] ASSIGN:=
+[15:41-15:41] LPARENT:(
+[16:5-16:5] LBRACE:{
+[16:7-16:17] IDENTIFIER:two_squared
+[16:19-16:19] ASSIGN:=
+[16:21-16:26] IDENTIFIER:square
+[16:27-16:27] LPARENT:(
+[16:28-16:28] INT_CONST:2
+[16:29-16:29] RPARENT:)
+[16:31-16:31] RBRACE:}
+[16:32-16:32] COMMA:,
+[17:5-17:5] LBRACE:{
+[17:7-17:21] IDENTIFIER:two_neg_squared
+[17:23-17:23] ASSIGN:=
+[17:25-17:30] IDENTIFIER:square
+[17:31-17:31] LPARENT:(
+[17:32-17:32] INT_CONST:2
+[17:33-17:33] COMMA:,
+[17:35-17:38] LOG_CONST:true
+[17:39-17:39] RPARENT:)
+[17:41-17:41] RBRACE:}
+[17:42-17:42] COMMA:,
+[18:5-18:5] INT_CONST:0
+[19:1-19:1] RPARENT:)
+EOF:
+source -> definitions
+definitions -> definition definitions'
+definition -> type_definition
+type_definition -> typ identifier : type
+type -> integer
+definitions' -> ; definition definitions'
+definition -> type_definition
+type_definition -> typ identifier : type
+type -> logical
+definitions' -> ; definition definitions'
+definition -> function_definition
+function_definition -> fun identifier ( parameters ) : type = expression
+parameters -> parameter parameters'
+parameter -> identifier : type
+type -> identifier
+parameters' -> , parameter parameters'
+parameter -> identifier : type
+type -> identifier
+parameters' -> ε
+type -> identifier
+expression -> logical_ior_expression expression'
+logical_ior_expression -> logical_and_expression logical_ior_expression'
+logical_and_expression -> compare_expression logical_and_expression'
+compare_expression -> additive_expression compare_expression'
+additive_expression -> multiplicatiove_expression additive_expression'
+multiplicative_expression -> prefix_expression multiplicative_expression'
+prefix_expression -> postfix_expression
+postfix_expression -> atom_expression postfix_expression'
+atom_expression -> ( expressions )
+expressions -> expression expressions'
+expression -> logical_ior_expression expression'
+logical_ior_expression -> logical_and_expression logical_ior_expression'
+logical_and_expression -> compare_expression logical_and_expression'
+compare_expression -> additive_expression compare_expression'
+additive_expression -> multiplicatiove_expression additive_expression'
+multiplicative_expression -> prefix_expression multiplicative_expression'
+prefix_expression -> postfix_expression
+postfix_expression -> atom_expression postfix_expression'
+atom_expression -> { atom_expression''
+atom_expression'' -> expression = expression }
+expression -> logical_ior_expression expression'
+logical_ior_expression -> logical_and_expression logical_ior_expression'
+logical_and_expression -> compare_expression logical_and_expression'
+compare_expression -> additive_expression compare_expression'
+additive_expression -> multiplicatiove_expression additive_expression'
+multiplicative_expression -> prefix_expression multiplicative_expression'
+prefix_expression -> postfix_expression
+postfix_expression -> atom_expression postfix_expression'
+atom_expression -> identifier atom_expression'''
+postfix_expression' -> ε
+postfix_expression' -> ε
+multiplicative_expression' -> ε
+additive_expression' -> ε
+compare_expression' -> ε
+logical_and_expression' -> ε
+logical_ior_expression' -> ε
+expression' -> ε
+expression -> logical_ior_expression expression'
+logical_ior_expression -> logical_and_expression logical_ior_expression'
+logical_and_expression -> compare_expression logical_and_expression'
+compare_expression -> additive_expression compare_expression'
+additive_expression -> multiplicatiove_expression additive_expression'
+multiplicative_expression -> prefix_expression multiplicative_expression'
+prefix_expression -> postfix_expression
+postfix_expression -> atom_expression postfix_expression'
+atom_expression -> identifier atom_expression'''
+postfix_expression' -> ε
+postfix_expression' -> ε
+multiplicative_expression' -> * prefix_expression multiplicative_expression'
+prefix_expression -> postfix_expression
+postfix_expression -> atom_expression postfix_expression'
+atom_expression -> identifier atom_expression'''
+postfix_expression' -> ε
+postfix_expression' -> ε
+multiplicative_expression' -> ε
+additive_expression' -> ε
+compare_expression' -> ε
+logical_and_expression' -> ε
+logical_ior_expression' -> ε
+expression' -> ε
+postfix_expression' -> ε
+multiplicative_expression' -> ε
+additive_expression' -> ε
+compare_expression' -> ε
+logical_and_expression' -> ε
+logical_ior_expression' -> ε
+expression' -> ε
+expressions' -> , expression expressions'
+expression -> logical_ior_expression expression'
+logical_ior_expression -> logical_and_expression logical_ior_expression'
+logical_and_expression -> compare_expression logical_and_expression'
+compare_expression -> additive_expression compare_expression'
+additive_expression -> multiplicatiove_expression additive_expression'
+multiplicative_expression -> prefix_expression multiplicative_expression'
+prefix_expression -> postfix_expression
+postfix_expression -> atom_expression postfix_expression'
+atom_expression -> { atom_expression''
+atom_expression'' -> if expression then expression atom_expression'
+expression -> logical_ior_expression expression'
+logical_ior_expression -> logical_and_expression logical_ior_expression'
+logical_and_expression -> compare_expression logical_and_expression'
+compare_expression -> additive_expression compare_expression'
+additive_expression -> multiplicatiove_expression additive_expression'
+multiplicative_expression -> prefix_expression multiplicative_expression'
+prefix_expression -> postfix_expression
+postfix_expression -> atom_expression postfix_expression'
+atom_expression -> identifier atom_expression'''
+postfix_expression' -> ε
+postfix_expression' -> ε
+multiplicative_expression' -> ε
+additive_expression' -> ε
+compare_expression' -> ε
+logical_and_expression' -> ε
+logical_ior_expression' -> ε
+expression' -> ε
+expression -> logical_ior_expression expression'
+logical_ior_expression -> logical_and_expression logical_ior_expression'
+logical_and_expression -> compare_expression logical_and_expression'
+compare_expression -> additive_expression compare_expression'
+additive_expression -> multiplicatiove_expression additive_expression'
+multiplicative_expression -> prefix_expression multiplicative_expression'
+prefix_expression -> postfix_expression
+postfix_expression -> atom_expression postfix_expression'
+atom_expression -> { atom_expression''
+atom_expression'' -> expression = expression }
+expression -> logical_ior_expression expression'
+logical_ior_expression -> logical_and_expression logical_ior_expression'
+logical_and_expression -> compare_expression logical_and_expression'
+compare_expression -> additive_expression compare_expression'
+additive_expression -> multiplicatiove_expression additive_expression'
+multiplicative_expression -> prefix_expression multiplicative_expression'
+prefix_expression -> postfix_expression
+postfix_expression -> atom_expression postfix_expression'
+atom_expression -> identifier atom_expression'''
+postfix_expression' -> ε
+postfix_expression' -> ε
+multiplicative_expression' -> ε
+additive_expression' -> ε
+compare_expression' -> ε
+logical_and_expression' -> ε
+logical_ior_expression' -> ε
+expression' -> ε
+expression -> logical_ior_expression expression'
+logical_ior_expression -> logical_and_expression logical_ior_expression'
+logical_and_expression -> compare_expression logical_and_expression'
+compare_expression -> additive_expression compare_expression'
+additive_expression -> multiplicatiove_expression additive_expression'
+multiplicative_expression -> prefix_expression multiplicative_expression'
+prefix_expression -> - prefix_expression
+prefix_expression -> postfix_expression
+postfix_expression -> atom_expression postfix_expression'
+atom_expression -> { atom_expression''
+atom_expression'' -> expression = expression }
+expression -> logical_ior_expression expression'
+logical_ior_expression -> logical_and_expression logical_ior_expression'
+logical_and_expression -> compare_expression logical_and_expression'
+compare_expression -> additive_expression compare_expression'
+additive_expression -> multiplicatiove_expression additive_expression'
+multiplicative_expression -> prefix_expression multiplicative_expression'
+prefix_expression -> postfix_expression
+postfix_expression -> atom_expression postfix_expression'
+atom_expression -> identifier atom_expression'''
+postfix_expression' -> ε
+postfix_expression' -> ε
+multiplicative_expression' -> ε
+additive_expression' -> ε
+compare_expression' -> ε
+logical_and_expression' -> ε
+logical_ior_expression' -> ε
+expression' -> ε
+expression -> logical_ior_expression expression'
+logical_ior_expression -> logical_and_expression logical_ior_expression'
+logical_and_expression -> compare_expression logical_and_expression'
+compare_expression -> additive_expression compare_expression'
+additive_expression -> multiplicatiove_expression additive_expression'
+multiplicative_expression -> prefix_expression multiplicative_expression'
+prefix_expression -> postfix_expression
+postfix_expression -> atom_expression postfix_expression'
+atom_expression -> identifier atom_expression'''
+postfix_expression' -> ε
+postfix_expression' -> ε
+multiplicative_expression' -> ε
+additive_expression' -> ε
+compare_expression' -> ε
+logical_and_expression' -> ε
+logical_ior_expression' -> ε
+expression' -> ε
+postfix_expression' -> ε
+multiplicative_expression' -> ε
+additive_expression' -> ε
+compare_expression' -> ε
+logical_and_expression' -> ε
+logical_ior_expression' -> ε
+expression' -> ε
+postfix_expression' -> ε
+multiplicative_expression' -> ε
+additive_expression' -> ε
+compare_expression' -> ε
+logical_and_expression' -> ε
+logical_ior_expression' -> ε
+expression' -> ε
+atom_expression' -> else expression }
+expression -> logical_ior_expression expression'
+logical_ior_expression -> logical_and_expression logical_ior_expression'
+logical_and_expression -> compare_expression logical_and_expression'
+compare_expression -> additive_expression compare_expression'
+additive_expression -> multiplicatiove_expression additive_expression'
+multiplicative_expression -> prefix_expression multiplicative_expression'
+prefix_expression -> postfix_expression
+postfix_expression -> atom_expression postfix_expression'
+atom_expression -> identifier atom_expression'''
+postfix_expression' -> ε
+postfix_expression' -> ε
+multiplicative_expression' -> ε
+additive_expression' -> + multiplicative_expression additive_expression'

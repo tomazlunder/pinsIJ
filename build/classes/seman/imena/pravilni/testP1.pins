@@ -1,0 +1,5 @@
+var c : integer;
+typ int : integer;
+fun mul ( a : integer, b : integer) : integer = ({c = a*b}) 
+{ where fun f(i:int) : inta = g(i);
+		fun g(i:int) : int = f(i)} 

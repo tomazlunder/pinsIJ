@@ -1,0 +1,67 @@
+AbsDefs 1:1-3:13:
+  AbsFunDef 1:1-1:48: f
+    #typed as FUN(INTEGER,INTEGER:INTEGER)
+    #framed as FRAME(f: level=0,label=_f,sizeLocs=0,sizeArgs=12,size=20,FP=T0,RV=T1)
+    AbsPar 1:7-1:15: a
+      #typed as INTEGER
+      #accesed as PAR(a: offset=4)
+      AbsAtomType 1:9-1:15: INTEGER
+        #typed as INTEGER
+    AbsPar 1:17-1:25: b
+      #typed as INTEGER
+      #accesed as PAR(b: offset=12)
+      AbsAtomType 1:19-1:25: INTEGER
+        #typed as INTEGER
+    AbsAtomType 1:28-1:34: INTEGER
+      #typed as INTEGER
+    AbsExprs 1:37-1:46:
+      #typed as INTEGER
+      AbsFunCall 1:37-1:44: f
+        #defined at 1:1-1:48
+        #typed as INTEGER
+        AbsBinExpr 1:39-1:41: ADD
+          #typed as INTEGER
+          AbsVarName 1:39-1:39: a
+            #defined at 1:7-1:15
+            #typed as INTEGER
+          AbsVarName 1:41-1:41: b
+            #defined at 1:17-1:25
+            #typed as INTEGER
+        AbsAtomConst 1:43-1:43: INTEGER(0)
+          #typed as INTEGER
+      AbsVarName 1:46-1:46: i
+        #defined at 2:1-2:13
+        #typed as INTEGER
+  AbsVarDef 2:1-2:13: i
+    #typed as INTEGER
+    #accesed as VAR(i: label=_i)
+    AbsAtomType 2:7-2:13: INTEGER
+      #typed as INTEGER
+  AbsVarDef 3:1-3:13: j
+    #typed as INTEGER
+    #accesed as VAR(j: label=_j)
+    AbsAtomType 3:7-3:13: INTEGER
+      #typed as INTEGER
+CODE CHUNK: label=_f
+  FRAME(f: level=0,label=_f,sizeLocs=0,sizeArgs=12,size=20,FP=T0,RV=T1)
+  MOVE
+    ESEQ
+      SEQ
+        EXP
+          CALL label=_f
+            CONST value=1100110011
+            BINOP op=+
+              MEM
+                BINOP op=<=
+                  TEMP name=T0
+                  CONST value=4
+              MEM
+                BINOP op=<=
+                  TEMP name=T0
+                  CONST value=12
+            CONST value=0
+      MEM
+        NAME label=_i
+    TEMP name=T1
+DATA CHUNK: label=_i size=4
+DATA CHUNK: label=_j size=4
