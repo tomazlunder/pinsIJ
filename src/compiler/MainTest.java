@@ -12,10 +12,7 @@ import compiler.frames.Frames;
 import compiler.frames.FrmDesc;
 import compiler.frames.FrmEvaluator;
 import compiler.frames.FrmFrame;
-import compiler.imcode.ImCode;
-import compiler.imcode.ImcCONST;
-import compiler.imcode.ImcChunk;
-import compiler.imcode.ImcCodeGen;
+import compiler.imcode.*;
 import compiler.interpreter.Interpreter;
 import compiler.lexan.*;
 import compiler.seman.NameChecker;
@@ -47,7 +44,7 @@ public class MainTest {
         sourceFileName = "test/interpreter/simple.pins";
         //sourceFileName = "test/intellij/seven/test.pins";
         boolean interpret = true;
-        boolean interpretDbg = true;
+        boolean interpretDbg = false;
 
         Report.openDumpFile(sourceFileName);
 

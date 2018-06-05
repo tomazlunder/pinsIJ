@@ -43,6 +43,9 @@ public class ImcCodeGen implements Visitor {
     public HashMap<AbsTree,ImcCode> code; //Dodal za shranjevanje vmesnih, prenašanje v starša   
     
     static public HashMap<AbsFunDef, ImcSEQ> linearCode;
+
+    static public HashMap<String, Integer> nasloviGlobalnih;
+    private static int globCounter;
     
     //Da vemo na katerem stat nivoju smo in v kateri funkciji (v primeru, da uporabljamo nekaj zunaj funkcije)
     int scope;
@@ -53,6 +56,8 @@ public class ImcCodeGen implements Visitor {
         code = new HashMap<AbsTree,ImcCode>();
         
         linearCode = new HashMap<AbsFunDef, ImcSEQ>();
+        nasloviGlobalnih = new HashMap<String, Integer>();
+        globCounter = 0;
         
         scope = -1;
         frames = new Stack<>();
@@ -89,6 +94,9 @@ public class ImcCodeGen implements Visitor {
         if(access instanceof FrmVarAccess){
             ImcDataChunk idc = new ImcDataChunk(((FrmVarAccess) access).label, SymbDesc.getType(acceptor).size());
             chunks.add(idc);
+
+            nasloviGlobalnih.put(((FrmVarAccess) access).label.name(), globCounter);
+            globCounter+=4;
         } 
 
     }

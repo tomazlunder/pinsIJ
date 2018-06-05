@@ -264,8 +264,12 @@ public class Interpreter {
 		
 		if (instruction instanceof ImcNAME) {
 			ImcNAME instr = (ImcNAME) instruction;
-			if (instr.label.name().equals("FP")) return fp;
-			if (instr.label.name().equals("SP")) return sp;
+			String imeLabele = instr.label.name();
+			if (imeLabele.equals("FP")) return fp;
+			if (imeLabele.equals("SP")) return sp;
+			if (ImcCodeGen.nasloviGlobalnih.containsKey(imeLabele)){
+			    return ImcCodeGen.nasloviGlobalnih.get(imeLabele);
+            }
 		}
 		
 		if (instruction instanceof ImcTEMP) {

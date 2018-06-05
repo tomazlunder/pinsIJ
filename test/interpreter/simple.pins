@@ -1,9 +1,13 @@
 var a : integer;
+var b : integer;
 
 fun returnInput(x:integer):integer =
 	(x);
 
 fun main(i:integer):integer =
 	( {a = 5},
+	  {b = 10},
+	  {c = 15},
 	  putInt(a),
-	  3)
+	  putInt(b),
+	  3) { where var c : integer}
