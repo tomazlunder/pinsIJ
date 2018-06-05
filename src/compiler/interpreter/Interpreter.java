@@ -77,6 +77,8 @@ public class Interpreter {
 			System.out.println("[SP=" + sp + "]");
 		}
 
+		stT(frame.FP, fp);
+
 		int pc = 0;
 		Object result = null;
 		while (pc < code.stmts.size()) {
@@ -248,12 +250,14 @@ public class Interpreter {
 		
 		if (instruction instanceof ImcMOVE) {
 			ImcMOVE instr = (ImcMOVE) instruction;
+            //Load
 			if (instr.dst instanceof ImcTEMP) {
 				FrmTemp temp = ((ImcTEMP) instr.dst).temp;
 				Object srcValue = execute(instr.src);
 				stT(temp, srcValue);
 				return srcValue;
 			}
+			//Store
 			if (instr.dst instanceof ImcMEM) {
 				Object dstValue = execute(((ImcMEM) instr.dst).expr);
 				Object srcValue = execute(instr.src);

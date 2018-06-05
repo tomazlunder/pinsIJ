@@ -10,4 +10,5 @@ fun main(i:integer):integer =
 	  {c = 15},
 	  putInt(a),
 	  putInt(b),
+	  putInt(c),
 	  3) { where var c : integer}
