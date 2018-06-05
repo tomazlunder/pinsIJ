@@ -1,6 +1,9 @@
-#fun returnInput(x:integer):integer =
-#	(x);
+var a : integer;
+
+fun returnInput(x:integer):integer =
+	(x);
 
 fun main(i:integer):integer =
-	(putInt(3),
-	3)
+	( {a = 5},
+	  putInt(a),
+	  3)

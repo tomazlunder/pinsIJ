@@ -163,8 +163,30 @@ public class ImcCodeGen implements Visitor {
         }
         //Assign
         else if(acceptor.oper == 15){
-            //result = new ImcMOVE((ImcExpr) code.get(acceptor.expr1), (ImcExpr) code.get(acceptor.expr2));
+            //1.  ta varjanta deluje za simple assigne, npr. a = 3.
             result = new ImcESEQ(new ImcMOVE((ImcExpr) code.get(acceptor.expr1), (ImcExpr) code.get(acceptor.expr2)), (ImcExpr) code.get(acceptor.expr2));
+
+            /*
+            //2. ta varjanta naj bi delovala za vse...
+            // Prvo zracunamo naslov elemnta, in ga shranimo v nek temp T
+            ImcTEMP naslovTemp = new ImcTEMP(new FrmTemp());
+            ImcMOVE naslov = new ImcMOVE(naslovTemp, (ImcExpr) code.get(acceptor.expr1));
+            // Potem izračunamo rezultat druge strani, in shranimo v neko drug temp T'
+            ImcTEMP vrednostTemp = new ImcTEMP(new FrmTemp());
+            ImcMOVE vrednost = new ImcMOVE(vrednostTemp, (ImcExpr) code.get(acceptor.expr2));
+            // Vrednost vrednostTemp premaknemo na ciljni naslov
+            ImcMOVE prenos = new ImcMOVE(new ImcMEM(naslovTemp), vrednostTemp);
+
+            //To vse zapakiramo v SEQ
+            ImcSEQ seq = new ImcSEQ();
+            seq.stmts.add(naslov);
+            seq.stmts.add(vrednost);
+            seq.stmts.add(prenos);
+
+            // Potem še v ESEQ, katerega expr je vrednost T'. To tudi vrnemo.
+            result = new ImcESEQ(seq, vrednostTemp);
+            */
+
         }
         
         code.put(acceptor, result);

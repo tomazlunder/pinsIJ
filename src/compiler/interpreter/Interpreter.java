@@ -95,7 +95,7 @@ public class Interpreter {
 		}
 		
 		//fp = (Integer) ldM(fp + frame.oldFPoffset);
-                fp = (Integer) ldM(fp + frame.oldFPoffset());
+		fp = (Integer) ldM(fp + frame.oldFPoffset());
 		sp = sp + frame.size();
 		if (debug) {
 			System.out.println("[FP=" + fp + "]");

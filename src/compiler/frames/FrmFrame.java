@@ -89,9 +89,7 @@ public class FrmFrame {
 					"RV=" + RV.name() + ")");
 	}
         
-        public int oldFPoffset(){
-            return sizeLocs + sizeFPRA/2;
-        }
-        
+	//public int oldFPoffset(){ return sizeLocs + sizeFPRA/2; }
+	public int oldFPoffset() {return sizeArgs + sizeTmps;}
 	
 }

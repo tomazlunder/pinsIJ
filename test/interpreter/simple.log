@@ -1,7 +1,27 @@
-AbsDefs 6:1-8:6:
-  AbsFunDef 6:1-8:6: main
+AbsDefs 1:1-9:8:
+  AbsVarDef 1:1-1:15: a
+    #typed as INTEGER
+    #accesed as VAR(a: label=_a)
+    AbsAtomType 1:9-1:15: INTEGER
+      #typed as INTEGER
+  AbsFunDef 3:1-4:8: returnInput
     #typed as FUN(INTEGER:INTEGER)
-    #framed as FRAME(main: level=1,label=_main,sizeLocs=0,sizeArgs=5,size=13,FP=T0,RV=T1)
+    #framed as FRAME(returnInput: level=1,label=_returnInput,sizeLocs=0,sizeArgs=0,size=8,FP=T0,RV=T1)
+    AbsPar 3:17-3:25: x
+      #typed as INTEGER
+      #accesed as PAR(x: offset=4)
+      AbsAtomType 3:19-3:25: INTEGER
+        #typed as INTEGER
+    AbsAtomType 3:28-3:34: INTEGER
+      #typed as INTEGER
+    AbsExprs 4:6-4:6:
+      #typed as INTEGER
+      AbsVarName 4:6-4:6: x
+        #defined at 3:17-3:25
+        #typed as INTEGER
+  AbsFunDef 6:1-9:8: main
+    #typed as FUN(INTEGER:INTEGER)
+    #framed as FRAME(main: level=1,label=_main,sizeLocs=0,sizeArgs=5,size=13,FP=T2,RV=T3)
     AbsPar 6:10-6:18: i
       #typed as INTEGER
       #accesed as PAR(i: offset=4)
@@ -9,26 +29,51 @@ AbsDefs 6:1-8:6:
         #typed as INTEGER
     AbsAtomType 6:21-6:27: INTEGER
       #typed as INTEGER
-    AbsExprs 7:6-8:5:
+    AbsExprs 7:7-9:7:
       #typed as INTEGER
-      AbsFunCall 7:6-7:14: putInt
-        #typed as VOID
-        AbsAtomConst 7:13-7:13: INTEGER(3)
-          #typed as INTEGER
-      AbsAtomConst 8:5-8:5: INTEGER(3)
+      AbsBinExpr 7:8-7:12: ASSIGN
         #typed as INTEGER
-CODE CHUNK: label=_main
-  FRAME(main: level=1,label=_main,sizeLocs=0,sizeArgs=5,size=13,FP=T0,RV=T1)
+        AbsVarName 7:8-7:8: a
+          #defined at 1:1-1:15
+          #typed as INTEGER
+        AbsAtomConst 7:12-7:12: INTEGER(5)
+          #typed as INTEGER
+      AbsFunCall 8:7-8:15: putInt
+        #typed as VOID
+        AbsVarName 8:14-8:14: a
+          #defined at 1:1-1:15
+          #typed as INTEGER
+      AbsAtomConst 9:7-9:7: INTEGER(3)
+        #typed as INTEGER
+DATA CHUNK: label=_a size=4
+CODE CHUNK: label=_returnInput
+  FRAME(returnInput: level=1,label=_returnInput,sizeLocs=0,sizeArgs=0,size=8,FP=T0,RV=T1)
   SEQ
     MOVE
-      TEMP name=T2
-      CONST value=3
-    MOVE
-      TEMP name=T3
-      CALL label=_Lsys::putInt
-        TEMP name=T2
-    EXP
-      TEMP name=T3
-    MOVE
-      CONST value=3
+      MEM
+        BINOP op=+
+          TEMP name=T0
+          CONST value=4
       TEMP name=T1
+CODE CHUNK: label=_main
+  FRAME(main: level=1,label=_main,sizeLocs=0,sizeArgs=5,size=13,FP=T2,RV=T3)
+  SEQ
+    MOVE
+      MEM
+        NAME label=_a
+      CONST value=5
+    EXP
+      CONST value=5
+    MOVE
+      TEMP name=T4
+      MEM
+        NAME label=_a
+    MOVE
+      TEMP name=T5
+      CALL label=_Lsys::putInt
+        TEMP name=T4
+    EXP
+      TEMP name=T5
+    MOVE
+      CONST value=3
+      TEMP name=T3
