@@ -59,7 +59,7 @@ public class ImcCodeGen implements Visitor {
         nasloviGlobalnih = new HashMap<String, Integer>();
         globCounter = 0;
         
-        scope = -1;
+        scope = 0;
         frames = new Stack<>();
     }    
         
@@ -77,9 +77,10 @@ public class ImcCodeGen implements Visitor {
                
         FrmFrame functionFrame = FrmDesc.getFrame(acceptor);
         ImcMOVE move;
-        move = new ImcMOVE((ImcExpr) code.get(acceptor.expr), new ImcTEMP(functionFrame.RV));
+        //move = new ImcMOVE((ImcExpr) code.get(acceptor.expr), new ImcTEMP(functionFrame.RV));
+        move = new ImcMOVE(new ImcMEM(new ImcTEMP(functionFrame.RV)),(ImcExpr) code.get(acceptor.expr));
         ImcCodeChunk functionCodeChunk = new ImcCodeChunk(functionFrame, move);
-        functionCodeChunk.lincode = move.linear();
+        //functionCodeChunk.lincode = move.linear();
         chunks.add(functionCodeChunk);
         
         linearCode.put(acceptor, move.linear());
@@ -172,29 +173,31 @@ public class ImcCodeGen implements Visitor {
         //Assign
         else if(acceptor.oper == 15){
             //1.  ta varjanta deluje za simple assigne, npr. a = 3.
-            result = new ImcESEQ(new ImcMOVE((ImcExpr) code.get(acceptor.expr1), (ImcExpr) code.get(acceptor.expr2)), (ImcExpr) code.get(acceptor.expr2));
+            if(code.get(acceptor.expr2) instanceof ImcCONST){
+                result = new ImcESEQ(new ImcMOVE((ImcExpr) code.get(acceptor.expr1), (ImcExpr) code.get(acceptor.expr2)), (ImcExpr) code.get(acceptor.expr2));}
 
-            /*
-            //2. ta varjanta naj bi delovala za vse...
-            // Prvo zracunamo naslov elemnta, in ga shranimo v nek temp T
-            ImcTEMP naslovTemp = new ImcTEMP(new FrmTemp());
-            ImcMOVE naslov = new ImcMOVE(naslovTemp, (ImcExpr) code.get(acceptor.expr1));
-            // Potem izračunamo rezultat druge strani, in shranimo v neko drug temp T'
-            ImcTEMP vrednostTemp = new ImcTEMP(new FrmTemp());
-            ImcMOVE vrednost = new ImcMOVE(vrednostTemp, (ImcExpr) code.get(acceptor.expr2));
-            // Vrednost vrednostTemp premaknemo na ciljni naslov
-            ImcMOVE prenos = new ImcMOVE(new ImcMEM(naslovTemp), vrednostTemp);
+            //2. ta varjanta naj bi delovala za vse... ampak še ne, probamo prvo zrihtat za funkcije //TODO: THIS
+            else if(code.get(acceptor.expr2) instanceof ImcCALL){
+                // Prvo zracunamo naslov elemnta, in ga shranimo v nek temp T
+                ImcTEMP naslovTemp = new ImcTEMP(new FrmTemp());
+                ImcMOVE naslov = new ImcMOVE(naslovTemp, (ImcExpr) code.get(acceptor.expr1));
+                // Potem izračunamo rezultat druge strani, in shranimo v neko drug temp T'
+                ImcTEMP vrednostTemp = new ImcTEMP(new FrmTemp());
+                ImcMOVE vrednost = new ImcMOVE(vrednostTemp, (ImcExpr) code.get(acceptor.expr2));
+                // Vrednost vrednostTemp premaknemo na ciljni naslov
+                ImcMOVE prenos = new ImcMOVE(naslovTemp, vrednostTemp);
 
-            //To vse zapakiramo v SEQ
-            ImcSEQ seq = new ImcSEQ();
-            seq.stmts.add(naslov);
-            seq.stmts.add(vrednost);
-            seq.stmts.add(prenos);
+                //To vse zapakiramo v SEQ
+                ImcSEQ seq = new ImcSEQ();
+                seq.stmts.add(naslov);
+                seq.stmts.add(vrednost);
+                seq.stmts.add(prenos);
 
-            // Potem še v ESEQ, katerega expr je vrednost T'. To tudi vrnemo.
-            result = new ImcESEQ(seq, vrednostTemp);
-            */
+                // Potem še v ESEQ, katerega expr je vrednost T'. To tudi vrnemo.
+                ImcESEQ eseq = new ImcESEQ(seq, vrednostTemp);
+                result = new ImcESEQ(new ImcMOVE((ImcExpr) code.get(acceptor.expr1), eseq), vrednostTemp); //TODO: Test
 
+            }
         }
         
         code.put(acceptor, result);
@@ -242,14 +245,15 @@ public class ImcCodeGen implements Visitor {
         
         ImcExpr SL = new ImcCONST(1100110011);
         //Klici na nivo n-1, n-2
-        if(klicanaFunkcija.level > 0){
+        //if(klicanaFunkcija.level > 0){
+        if(razlika < 0){
             SL = new ImcMEM( new ImcTEMP(frames.peek().FP));
             for(int i = 0; i < razlika; i++){
                 SL = new ImcMEM(SL);
             }
         }
         //Klic na nivo n+1
-        else if(klicanaFunkcija.level == -1){
+        else if(razlika == 1){
             SL = new ImcTEMP(FrmDesc.getFrame(acceptor).FP);
         }
         //Na zacetek argumentov dodamo StaticLink

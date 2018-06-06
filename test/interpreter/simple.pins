@@ -11,4 +11,6 @@ fun main(i:integer):integer =
 	  putInt(a),
 	  putInt(b),
 	  putInt(c),
+	  {c = returnInput(3)},
+	  putInt(c),
 	  3) { where var c : integer}

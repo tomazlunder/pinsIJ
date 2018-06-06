@@ -35,8 +35,7 @@ public class MainTest {
 
     private static String testName = "p3";
 
-    //Faze: 
-
+    //Faze:
     public static void main(String[] args) throws Exception {
         String sourceFileName = "test/" + fazaPrev + "/" + pravilnost + "/" + testName + ".pins";
         //sourceFileName = "test/sliva/tipi/test.pins";

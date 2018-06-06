@@ -26,10 +26,10 @@ public class TypeChecker implements Visitor {
     int globPrelet = -1;
     
     //Za primerjanje ATOM Tipov v unarnih in binarnih izrazih.
-    final static SemAtomType LOGICAL = new SemAtomType(0);
-    final static SemAtomType INTEGER = new SemAtomType(1);
-    final static SemAtomType STRING = new SemAtomType(2);
-    final static SemAtomType VOID = new SemAtomType(3);
+    final public static SemAtomType LOGICAL = new SemAtomType(0);
+    final public static SemAtomType INTEGER = new SemAtomType(1);
+    final public static SemAtomType STRING = new SemAtomType(2);
+    final public static SemAtomType VOID = new SemAtomType(3);
 
     AbsDefs original;
     /*
@@ -308,7 +308,13 @@ public class TypeChecker implements Visitor {
 
         //Če je klicana funkcija predefinirana je tipa void
         else if(globPrelet == 4 && Interpreter.isPredefined(acceptor.name)){
-            SymbDesc.setType(acceptor, VOID);
+            switch(acceptor.name){
+                case "putInt": SymbDesc.setType(acceptor,VOID); break;
+                case "getInt": SymbDesc.setType(acceptor,INTEGER); break;
+                case "putString": SymbDesc.setType(acceptor, VOID); break;
+                case "getString": SymbDesc.setType(acceptor, STRING); break;
+                default: Report.error("Predefined function TypeChecker error!");
+            }
         }
     }
     
