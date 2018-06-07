@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb7e99d2-cd24-4109-b71b-80fc523394d9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/pins/compiler/frames/FrmFrame.class" afterPath="$PROJECT_DIR$/out/production/pins/compiler/frames/FrmFrame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/pins/compiler/imcode/ImcCodeGen.class" afterPath="$PROJECT_DIR$/out/production/pins/compiler/imcode/ImcCodeGen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/pins/compiler/interpreter/Interpreter.class" afterPath="$PROJECT_DIR$/out/production/pins/compiler/interpreter/Interpreter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/pins/compiler/seman/TypeChecker.class" afterPath="$PROJECT_DIR$/out/production/pins/compiler/seman/TypeChecker.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/interpreter/math_simple.pins" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/pins/compiler/MainTest.class" afterPath="$PROJECT_DIR$/out/production/pins/compiler/MainTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/MainTest.java" afterPath="$PROJECT_DIR$/src/compiler/MainTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/frames/FrmFrame.java" afterPath="$PROJECT_DIR$/src/compiler/frames/FrmFrame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/imcode/ImcCodeGen.java" afterPath="$PROJECT_DIR$/src/compiler/imcode/ImcCodeGen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/interpreter/Interpreter.java" afterPath="$PROJECT_DIR$/src/compiler/interpreter/Interpreter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/seman/TypeChecker.java" afterPath="$PROJECT_DIR$/src/compiler/seman/TypeChecker.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/interpreter/simple.log" afterPath="$PROJECT_DIR$/test/interpreter/simple.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/interpreter/simple.pins" afterPath="$PROJECT_DIR$/test/interpreter/simple.pins" />
     </list>
@@ -27,22 +22,32 @@
     <window id="1">
       <content type="file-editors">
         <state>
-          <leaf>
-            <file leaf-file-name="simple.pins" pinned="false" current-in-tab="true">
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+            <file leaf-file-name="simple.pins" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/test/interpreter/simple.pins">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="255">
-                    <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+                  <state relative-caret-position="374">
+                    <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
                     <folding />
                   </state>
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="simple.log" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/test/interpreter/simple.log">
+            <file leaf-file-name="math_simple.pins" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/test/interpreter/math_simple.pins">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="388">
-                    <caret line="145" column="27" lean-forward="true" selection-start-line="145" selection-start-column="27" selection-end-line="145" selection-end-column="27" />
+                  <state relative-caret-position="442">
+                    <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="AbsVarDef.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsVarDef.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="578">
+                    <caret line="35" column="51" lean-forward="false" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
                     <folding />
                   </state>
                 </provider>
@@ -55,12 +60,22 @@
     <window id="13">
       <content type="file-editors">
         <state>
-          <leaf>
-            <file leaf-file-name="test.pins.log_org" pinned="false" current-in-tab="true">
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+            <file leaf-file-name="test.pins.log_org" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/test/intellij/seven/test.pins.log_org">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="-3451">
-                    <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+                  <state relative-caret-position="-34">
+                    <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="math_simple.log" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/test/interpreter/math_simple.log">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="-1756">
+                    <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
                     <folding />
                   </state>
                 </provider>
@@ -73,62 +88,107 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/compiler/MainTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="37" column="11" lean-forward="false" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
+            <state relative-caret-position="170">
+              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Interpreter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/compiler/interpreter/Interpreter.java">
+      <file leaf-file-name="ImcSEQ.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcSEQ.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+            <state relative-caret-position="595">
+              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TypeChecker.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/compiler/seman/TypeChecker.java">
+      <file leaf-file-name="AbsFunDef.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsFunDef.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="31" column="17" lean-forward="false" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+            <state relative-caret-position="742">
+              <caret line="70" column="51" lean-forward="false" selection-start-line="70" selection-start-column="51" selection-end-line="70" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FrmFrame.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/compiler/frames/FrmFrame.java">
+      <file leaf-file-name="ImcESEQ.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcESEQ.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="719">
-              <caret line="92" column="60" lean-forward="true" selection-start-line="92" selection-start-column="60" selection-end-line="92" selection-end-column="60" />
+            <state relative-caret-position="629">
+              <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImcCodeGen.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ImcMOVE.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcMOVE.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="634">
+              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImcCodeGen.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcCodeGen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="167" column="60" lean-forward="true" selection-start-line="167" selection-start-column="60" selection-end-line="167" selection-end-column="60" />
+            <state relative-caret-position="647">
+              <caret line="192" column="14" lean-forward="false" selection-start-line="192" selection-start-column="14" selection-end-line="192" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImcCodeChunk.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcCodeChunk.java">
+      <file leaf-file-name="AbsBinExpr.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsBinExpr.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state relative-caret-position="742">
+              <caret line="56" column="51" lean-forward="false" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbsExprs.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsExprs.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding>
+                <element signature="e#792#793#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbsWhere.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsWhere.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="34" column="51" lean-forward="false" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbsDefs.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsDefs.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="799">
+              <caret line="52" column="51" lean-forward="false" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+              <folding>
+                <element signature="e#780#781#0" expanded="true" />
+                <element signature="e#805#806#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -186,11 +246,13 @@
         <option value="$PROJECT_DIR$/src/compiler/frames/FrmEvaluator.java" />
         <option value="$PROJECT_DIR$/src/compiler/seman/TypeChecker.java" />
         <option value="$PROJECT_DIR$/src/compiler/frames/FrmFrame.java" />
-        <option value="$PROJECT_DIR$/test/interpreter/simple.pins" />
         <option value="$PROJECT_DIR$/src/compiler/interpreter/Interpreter.java" />
         <option value="$PROJECT_DIR$/test/interpreter/simple.log" />
-        <option value="$PROJECT_DIR$/src/compiler/imcode/ImcCodeGen.java" />
+        <option value="$PROJECT_DIR$/test/interpreter/simple.pins" />
+        <option value="$PROJECT_DIR$/test/interpreter/functions.pins" />
+        <option value="$PROJECT_DIR$/test/interpreter/math_simple.pins" />
         <option value="$PROJECT_DIR$/src/compiler/MainTest.java" />
+        <option value="$PROJECT_DIR$/src/compiler/imcode/ImcCodeGen.java" />
       </list>
     </option>
   </component>
@@ -222,6 +284,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -256,23 +319,15 @@
               <item name="pins" type="b2602c69:ProjectViewProjectNode" />
               <item name="pins" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="intellij" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pins" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pins" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="intellij" type="462c0819:PsiDirectoryNode" />
-              <item name="seven" type="462c0819:PsiDirectoryNode" />
+              <item name="interpreter" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -415,12 +470,13 @@
       <updated>1528110146393</updated>
       <workItem from="1528110149965" duration="7571000" />
       <workItem from="1528202887405" duration="14230000" />
-      <workItem from="1528284205850" duration="10480000" />
+      <workItem from="1528284205850" duration="11174000" />
+      <workItem from="1528369671069" duration="1614000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32281000" />
+    <option name="totallyTimeSpent" value="34589000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -434,25 +490,25 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26705757" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20735608" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1119403" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15405117" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20682302" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -511,6 +567,18 @@
           <properties />
           <option name="timeStamp" value="33" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/compiler/imcode/ImcCodeGen.java</url>
+          <line>286</line>
+          <properties />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/compiler/imcode/ImcCodeGen.java</url>
+          <line>68</line>
+          <properties />
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/compiler/interpreter/Interpreter.java</url>
           <line>127</line>
@@ -520,7 +588,7 @@
           <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="35" />
+      <option name="time" value="39" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -533,36 +601,13 @@
         <watch expression="((ImcMOVE)instruction).dst" custom="compiler.imcode.ImcMOVE" />
         <watch expression="((HashMap.Node)((HashMap)((Interpreter)this).temps).entrySet().toArray()[4]).getKey()" custom="compiler.interpreter.Interpreter,java.util.HashMap.Node,java.util.HashMap" />
         <watch expression="((ImcMOVE)instruction).dst" custom="compiler.imcode.ImcMOVE" />
+        <watch expression="code.get(acceptor.expr)" language="JAVA" />
+        <watch expression="code.get(acceptor.expr1)" language="JAVA" />
+        <watch expression="code.get(acceptor.expr2)" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/compiler/MainTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/frames/FrmFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsFunCall.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding>
-            <element signature="e#936#937#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcCodeGen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2805">
@@ -608,14 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsFunDef.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1751">
@@ -651,7 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
           <caret line="21" column="36" lean-forward="true" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -696,14 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcMOVE.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="22" column="11" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/classes/compiler/frames/FrmLabel.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -730,7 +758,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5066">
           <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -745,7 +772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -801,7 +827,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="477">
           <caret line="242" column="9" lean-forward="true" selection-start-line="242" selection-start-column="9" selection-end-line="242" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -809,16 +834,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10108#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/intellij/seven/test.pins.log_org">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3451">
-          <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        <state relative-caret-position="-34">
+          <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -833,8 +855,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/frames/FrmFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="719">
-          <caret line="92" column="60" lean-forward="true" selection-start-line="92" selection-start-column="60" selection-end-line="92" selection-end-column="60" />
+        <state relative-caret-position="1496">
+          <caret line="92" column="60" lean-forward="false" selection-start-line="92" selection-start-column="60" selection-end-line="92" selection-end-column="60" />
           <folding />
         </state>
       </provider>
@@ -849,40 +871,141 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/interpreter/Interpreter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcCodeGen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="167" column="60" lean-forward="true" selection-start-line="167" selection-start-column="60" selection-end-line="167" selection-end-column="60" />
+        <state relative-caret-position="1207">
+          <caret line="102" column="53" lean-forward="false" selection-start-line="102" selection-start-column="53" selection-end-line="102" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/interpreter/simple.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="145" column="27" lean-forward="true" selection-start-line="145" selection-start-column="27" selection-end-line="145" selection-end-column="27" />
+        <state relative-caret-position="2703">
+          <caret line="159" column="17" lean-forward="false" selection-start-line="159" selection-start-column="17" selection-end-line="159" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/interpreter/math_simple.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1756">
+          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcEXP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcMOVE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="634">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcESEQ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcSEQ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsFunDef.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="742">
+          <caret line="70" column="51" lean-forward="false" selection-start-line="70" selection-start-column="51" selection-end-line="70" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsWhere.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="34" column="51" lean-forward="false" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/interpreter/simple.pins">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+        <state relative-caret-position="374">
+          <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsVarDef.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="35" column="51" lean-forward="false" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsDefs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="52" column="51" lean-forward="false" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+          <folding>
+            <element signature="e#780#781#0" expanded="true" />
+            <element signature="e#805#806#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsExprs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="e#792#793#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsBinExpr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="742">
+          <caret line="56" column="51" lean-forward="false" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/MainTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="37" column="11" lean-forward="false" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
+        <state relative-caret-position="170">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/interpreter/math_simple.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcCodeGen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="192" column="14" lean-forward="false" selection-start-line="192" selection-start-column="14" selection-end-line="192" selection-end-column="14" />
           <folding />
         </state>
       </provider>

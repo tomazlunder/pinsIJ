@@ -172,32 +172,26 @@ public class ImcCodeGen implements Visitor {
         }
         //Assign
         else if(acceptor.oper == 15){
-            //1.  ta varjanta deluje za simple assigne, npr. a = 3.
-            if(code.get(acceptor.expr2) instanceof ImcCONST){
-                result = new ImcESEQ(new ImcMOVE((ImcExpr) code.get(acceptor.expr1), (ImcExpr) code.get(acceptor.expr2)), (ImcExpr) code.get(acceptor.expr2));}
+            //2. ta varjanta naj bi delovala za vse... :) Zaenkrat kaže da ja
+            // Prvo zracunamo naslov elemnta, in ga shranimo v nek temp T
+            ImcTEMP naslovTemp = new ImcTEMP(new FrmTemp());
+            ImcMOVE naslov = new ImcMOVE(naslovTemp, (ImcExpr) code.get(acceptor.expr1));
+            // Potem izračunamo rezultat druge strani, in shranimo v neko drug temp T'
+            ImcTEMP vrednostTemp = new ImcTEMP(new FrmTemp());
+            ImcMOVE vrednost = new ImcMOVE(vrednostTemp, (ImcExpr) code.get(acceptor.expr2));
+            // Vrednost vrednostTemp premaknemo na ciljni naslov
+            ImcMOVE prenos = new ImcMOVE(naslovTemp, vrednostTemp);
 
-            //2. ta varjanta naj bi delovala za vse... ampak še ne, probamo prvo zrihtat za funkcije //TODO: THIS
-            else if(code.get(acceptor.expr2) instanceof ImcCALL){
-                // Prvo zracunamo naslov elemnta, in ga shranimo v nek temp T
-                ImcTEMP naslovTemp = new ImcTEMP(new FrmTemp());
-                ImcMOVE naslov = new ImcMOVE(naslovTemp, (ImcExpr) code.get(acceptor.expr1));
-                // Potem izračunamo rezultat druge strani, in shranimo v neko drug temp T'
-                ImcTEMP vrednostTemp = new ImcTEMP(new FrmTemp());
-                ImcMOVE vrednost = new ImcMOVE(vrednostTemp, (ImcExpr) code.get(acceptor.expr2));
-                // Vrednost vrednostTemp premaknemo na ciljni naslov
-                ImcMOVE prenos = new ImcMOVE(naslovTemp, vrednostTemp);
+            //To vse zapakiramo v SEQ
+            ImcSEQ seq = new ImcSEQ();
+            seq.stmts.add(naslov);
+            seq.stmts.add(vrednost);
+            seq.stmts.add(prenos);
 
-                //To vse zapakiramo v SEQ
-                ImcSEQ seq = new ImcSEQ();
-                seq.stmts.add(naslov);
-                seq.stmts.add(vrednost);
-                seq.stmts.add(prenos);
-
-                // Potem še v ESEQ, katerega expr je vrednost T'. To tudi vrnemo.
-                ImcESEQ eseq = new ImcESEQ(seq, vrednostTemp);
-                result = new ImcESEQ(new ImcMOVE((ImcExpr) code.get(acceptor.expr1), eseq), vrednostTemp); //TODO: Test
-
-            }
+            // Potem še v ESEQ, katerega expr je vrednost T'.
+            ImcESEQ eseq = new ImcESEQ(seq, vrednostTemp);
+            //
+            result = new ImcESEQ(new ImcMOVE((ImcExpr) code.get(acceptor.expr1), eseq), vrednostTemp);
         }
         
         code.put(acceptor, result);

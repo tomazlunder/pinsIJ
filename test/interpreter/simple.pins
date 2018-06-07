@@ -1,3 +1,10 @@
+#Tests:
+# - assign and usage of global and local variables
+# - usage of parameters
+# - predefined function putInt()
+# - simple function call
+# Expected output: 5 10 15 3
+
 var a : integer;
 var b : integer;
 

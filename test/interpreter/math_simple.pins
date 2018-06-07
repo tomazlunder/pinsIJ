@@ -1,0 +1,32 @@
+#Tests:
+# -
+
+var a : integer;
+var b : integer;
+
+fun add(x:integer, y:integer):integer = (x+y);
+
+fun sub(x:integer, y:integer):integer = (x-y);
+
+fun mul(x:integer, y:integer):integer = (x*y);
+
+fun div(x:integer, y:integer):integer = (x/y);
+
+fun switchAB(x:integer):integer = (
+    {l = a},
+    {a = b},
+    {b = l},
+    1 ) {where var l : integer};
+
+fun main(x:integer):integer = (
+    {a = 10},
+    {b = 20},
+    putInt(add(a,b)),
+    putInt(sub(a,b)),
+    putInt(mul(a,b)),
+    putInt(div(a,b)),
+    putInt(a),
+    switchAB(0),
+    putInt(a),
+    777)
+
