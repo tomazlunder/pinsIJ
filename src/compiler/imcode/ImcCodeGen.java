@@ -290,35 +290,26 @@ public class ImcCodeGen implements Visitor {
 
     @Override
     public void visit(AbsExprs acceptor) {
+        //Pri expressionih vrnemo sekvenco SEQ expressionov, ki jo zapakiramo v ESEQ(SEQ, zadnji expression).
         for(int i = 0; i < acceptor.numExprs(); i++){
             acceptor.expr(i).accept(this);
         }
         ImcSEQ seq = new ImcSEQ();
         ImcExpr expr = null;
         for(int i = 0; i < acceptor.numExprs(); i++){
+            //Če ni zadnji expression
             if(i < acceptor.numExprs()-1){
                 if(code.get(acceptor.expr(i)) instanceof ImcStmt){
                     seq.stmts.add((ImcStmt) code.get(acceptor.expr(i)));
                 } 
                 else {
-                seq.stmts.add(new ImcEXP((ImcExpr) code.get(acceptor.expr(i))));
+                    seq.stmts.add(new ImcEXP((ImcExpr) code.get(acceptor.expr(i))));
                 }
+            //Če je zadnji expression
             }else{
                 AbsExpr lastExpression = acceptor.expr(i);
-                ImcCode lastExpressionCode = code.get(lastExpression); 
-                //TODO: Tukaj je problem da je to v nekaterih primerih Stmt... moral bi pa biti Expr. 
-                /*
-                if(lastExpressionCode instanceof ImcExpr){
-                    expr = (ImcExpr) lastExpressionCode;
-                }
-                else{
-                    seq.stmts.add((ImcStmt) lastExpressionCode);
-                    code.put(acceptor, seq);
-                    return;
-                }
-                */
+                ImcCode lastExpressionCode = code.get(lastExpression);
                 expr = (ImcExpr) lastExpressionCode;
-                     
             }
         }        
         code.put(acceptor, new ImcESEQ(seq, expr));
@@ -354,8 +345,7 @@ public class ImcCodeGen implements Visitor {
         ImcLABEL endLabel = new ImcLABEL(FrmLabel.newLabel());
         
         ImcCJUMP cjump = new ImcCJUMP((ImcExpr) code.get(accpetor.cond), trueLabel.label, falseLabel.label);
-        //TODO: Tha fuck .. je tle spodi ImcEXP prav? idk...
-        
+
         ImcSEQ seq = new ImcSEQ();
         seq.stmts.add(cjump.linear());
         seq.stmts.add(falseLabel);

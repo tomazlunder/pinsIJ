@@ -1,5 +1,7 @@
 #Tests:
-# -
+# - Osnovne matematične operacije (+, -, *, /, %)
+# - Prenos vrednosti med lokalnimi in globalnimi spremenljivkami
+# Pričakovan izhod: 30 10 200 2 0 20 10
 
 var a : integer;
 var b : integer;
@@ -12,6 +14,8 @@ fun mul(x:integer, y:integer):integer = (x*y);
 
 fun div(x:integer, y:integer):integer = (x/y);
 
+fun mod(x:integer, y:integer):integer = (x%y);
+
 fun switchAB(x:integer):integer = (
     {l = a},
     {a = b},
@@ -19,14 +23,15 @@ fun switchAB(x:integer):integer = (
     1 ) {where var l : integer};
 
 fun main(x:integer):integer = (
-    {a = 10},
-    {b = 20},
-    putInt(add(a,b)),
-    putInt(sub(a,b)),
-    putInt(mul(a,b)),
-    putInt(div(a,b)),
-    putInt(a),
+    {a = 20},
+    {b = 10},
+    putInt(add(a,b)), #30
+    putInt(sub(a,b)), #10
+    putInt(mul(a,b)), #200
+    putInt(div(a,b)), #2
+    putInt(mod(a,b)), #0
+    putInt(a),        #20
     switchAB(0),
-    putInt(a),
+    putInt(a),        #10
     777)
 
