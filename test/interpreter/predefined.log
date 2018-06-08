@@ -1,0 +1,218 @@
+AbsDefs 1:1-22:6:
+  AbsVarDef 1:1-1:15: a
+    #typed as INTEGER
+    #accesed as VAR(a: label=_a)
+    AbsAtomType 1:9-1:15: INTEGER
+      #typed as INTEGER
+  AbsVarDef 2:1-2:15: b
+    #typed as INTEGER
+    #accesed as VAR(b: label=_b)
+    AbsAtomType 2:9-2:15: INTEGER
+      #typed as INTEGER
+  AbsFunDef 5:1-7:7: testPutInt
+    #typed as FUN(INTEGER:INTEGER)
+    #framed as FRAME(testPutInt: level=1,label=_testPutInt,sizeLocs=0,sizeArgs=5,size=13,FP=T0,RV=T1)
+    AbsPar 5:16-5:24: x
+      #typed as INTEGER
+      #accesed as PAR(x: offset=4)
+      AbsAtomType 5:18-5:24: INTEGER
+        #typed as INTEGER
+    AbsAtomType 5:27-5:33: INTEGER
+      #typed as INTEGER
+    AbsExprs 6:5-7:5:
+      #typed as INTEGER
+      AbsFunCall 6:5-6:14: putInt
+        #typed as VOID
+        AbsAtomConst 6:12-6:13: INTEGER(33)
+          #typed as INTEGER
+      AbsAtomConst 7:5-7:5: INTEGER(1)
+        #typed as INTEGER
+  AbsFunDef 9:1-15:32: testGetInt
+    #typed as FUN(INTEGER:INTEGER)
+    #framed as FRAME(testGetInt: level=1,label=_testGetInt,sizeLocs=4,sizeArgs=5,size=17,FP=T2,RV=T3)
+    AbsPar 9:16-9:24: x
+      #typed as INTEGER
+      #accesed as PAR(x: offset=4)
+      AbsAtomType 9:18-9:24: INTEGER
+        #typed as INTEGER
+    AbsAtomType 9:27-9:33: INTEGER
+      #typed as INTEGER
+    AbsWhere 15:5-15:32:
+      #typed as INTEGER
+      AbsExprs 10:5-14:5:
+        #typed as INTEGER
+        AbsFunCall 10:5-10:13: getInt
+          #typed as INTEGER
+          AbsVarName 10:12-10:12: a
+            #defined at 1:1-1:15
+            #typed as INTEGER
+        AbsFunCall 11:5-11:13: putInt
+          #typed as VOID
+          AbsVarName 11:12-11:12: a
+            #defined at 1:1-1:15
+            #typed as INTEGER
+        AbsFunCall 12:5-12:17: getInt
+          #typed as INTEGER
+          AbsVarName 12:12-12:16: local
+            #defined at 15:12-15:30
+            #typed as INTEGER
+        AbsFunCall 13:5-13:17: putInt
+          #typed as VOID
+          AbsVarName 13:12-13:16: local
+            #defined at 15:12-15:30
+            #typed as INTEGER
+        AbsAtomConst 14:5-14:5: INTEGER(1)
+          #typed as INTEGER
+      AbsDefs 15:12-15:30:
+        AbsVarDef 15:12-15:30: local
+          #typed as INTEGER
+          #accesed as LOC(local: offset=-4)
+          AbsAtomType 15:24-15:30: INTEGER
+            #typed as INTEGER
+  AbsFunDef 18:1-22:6: main
+    #typed as FUN(INTEGER:INTEGER)
+    #framed as FRAME(main: level=1,label=_main,sizeLocs=0,sizeArgs=8,size=16,FP=T4,RV=T5)
+    AbsPar 18:10-18:18: x
+      #typed as INTEGER
+      #accesed as PAR(x: offset=4)
+      AbsAtomType 18:12-18:18: INTEGER
+        #typed as INTEGER
+    AbsAtomType 18:21-18:27: INTEGER
+      #typed as INTEGER
+    AbsExprs 19:5-22:5:
+      #typed as INTEGER
+      AbsBinExpr 19:6-19:10: ASSIGN
+        #typed as INTEGER
+        AbsVarName 19:6-19:6: a
+          #defined at 1:1-1:15
+          #typed as INTEGER
+        AbsAtomConst 19:10-19:10: INTEGER(0)
+          #typed as INTEGER
+      AbsFunCall 20:5-20:17: testPutInt
+        #defined at 5:1-7:7
+        #typed as INTEGER
+        AbsAtomConst 20:16-20:16: INTEGER(1)
+          #typed as INTEGER
+      AbsFunCall 21:5-21:17: testGetInt
+        #defined at 9:1-15:32
+        #typed as INTEGER
+        AbsAtomConst 21:16-21:16: INTEGER(1)
+          #typed as INTEGER
+      AbsAtomConst 22:5-22:5: INTEGER(1)
+        #typed as INTEGER
+DATA CHUNK: label=_a size=4
+DATA CHUNK: label=_b size=4
+CODE CHUNK: label=_testPutInt
+  FRAME(testPutInt: level=1,label=_testPutInt,sizeLocs=0,sizeArgs=5,size=13,FP=T0,RV=T1)
+  SEQ
+    MOVE
+      TEMP name=T6
+      CONST value=33
+    MOVE
+      TEMP name=T7
+      CALL label=_Lsys::putInt
+        TEMP name=T6
+    EXP
+      TEMP name=T7
+    MOVE
+      MEM
+        TEMP name=T1
+      CONST value=1
+CODE CHUNK: label=_testGetInt
+  FRAME(testGetInt: level=1,label=_testGetInt,sizeLocs=4,sizeArgs=5,size=17,FP=T2,RV=T3)
+  SEQ
+    MOVE
+      TEMP name=T12
+      NAME label=_a
+    MOVE
+      TEMP name=T13
+      CALL label=_Lsys::getInt
+        TEMP name=T12
+    EXP
+      TEMP name=T13
+    MOVE
+      TEMP name=T14
+      MEM
+        NAME label=_a
+    MOVE
+      TEMP name=T15
+      CALL label=_Lsys::putInt
+        TEMP name=T14
+    EXP
+      TEMP name=T15
+    MOVE
+      TEMP name=T16
+      BINOP op=+
+        TEMP name=T2
+        CONST value=-4
+    MOVE
+      TEMP name=T17
+      CALL label=_Lsys::getInt
+        TEMP name=T16
+    EXP
+      TEMP name=T17
+    MOVE
+      TEMP name=T18
+      MEM
+        BINOP op=+
+          TEMP name=T2
+          CONST value=-4
+    MOVE
+      TEMP name=T19
+      CALL label=_Lsys::putInt
+        TEMP name=T18
+    EXP
+      TEMP name=T19
+    MOVE
+      MEM
+        TEMP name=T3
+      CONST value=1
+CODE CHUNK: label=_main
+  FRAME(main: level=1,label=_main,sizeLocs=0,sizeArgs=8,size=16,FP=T4,RV=T5)
+  SEQ
+    MOVE
+      TEMP name=T36
+      MEM
+        NAME label=_a
+    MOVE
+      TEMP name=T37
+      CONST value=0
+    MOVE
+      TEMP name=T36
+      TEMP name=T37
+    MOVE
+      MEM
+        NAME label=_a
+      TEMP name=T37
+    EXP
+      TEMP name=T37
+    MOVE
+      TEMP name=T38
+      CONST value=1100110011
+    MOVE
+      TEMP name=T39
+      CONST value=1
+    MOVE
+      TEMP name=T40
+      CALL label=_testPutInt
+        TEMP name=T38
+        TEMP name=T39
+    EXP
+      TEMP name=T40
+    MOVE
+      TEMP name=T41
+      CONST value=1100110011
+    MOVE
+      TEMP name=T42
+      CONST value=1
+    MOVE
+      TEMP name=T43
+      CALL label=_testGetInt
+        TEMP name=T41
+        TEMP name=T42
+    EXP
+      TEMP name=T43
+    MOVE
+      MEM
+        TEMP name=T5
+      CONST value=1

@@ -1,0 +1,22 @@
+var a : integer;
+var b : integer;
+
+
+fun testPutInt(x:integer):integer = (
+    putInt(33),
+    1);
+
+fun testGetInt(x:integer):integer = (
+    getInt(a),
+    putInt(a),
+    getInt(local),
+    putInt(local),
+    1)
+    {where var local : integer};
+
+
+fun main(x:integer):integer = (
+    {a = 0},
+    testPutInt(1),
+    testGetInt(1),
+    1)

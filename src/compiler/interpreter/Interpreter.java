@@ -185,8 +185,9 @@ public class Interpreter {
             }
             if (instr.label.name().equals("_Lsys::getInt")) {
                 Scanner scanner = new Scanner(System.in);
-                stM((Integer) ldM(sp + 4), scanner.nextInt());
-                return null;
+                int input = scanner.nextInt();
+                execute(new ImcMOVE(new ImcMEM(((ImcCALL) instruction).args.get(0)),new ImcCONST(input)));
+                return 6666;
             }
             if (instr.label.name().equals("_Lsys::putString")) {
                 System.out.println((String) ldM(sp + 4));

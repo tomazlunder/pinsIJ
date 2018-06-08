@@ -249,6 +249,14 @@ public class ImcCodeGen implements Visitor {
         if(Interpreter.isPredefined(acceptor.name)){
             ImcCALL call = new ImcCALL(FrmLabel.newLabel("Lsys::"+acceptor.name));
             call.args.addAll(args); //Predefinirani funkciji dodamo argumente
+
+            if(acceptor.name.equals("getInt")){
+                if(!(acceptor.arg(0) instanceof AbsVarName)) Report.error("Argument of getInt must be local/global variable name.");
+
+                call.args.set(0, (ImcExpr) getVariableAddress((AbsVarName) acceptor.arg(0)));
+            }
+
+
             code.put(acceptor,call);
             return;
         }
@@ -473,5 +481,37 @@ public class ImcCodeGen implements Visitor {
     @Override
     public void visit(AbsArrType acceptor) {
         //Mislim da nic
+    }
+
+    public ImcCode getVariableAddress(AbsVarName acceptor){
+        ImcCode result = null;
+        //Preleta vsega ni, ker je samo AbsType
+
+        FrmAccess access = FrmDesc.getAccess(SymbDesc.getNameDef(acceptor));
+        //Globalna
+        if(access instanceof FrmVarAccess){
+            result = new ImcNAME(((FrmVarAccess)access).label);
+        }
+        //Lokalna
+        else if (access instanceof FrmLocAccess){
+            FrmLocAccess locAccess = (FrmLocAccess) access;
+            // trenutni nivo - nivo definicije = razlika v nivojih (scope)
+            //int razlika = scope - SymbDesc.getScope(locAccess.var);
+            int razlika = scope - locAccess.frame.level;
+
+            ImcExpr leftSide = new ImcTEMP(frames.peek().FP);
+            for(int i = 0; i < razlika; i++){
+                leftSide = new ImcMEM(leftSide);
+            }
+
+            ImcBINOP binop = new ImcBINOP(ImcBINOP.ADD,(ImcExpr) leftSide, new ImcCONST(locAccess.offset));
+            result = binop;
+        }
+        //Parameter
+        else if (access instanceof FrmParAccess){
+            Report.error("Cannot write input into function parameter.");
+        }
+
+        return result;
     }
 }

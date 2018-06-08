@@ -4,4 +4,17 @@ typ log : logical;
 
 fun negate(input:logical):log = ( !input );
 
-fun 
+fun logicalOps(x:integer):integer = (
+    {if (3>10) then putInt(0) else putInt(1)},
+    {if (10>3) then putInt(1) else putInt(0)},
+    {if (10>10) then putInt(0) else putInt(1)},
+    3);
+
+fun main(x:int2):int = (
+    {if (negate(true) == true) then putInt(0) else putInt(10)},
+    {if (negate(false) == true) then putInt(0) else putInt(10)},
+    logicalOps(0),
+    {local = 10},
+    local ) {where var local : int3};
+
+typ int3 : int2

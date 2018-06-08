@@ -1,101 +1,101 @@
-AbsDefs 8:1-23:33:
-  AbsVarDef 8:1-8:15: a
+AbsDefs 7:1-22:33:
+  AbsVarDef 7:1-7:15: a
     #typed as INTEGER
     #accesed as VAR(a: label=_a)
-    AbsAtomType 8:9-8:15: INTEGER
+    AbsAtomType 7:9-7:15: INTEGER
       #typed as INTEGER
-  AbsVarDef 9:1-9:15: b
+  AbsVarDef 8:1-8:15: b
     #typed as INTEGER
     #accesed as VAR(b: label=_b)
-    AbsAtomType 9:9-9:15: INTEGER
+    AbsAtomType 8:9-8:15: INTEGER
       #typed as INTEGER
-  AbsFunDef 11:1-12:8: returnInput
+  AbsFunDef 10:1-11:8: returnInput
     #typed as FUN(INTEGER:INTEGER)
     #framed as FRAME(returnInput: level=1,label=_returnInput,sizeLocs=0,sizeArgs=0,size=8,FP=T0,RV=T1)
-    AbsPar 11:17-11:25: x
+    AbsPar 10:17-10:25: x
       #typed as INTEGER
       #accesed as PAR(x: offset=4)
-      AbsAtomType 11:19-11:25: INTEGER
+      AbsAtomType 10:19-10:25: INTEGER
         #typed as INTEGER
-    AbsAtomType 11:28-11:34: INTEGER
+    AbsAtomType 10:28-10:34: INTEGER
       #typed as INTEGER
-    AbsExprs 12:6-12:6:
+    AbsExprs 11:6-11:6:
       #typed as INTEGER
-      AbsVarName 12:6-12:6: x
-        #defined at 11:17-11:25
+      AbsVarName 11:6-11:6: x
+        #defined at 10:17-10:25
         #typed as INTEGER
-  AbsFunDef 14:1-23:33: main
+  AbsFunDef 13:1-22:33: main
     #typed as FUN(INTEGER:INTEGER)
     #framed as FRAME(main: level=1,label=_main,sizeLocs=4,sizeArgs=8,size=20,FP=T2,RV=T3)
-    AbsPar 14:10-14:18: i
+    AbsPar 13:10-13:18: i
       #typed as INTEGER
       #accesed as PAR(i: offset=4)
-      AbsAtomType 14:12-14:18: INTEGER
+      AbsAtomType 13:12-13:18: INTEGER
         #typed as INTEGER
-    AbsAtomType 14:21-14:27: INTEGER
+    AbsAtomType 13:21-13:27: INTEGER
       #typed as INTEGER
-    AbsWhere 23:10-23:33:
+    AbsWhere 22:10-22:33:
       #typed as INTEGER
-      AbsExprs 15:7-23:7:
+      AbsExprs 14:7-22:7:
         #typed as INTEGER
-        AbsBinExpr 15:8-15:12: ASSIGN
+        AbsBinExpr 14:8-14:12: ASSIGN
           #typed as INTEGER
-          AbsVarName 15:8-15:8: a
+          AbsVarName 14:8-14:8: a
+            #defined at 7:1-7:15
+            #typed as INTEGER
+          AbsAtomConst 14:12-14:12: INTEGER(5)
+            #typed as INTEGER
+        AbsBinExpr 15:8-15:13: ASSIGN
+          #typed as INTEGER
+          AbsVarName 15:8-15:8: b
             #defined at 8:1-8:15
             #typed as INTEGER
-          AbsAtomConst 15:12-15:12: INTEGER(5)
+          AbsAtomConst 15:12-15:13: INTEGER(10)
             #typed as INTEGER
         AbsBinExpr 16:8-16:13: ASSIGN
           #typed as INTEGER
-          AbsVarName 16:8-16:8: b
-            #defined at 9:1-9:15
+          AbsVarName 16:8-16:8: c
+            #defined at 22:18-22:32
             #typed as INTEGER
-          AbsAtomConst 16:12-16:13: INTEGER(10)
+          AbsAtomConst 16:12-16:13: INTEGER(15)
             #typed as INTEGER
-        AbsBinExpr 17:8-17:13: ASSIGN
-          #typed as INTEGER
-          AbsVarName 17:8-17:8: c
-            #defined at 23:18-23:32
-            #typed as INTEGER
-          AbsAtomConst 17:12-17:13: INTEGER(15)
+        AbsFunCall 17:7-17:15: putInt
+          #typed as VOID
+          AbsVarName 17:14-17:14: a
+            #defined at 7:1-7:15
             #typed as INTEGER
         AbsFunCall 18:7-18:15: putInt
           #typed as VOID
-          AbsVarName 18:14-18:14: a
+          AbsVarName 18:14-18:14: b
             #defined at 8:1-8:15
             #typed as INTEGER
         AbsFunCall 19:7-19:15: putInt
           #typed as VOID
-          AbsVarName 19:14-19:14: b
-            #defined at 9:1-9:15
+          AbsVarName 19:14-19:14: c
+            #defined at 22:18-22:32
             #typed as INTEGER
-        AbsFunCall 20:7-20:15: putInt
-          #typed as VOID
-          AbsVarName 20:14-20:14: c
-            #defined at 23:18-23:32
-            #typed as INTEGER
-        AbsBinExpr 21:8-21:25: ASSIGN
+        AbsBinExpr 20:8-20:25: ASSIGN
           #typed as INTEGER
-          AbsVarName 21:8-21:8: c
-            #defined at 23:18-23:32
+          AbsVarName 20:8-20:8: c
+            #defined at 22:18-22:32
             #typed as INTEGER
-          AbsFunCall 21:12-21:25: returnInput
-            #defined at 11:1-12:8
+          AbsFunCall 20:12-20:25: returnInput
+            #defined at 10:1-11:8
             #typed as INTEGER
-            AbsAtomConst 21:24-21:24: INTEGER(3)
+            AbsAtomConst 20:24-20:24: INTEGER(3)
               #typed as INTEGER
-        AbsFunCall 22:7-22:15: putInt
+        AbsFunCall 21:7-21:15: putInt
           #typed as VOID
-          AbsVarName 22:14-22:14: c
-            #defined at 23:18-23:32
+          AbsVarName 21:14-21:14: c
+            #defined at 22:18-22:32
             #typed as INTEGER
-        AbsAtomConst 23:7-23:7: INTEGER(3)
+        AbsAtomConst 22:7-22:7: INTEGER(3)
           #typed as INTEGER
-      AbsDefs 23:18-23:32:
-        AbsVarDef 23:18-23:32: c
+      AbsDefs 22:18-22:32:
+        AbsVarDef 22:18-22:32: c
           #typed as INTEGER
           #accesed as LOC(c: offset=-4)
-          AbsAtomType 23:26-23:32: INTEGER
+          AbsAtomType 22:26-22:32: INTEGER
             #typed as INTEGER
 DATA CHUNK: label=_a size=4
 DATA CHUNK: label=_b size=4

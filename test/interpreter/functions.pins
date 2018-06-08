@@ -1,3 +1,8 @@
+#Tests:
+# - Nested functions
+# - Nested functions using local and global variables
+# Expected output: 30, -10, 99, 76
+
 var a : integer;
 var b : integer;
 
@@ -29,8 +34,3 @@ fun main(x:integer):integer =  (
     f1(a,b),
     f2(a),
     777)
-
-#Tests:
-# - Gnezdene funkcije
-# - Gnezdene funkcije ki uporabljajo lokalne spr. starša in globalne spr.
-# Pričakovan izhod: 30, -10, 99, 76
