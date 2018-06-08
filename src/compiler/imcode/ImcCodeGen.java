@@ -409,26 +409,33 @@ public class ImcCodeGen implements Visitor {
         acceptor.lo.accept(this);
         acceptor.step.accept(this);
         acceptor.body.accept(this);
-        
-        ImcTEMP counter = new ImcTEMP(new FrmTemp());
-        ImcMOVE init = new ImcMOVE(new ImcMEM(counter),(ImcExpr) code.get(acceptor.lo));
-        
+        acceptor.count.accept(this);
+
+
+        ImcMEM counter = (ImcMEM) code.get(acceptor.count);
+        ImcMOVE init = new ImcMOVE(counter,(ImcExpr) code.get(acceptor.lo));
+
+
         ImcLABEL startLabel = new ImcLABEL(FrmLabel.newLabel());
-        ImcBINOP condition = new ImcBINOP(ImcBINOP.LEQ, counter, (ImcExpr) code.get(acceptor.hi));
         ImcLABEL trueLabel = new ImcLABEL(FrmLabel.newLabel());
-        //Stavek
-        ImcMOVE increment = new ImcMOVE(counter,new ImcBINOP(ImcBINOP.ADD, counter, (ImcExpr) code.get(acceptor.step)));
-        ImcJUMP jump = new ImcJUMP(startLabel.label);
         ImcLABEL endLabel = new ImcLABEL(FrmLabel.newLabel());
-        
+
+        ImcBINOP condition = new ImcBINOP(ImcBINOP.LEQ, counter, (ImcExpr) code.get(acceptor.hi));
+
+        ImcMOVE increment = new ImcMOVE(counter, new ImcBINOP(ImcBINOP.ADD, counter, (ImcExpr) code.get(acceptor.step)));
+
+
         ImcCJUMP cjump = new ImcCJUMP(condition, trueLabel.label,endLabel.label);
-        
+        ImcJUMP jump = new ImcJUMP(startLabel.label);
+
+
         ImcSEQ seq = new ImcSEQ();
         seq.stmts.add(init);
         seq.stmts.add(startLabel);
         seq.stmts.add(cjump);
         seq.stmts.add(trueLabel);
         seq.stmts.add(new ImcEXP((ImcExpr) code.get(acceptor.body)));
+        seq.stmts.add(increment);
         seq.stmts.add(jump);
         seq.stmts.add(endLabel);
         
