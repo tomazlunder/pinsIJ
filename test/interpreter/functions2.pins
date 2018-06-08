@@ -1,0 +1,30 @@
+var a : integer;
+var b : integer;
+
+fun f0(x:integer):integer = (
+     {a = a + 1},
+     putInt(a),
+    { if (a < 5) then (g(10)) else (putInt(10)) },
+    666);
+
+fun f1(x:integer):integer = (
+    putInt(f2(0) * g2(0)),
+    3)
+    { where
+        fun g1(x:integer):integer = (-1);
+        fun g2(x:integer):integer = (g1(0) * f2(0))
+     };
+
+fun f2(x:integer):integer = (10);
+
+fun main(x:integer):integer = (
+    {a = 0},
+    f0(0),
+    f1(0),
+    777)
+
+#Tests:
+# - f0: rekurzija, if then else stavek
+# - f1: klice notranjo funkcijo (g2) in funkcijo na istem nivoju (f2)
+# - g2: klice zunanjo funkcijo (f2) in funkcijo na istem nivoju (g1)
+# Expected output: 1 2 3 4 5 10 -100

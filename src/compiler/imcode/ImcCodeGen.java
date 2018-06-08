@@ -259,34 +259,19 @@ public class ImcCodeGen implements Visitor {
         //int nivoDefinicije = SymbDesc.getScope(SymbDesc.getNameDef(acceptor));
         int razlika = scope - klicanaFunkcija.level;
 
+        //TODO: Tle je mogoce mal zmeda ki se pol prepise...
         ImcExpr SL = new ImcCONST(1100110011);
 
         //Klici na nivo n-1, n-2
         //if(klicanaFunkcija.level > 0){
         if(razlika < 0){
-            //SL = new ImcMEM( new ImcTEMP(frames.peek().FP));
             SL = new ImcMEM(new ImcTEMP(staticLinksByLabel.get(klicanaFunkcija.label.name())));
-
-            /*
-            //TODO: Testing this
-            ImcTEMP temp;
-            if(staticLinksByLabel.containsKey(klicanaFunkcija)){
-                temp = new ImcTEMP(staticLinksByLabel.get(klicanaFunkcija));
-            } else {
-                temp = new ImcTEMP(frames.peek().FP);
-            }
-            SL = new ImcMEM(temp); //TODO: To here
-            */
 
             for(int i = 0; i < razlika; i++){
                 SL = new ImcMEM(SL);
             }
         }
-        //Klic na nivo n+1
-        else if(razlika == 1){
-            SL = new ImcTEMP(FrmDesc.getFrame(acceptor).FP);
-        }
-        //Na zacetek argumentov dodamo StaticLink
+
         args.addFirst(SL);
         
         ImcCALL call = new ImcCALL(klicanaFunkcija.label);
@@ -407,6 +392,7 @@ public class ImcCodeGen implements Visitor {
         ImcCJUMP cjump = new ImcCJUMP((ImcExpr) code.get(acceptor.cond),trueLabel.label, endLabel.label);
         
         ImcSEQ seq = new ImcSEQ();
+        seq.stmts.add(startLabel);
         seq.stmts.add(cjump.linear());
         seq.stmts.add(trueLabel);
         seq.stmts.add(new ImcEXP((ImcExpr) code.get(acceptor.body)));

@@ -1,0 +1,197 @@
+AbsDefs 1:1-9:6:
+  AbsFunDef 1:1-5:28: whileFun
+    #typed as FUN(INTEGER,INTEGER:INTEGER)
+    #framed as FRAME(whileFun: level=1,label=_whileFun,sizeLocs=4,sizeArgs=5,size=17,FP=T0,RV=T1)
+    AbsPar 1:14-1:22: x
+      #typed as INTEGER
+      #accesed as PAR(x: offset=4)
+      AbsAtomType 1:16-1:22: INTEGER
+        #typed as INTEGER
+    AbsPar 1:25-1:33: y
+      #typed as INTEGER
+      #accesed as PAR(y: offset=8)
+      AbsAtomType 1:27-1:33: INTEGER
+        #typed as INTEGER
+    AbsAtomType 1:36-1:42: INTEGER
+      #typed as INTEGER
+    AbsWhere 5:5-5:28:
+      #typed as INTEGER
+      AbsExprs 2:5-4:5:
+        #typed as INTEGER
+        AbsBinExpr 2:6-2:10: ASSIGN
+          #typed as INTEGER
+          AbsVarName 2:6-2:6: a
+            #defined at 5:12-5:26
+            #typed as INTEGER
+          AbsVarName 2:10-2:10: x
+            #defined at 1:14-1:22
+            #typed as INTEGER
+        AbsWhileName 3:6-3:41:
+          #typed as VOID
+          AbsExprs 3:13-3:17:
+            #typed as LOGICAL
+            AbsBinExpr 3:13-3:17: LTH
+              #typed as LOGICAL
+              AbsVarName 3:13-3:13: a
+                #defined at 5:12-5:26
+                #typed as INTEGER
+              AbsVarName 3:17-3:17: y
+                #defined at 1:25-1:33
+                #typed as INTEGER
+          AbsExprs 3:23-3:41:
+            #typed as INTEGER
+            AbsFunCall 3:23-3:31: putInt
+              #typed as VOID
+              AbsVarName 3:30-3:30: a
+                #defined at 5:12-5:26
+                #typed as INTEGER
+            AbsBinExpr 3:35-3:41: ASSIGN
+              #typed as INTEGER
+              AbsVarName 3:35-3:35: a
+                #defined at 5:12-5:26
+                #typed as INTEGER
+              AbsBinExpr 3:39-3:41: ADD
+                #typed as INTEGER
+                AbsVarName 3:39-3:39: a
+                  #defined at 5:12-5:26
+                  #typed as INTEGER
+                AbsAtomConst 3:41-3:41: INTEGER(1)
+                  #typed as INTEGER
+        AbsAtomConst 4:5-4:5: INTEGER(0)
+          #typed as INTEGER
+      AbsDefs 5:12-5:26:
+        AbsVarDef 5:12-5:26: a
+          #typed as INTEGER
+          #accesed as LOC(a: offset=-4)
+          AbsAtomType 5:20-5:26: INTEGER
+            #typed as INTEGER
+  AbsFunDef 7:1-9:6: main
+    #typed as FUN(INTEGER:INTEGER)
+    #framed as FRAME(main: level=1,label=_main,sizeLocs=0,sizeArgs=12,size=20,FP=T2,RV=T3)
+    AbsPar 7:10-7:18: x
+      #typed as INTEGER
+      #accesed as PAR(x: offset=4)
+      AbsAtomType 7:12-7:18: INTEGER
+        #typed as INTEGER
+    AbsAtomType 7:21-7:27: INTEGER
+      #typed as INTEGER
+    AbsExprs 8:5-9:5:
+      #typed as INTEGER
+      AbsFunCall 8:5-8:17: whileFun
+        #defined at 1:1-5:28
+        #typed as INTEGER
+        AbsAtomConst 8:14-8:14: INTEGER(1)
+          #typed as INTEGER
+        AbsAtomConst 8:16-8:16: INTEGER(5)
+          #typed as INTEGER
+      AbsAtomConst 9:5-9:5: INTEGER(1)
+        #typed as INTEGER
+CODE CHUNK: label=_whileFun
+  FRAME(whileFun: level=1,label=_whileFun,sizeLocs=4,sizeArgs=5,size=17,FP=T0,RV=T1)
+  SEQ
+    MOVE
+      TEMP name=T4
+      MEM
+        BINOP op=+
+          TEMP name=T0
+          CONST value=-4
+    MOVE
+      TEMP name=T5
+      MEM
+        BINOP op=+
+          TEMP name=T0
+          CONST value=4
+    MOVE
+      TEMP name=T4
+      TEMP name=T5
+    MOVE
+      MEM
+        BINOP op=+
+          TEMP name=T0
+          CONST value=-4
+      TEMP name=T5
+    EXP
+      TEMP name=T5
+    LABEL label=L0
+    CJUMP labels=L1,L4
+      BINOP op=<
+        MEM
+          BINOP op=+
+            TEMP name=T0
+            CONST value=-4
+        MEM
+          BINOP op=+
+            TEMP name=T0
+            CONST value=8
+    LABEL label=L4
+    JUMP label=L3
+    LABEL label=L3
+    JUMP label=L2
+    LABEL label=L1
+    MOVE
+      TEMP name=T8
+      MEM
+        BINOP op=+
+          TEMP name=T0
+          CONST value=-4
+    MOVE
+      TEMP name=T9
+      CALL label=_Lsys::putInt
+        TEMP name=T8
+    EXP
+      TEMP name=T9
+    MOVE
+      TEMP name=T6
+      MEM
+        BINOP op=+
+          TEMP name=T0
+          CONST value=-4
+    MOVE
+      TEMP name=T7
+      BINOP op=+
+        MEM
+          BINOP op=+
+            TEMP name=T0
+            CONST value=-4
+        CONST value=1
+    MOVE
+      TEMP name=T6
+      TEMP name=T7
+    MOVE
+      MEM
+        BINOP op=+
+          TEMP name=T0
+          CONST value=-4
+      TEMP name=T7
+    EXP
+      TEMP name=T7
+    JUMP label=L0
+    LABEL label=L2
+    MOVE
+      MEM
+        TEMP name=T1
+      CONST value=0
+CODE CHUNK: label=_main
+  FRAME(main: level=1,label=_main,sizeLocs=0,sizeArgs=12,size=20,FP=T2,RV=T3)
+  SEQ
+    MOVE
+      TEMP name=T14
+      CONST value=1100110011
+    MOVE
+      TEMP name=T15
+      CONST value=1
+    MOVE
+      TEMP name=T16
+      CONST value=5
+    MOVE
+      TEMP name=T17
+      CALL label=_whileFun
+        TEMP name=T14
+        TEMP name=T15
+        TEMP name=T16
+    EXP
+      TEMP name=T17
+    MOVE
+      MEM
+        TEMP name=T3
+      CONST value=1

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package compiler;
 
 import compiler.abstr.tree.AbsDef;
@@ -12,48 +7,51 @@ import compiler.frames.Frames;
 import compiler.frames.FrmDesc;
 import compiler.frames.FrmEvaluator;
 import compiler.frames.FrmFrame;
-import compiler.imcode.*;
+import compiler.imcode.ImCode;
+import compiler.imcode.ImcCONST;
+import compiler.imcode.ImcCodeGen;
 import compiler.interpreter.Interpreter;
-import compiler.lexan.*;
+import compiler.lexan.LexAn;
+import compiler.lexan.Token;
 import compiler.seman.NameChecker;
 import compiler.seman.SemAn;
 import compiler.seman.SymbTable;
 import compiler.seman.TypeChecker;
 import compiler.synan.SynAn;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
-/**
- * @author Tomaz Lunder
- */
+import java.io.ByteArrayOutputStream;
+import java.io.FileDescriptor;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
 
-public class MainTest {
+public class UnitTests {
 
-    //private static String fazaPrev = "lexan";
-    private static String fazaPrev = "synan";
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
+    private final String pre = "TEST: Konec lex\nTEST: Konec syn\nTEST: Abst drevo zgrajeno\nTEST: Seman imena ok\nTEST: Seman tipi ok\nTEST: Frames constructed\nTEST: Intermediatecode chunkified\n";
 
-    //private static String pravilnost = "pravilni";
-    private static String pravilnost = "pravilni";
+    @Test
+    public void basicTest() throws Exception{
+        String fileName = "test/interpreter/simple.pins";
+        captureOut();
+        run(fileName);
 
-    private static String testName = "p3";
+        String output = getOut();
+        String expected = pre
+        + "5\n"
+        + "10\n"
+        + "15\n"
+        + "3\n";
 
-    //Faze:
-    public static void main(String[] args) throws Exception {
-        String sourceFileName = "test/" + fazaPrev + "/" + pravilnost + "/" + testName + ".pins";
-        //sourceFileName = "test/sliva/tipi/test.pins";
-        //sourceFileName = "test/v2/koda/test1.pins";
-        //sourceFileName = "test/intellij/seven/test.pins";
-
-        //sourceFileName = "test/interpreter/simple.pins";
-        //sourceFileName = "test/interpreter/math_simple.pins";
-        //sourceFileName = "test/interpreter/functions.pins";
-        //sourceFileName = "test/interpreter/functions2.pins";
-        sourceFileName = "test/interpreter/loops.pins";
-
+        Assertions.assertEquals(expected,output);
+    }
 
 
+    public static void run(String sourceFileName) throws Exception {
         boolean interpret = true;
         boolean interpretDbg = false;
-
-        Report.openDumpFile(sourceFileName);
 
         //Lexan - 0
         LexAn lexAn = new LexAn(sourceFileName, false);
@@ -79,7 +77,7 @@ public class MainTest {
         lexAn = new LexAn(sourceFileName, false);
         synAn = new SynAn(lexAn, false);
         source = synAn.parse();
-        SemAn semAn = new SemAn(true);
+        SemAn semAn = new SemAn(false);
         source.accept(new NameChecker());
         //semAn.dump(source);
         //Report.closeDumpFile();
@@ -92,14 +90,14 @@ public class MainTest {
         System.out.printf("TEST: Seman tipi ok\n");
 
         // Klicni zapisi - 5
-        Frames frames = new Frames(true);
+        Frames frames = new Frames(false);
         source.accept(new FrmEvaluator());
         frames.dump(source);
 
         System.out.printf("TEST: Frames constructed\n");
 
 
-        ImCode imcode = new ImCode(true);
+        ImCode imcode = new ImCode(false);
         ImcCodeGen imcodegen = new ImcCodeGen();
         source.accept(imcodegen);
         imcode.dump(imcodegen.chunks);
@@ -108,8 +106,9 @@ public class MainTest {
 
         //**INTERPRETER TESTING**//
         if (interpret) {
-            //Najde definicijo funkcije main ali pa konča izvajanje, če definicije ne najde
+            Interpreter.debug = false;
 
+            //Najde definicijo funkcije main ali pa konča izvajanje, če definicije ne najde
             AbsDef mainDef = SymbTable.fnd("main");
 
             //Če definicija ni funkcija (npr. globalana spremenljiva)
@@ -119,14 +118,47 @@ public class MainTest {
             //Najde okvir funkcije main
             FrmFrame mainFrame = FrmDesc.getFrame((AbsFunDef) mainDef);
 
-            Interpreter.debug = interpretDbg;
-
             //Argument main funkcije nastavimo na 0 (1000 - začetna vrednost FP, FP+4 naj bi bil prvi argument main funkcije)
             Interpreter.stM(1000 + 4, new ImcCONST(0));
 
             new Interpreter(mainFrame, ImcCodeGen.linearCode.get(mainDef));
         }
+    }
 
-        Report.closeDumpFile();
+    /**
+     * Turns on stdOut output capture
+     */
+    private void captureOut() {
+        System.setOut( new PrintStream( outContent ) );
+    }
+
+    /**
+     * Turns on stdErr output capture
+     */
+    private void captureErr() {
+        System.setErr( new PrintStream( errContent ) );
+    }
+
+    /**
+     * Turns off stdOut capture and returns the contents
+     * that have been captured
+     *
+     * @return
+     */
+    private String getOut() {
+        System.setOut( new PrintStream( new FileOutputStream( FileDescriptor.out ) ) );
+        return outContent.toString().replaceAll( "\r", "" );
+
+    }
+
+    /**
+     * Turns off stdErr capture and returns the contents
+     * that have been captured
+     *
+     * @return
+     */
+    private String getErr() {
+        System.setErr( new PrintStream( new FileOutputStream( FileDescriptor.out ) ) );
+        return errContent.toString().replaceAll( "\r", "" );
     }
 }
