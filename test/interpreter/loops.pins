@@ -1,6 +1,6 @@
 fun whileFun(x:integer, y:integer):integer = (
     {a = x},
-    {while (a < y) : (putInt(a), {a = a+1})},
+    {while (a <= y) : (putInt(a), {a = a+1})},
     0)
     {where var a : integer};
 
@@ -10,6 +10,6 @@ fun forFun(x:integer, y:integer):integer = (
     {where var a : integer};
 
 fun main(x:integer):integer = (
-    #whileFun(1,5),
+    whileFun(1,5),
     forFun(1,5),
     1)

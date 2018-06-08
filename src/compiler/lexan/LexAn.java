@@ -18,6 +18,8 @@ public class LexAn {
     private BufferedReader br;
     private int line, column;
 
+    private boolean just13;
+
     /**
      * Ustvari nov leksikalni analizator.
      *
@@ -32,6 +34,8 @@ public class LexAn {
         this.dump = dump;
         this.line = 1;
         this.column = 0;
+
+        this.just13 = false;
     }
 
     /**
@@ -66,6 +70,7 @@ public class LexAn {
                 this.column += 3;
                 continue;
             }
+            /*
             //If there is a symbol for new line
             if (character == 13) {
                 br.mark(2);
@@ -91,6 +96,20 @@ public class LexAn {
                 this.column = 0;
                 continue;
             }
+            */
+            if (character == 10) {
+                if(!just13) this.line++;
+                this.column = 0;
+                continue;
+            }
+
+            if (character == 13) {
+                this.line++;
+                this.column = 0;
+                this.just13 = true;
+                continue;
+            }
+            this.just13 = false;
 
             //If the character is # the whole line is a comment (thrown away)
             if (character == 35) {
@@ -99,6 +118,7 @@ public class LexAn {
                     character = br.read();
                     //Reads and passes everything untill it reaches a symbol for new line
                     if (character == 10 || character == 13) {
+                        if(character == 13) this.just13 = true;
                         this.line++;
                         this.column = 0;
                         break;

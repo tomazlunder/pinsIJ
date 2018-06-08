@@ -43,10 +43,10 @@ public class MainTest {
         //sourceFileName = "test/intellij/seven/test.pins";
 
         //sourceFileName = "test/interpreter/simple.pins";
-        //sourceFileName = "test/interpreter/math_simple.pins";
+        sourceFileName = "test/interpreter/math.pins";
         //sourceFileName = "test/interpreter/functions.pins";
         //sourceFileName = "test/interpreter/functions2.pins";
-        sourceFileName = "test/interpreter/loops.pins";
+        //sourceFileName = "test/interpreter/loops.pins";
 
 
 

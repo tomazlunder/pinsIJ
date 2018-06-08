@@ -1,0 +1,7 @@
+typ int2 : int;
+typ int : integer;
+typ log : logical;
+
+fun negate(input:logical):log = ( !input );
+
+fun 

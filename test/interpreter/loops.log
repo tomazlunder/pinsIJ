@@ -1,4 +1,4 @@
-AbsDefs 1:1-16:6:
+AbsDefs 1:1-15:6:
   AbsFunDef 1:1-5:28: whileFun
     #typed as FUN(INTEGER,INTEGER:INTEGER)
     #framed as FRAME(whileFun: level=1,label=_whileFun,sizeLocs=4,sizeArgs=5,size=17,FP=T0,RV=T1)
@@ -26,36 +26,36 @@ AbsDefs 1:1-16:6:
           AbsVarName 2:10-2:10: x
             #defined at 1:14-1:22
             #typed as INTEGER
-        AbsWhileName 3:6-3:41:
+        AbsWhileName 3:6-3:42:
           #typed as VOID
-          AbsExprs 3:13-3:17:
+          AbsExprs 3:13-3:18:
             #typed as LOGICAL
-            AbsBinExpr 3:13-3:17: LTH
+            AbsBinExpr 3:13-3:18: LEQ
               #typed as LOGICAL
               AbsVarName 3:13-3:13: a
                 #defined at 5:12-5:26
                 #typed as INTEGER
-              AbsVarName 3:17-3:17: y
+              AbsVarName 3:18-3:18: y
                 #defined at 1:25-1:33
                 #typed as INTEGER
-          AbsExprs 3:23-3:41:
+          AbsExprs 3:24-3:42:
             #typed as INTEGER
-            AbsFunCall 3:23-3:31: putInt
+            AbsFunCall 3:24-3:32: putInt
               #typed as VOID
-              AbsVarName 3:30-3:30: a
+              AbsVarName 3:31-3:31: a
                 #defined at 5:12-5:26
                 #typed as INTEGER
-            AbsBinExpr 3:35-3:41: ASSIGN
+            AbsBinExpr 3:36-3:42: ASSIGN
               #typed as INTEGER
-              AbsVarName 3:35-3:35: a
+              AbsVarName 3:36-3:36: a
                 #defined at 5:12-5:26
                 #typed as INTEGER
-              AbsBinExpr 3:39-3:41: ADD
+              AbsBinExpr 3:40-3:42: ADD
                 #typed as INTEGER
-                AbsVarName 3:39-3:39: a
+                AbsVarName 3:40-3:40: a
                   #defined at 5:12-5:26
                   #typed as INTEGER
-                AbsAtomConst 3:41-3:41: INTEGER(1)
+                AbsAtomConst 3:42-3:42: INTEGER(1)
                   #typed as INTEGER
         AbsAtomConst 4:5-4:5: INTEGER(0)
           #typed as INTEGER
@@ -110,7 +110,7 @@ AbsDefs 1:1-16:6:
           #accesed as LOC(a: offset=-4)
           AbsAtomType 10:20-10:26: INTEGER
             #typed as INTEGER
-  AbsFunDef 12:1-16:6: main
+  AbsFunDef 12:1-15:6: main
     #typed as FUN(INTEGER:INTEGER)
     #framed as FRAME(main: level=1,label=_main,sizeLocs=0,sizeArgs=12,size=20,FP=T4,RV=T5)
     AbsPar 12:10-12:18: x
@@ -120,16 +120,23 @@ AbsDefs 1:1-16:6:
         #typed as INTEGER
     AbsAtomType 12:21-12:27: INTEGER
       #typed as INTEGER
-    AbsExprs 15:5-16:5:
+    AbsExprs 13:5-15:5:
       #typed as INTEGER
-      AbsFunCall 15:5-15:15: forFun
+      AbsFunCall 13:5-13:17: whileFun
+        #defined at 1:1-5:28
+        #typed as INTEGER
+        AbsAtomConst 13:14-13:14: INTEGER(1)
+          #typed as INTEGER
+        AbsAtomConst 13:16-13:16: INTEGER(5)
+          #typed as INTEGER
+      AbsFunCall 14:5-14:15: forFun
         #defined at 7:1-10:28
         #typed as INTEGER
-        AbsAtomConst 15:12-15:12: INTEGER(1)
+        AbsAtomConst 14:12-14:12: INTEGER(1)
           #typed as INTEGER
-        AbsAtomConst 15:14-15:14: INTEGER(5)
+        AbsAtomConst 14:14-14:14: INTEGER(5)
           #typed as INTEGER
-      AbsAtomConst 16:5-16:5: INTEGER(1)
+      AbsAtomConst 15:5-15:5: INTEGER(1)
         #typed as INTEGER
 CODE CHUNK: label=_whileFun
   FRAME(whileFun: level=1,label=_whileFun,sizeLocs=4,sizeArgs=5,size=17,FP=T0,RV=T1)
@@ -159,7 +166,7 @@ CODE CHUNK: label=_whileFun
       TEMP name=T7
     LABEL label=L0
     CJUMP labels=L1,L4
-      BINOP op=<
+      BINOP op=<=
         MEM
           BINOP op=+
             TEMP name=T0
@@ -285,12 +292,29 @@ CODE CHUNK: label=_main
       CONST value=5
     MOVE
       TEMP name=T25
-      CALL label=_forFun
+      CALL label=_whileFun
         TEMP name=T22
         TEMP name=T23
         TEMP name=T24
     EXP
       TEMP name=T25
+    MOVE
+      TEMP name=T26
+      CONST value=1100110011
+    MOVE
+      TEMP name=T27
+      CONST value=1
+    MOVE
+      TEMP name=T28
+      CONST value=5
+    MOVE
+      TEMP name=T29
+      CALL label=_forFun
+        TEMP name=T26
+        TEMP name=T27
+        TEMP name=T28
+    EXP
+      TEMP name=T29
     MOVE
       MEM
         TEMP name=T5
