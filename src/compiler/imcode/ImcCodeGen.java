@@ -43,6 +43,14 @@ public class ImcCodeGen implements Visitor {
     public HashMap<AbsTree,ImcCode> code; //Dodal za shranjevanje vmesnih, prenašanje v starša   
     
     static public HashMap<AbsFunDef, ImcSEQ> linearCode;
+    static public HashMap<String, ImcSEQ> linearCodeByLabel;
+    static public HashMap<String, FrmFrame> frmFrameByLabel;
+    static public HashMap<String, FrmTemp> staticLinksByLabel;
+
+    static public FrmTemp getStaticLinkByLabel(String label){
+        if(staticLinksByLabel.containsKey(label)) return staticLinksByLabel.get(label);
+        else return null;
+    }
 
     static public HashMap<String, Integer> nasloviGlobalnih;
     private static int globCounter;
@@ -56,6 +64,11 @@ public class ImcCodeGen implements Visitor {
         code = new HashMap<AbsTree,ImcCode>();
         
         linearCode = new HashMap<AbsFunDef, ImcSEQ>();
+        linearCodeByLabel = new HashMap<String, ImcSEQ>();
+        frmFrameByLabel = new HashMap<String, FrmFrame>();
+        staticLinksByLabel = new HashMap<String, FrmTemp>();
+
+
         nasloviGlobalnih = new HashMap<String, Integer>();
         globCounter = 0;
         
@@ -72,6 +85,7 @@ public class ImcCodeGen implements Visitor {
             acceptor.par(i).accept(this);
         }
         acceptor.expr.accept(this);
+
         frames.pop();
         scope--;
                
@@ -80,10 +94,17 @@ public class ImcCodeGen implements Visitor {
         //move = new ImcMOVE((ImcExpr) code.get(acceptor.expr), new ImcTEMP(functionFrame.RV));
         move = new ImcMOVE(new ImcMEM(new ImcTEMP(functionFrame.RV)),(ImcExpr) code.get(acceptor.expr));
         ImcCodeChunk functionCodeChunk = new ImcCodeChunk(functionFrame, move);
-        //functionCodeChunk.lincode = move.linear();
+        functionCodeChunk.lincode = move.linear();
         chunks.add(functionCodeChunk);
+
+        //TODO: Testing this
+        if(frames.size() >= 1){
+            staticLinksByLabel.put(functionFrame.label.name(), frames.peek().FP);
+        }
         
         linearCode.put(acceptor, move.linear());
+        linearCodeByLabel.put(functionFrame.label.name(),move.linear());
+        frmFrameByLabel.put(functionFrame.label.name(),functionFrame);
     }
     
     @Override
@@ -116,9 +137,11 @@ public class ImcCodeGen implements Visitor {
         else if (access instanceof FrmLocAccess){
             FrmLocAccess locAccess = (FrmLocAccess) access;
             // trenutni nivo - nivo definicije = razlika v nivojih (scope)
-            int razlika = scope - SymbDesc.getScope(locAccess.var);
+            //int razlika = scope - SymbDesc.getScope(locAccess.var);
+            int razlika = scope - locAccess.frame.level; //TODO: Testing this
             
-            ImcExpr leftSide = new ImcTEMP(locAccess.frame.FP);
+            //ImcExpr leftSide = new ImcTEMP(locAccess.frame.FP); //TODO: Testing this
+            ImcExpr leftSide = new ImcTEMP(frames.peek().FP);
             for(int i = 0; i < razlika; i++){
                 leftSide = new ImcMEM(leftSide);
             }
@@ -236,12 +259,25 @@ public class ImcCodeGen implements Visitor {
         //int nivoDefinicije = SymbDesc.getScope(SymbDesc.getNameDef(acceptor));
         int razlika = scope - klicanaFunkcija.level;
 
-        
         ImcExpr SL = new ImcCONST(1100110011);
+
         //Klici na nivo n-1, n-2
         //if(klicanaFunkcija.level > 0){
         if(razlika < 0){
-            SL = new ImcMEM( new ImcTEMP(frames.peek().FP));
+            //SL = new ImcMEM( new ImcTEMP(frames.peek().FP));
+            SL = new ImcMEM(new ImcTEMP(staticLinksByLabel.get(klicanaFunkcija.label.name())));
+
+            /*
+            //TODO: Testing this
+            ImcTEMP temp;
+            if(staticLinksByLabel.containsKey(klicanaFunkcija)){
+                temp = new ImcTEMP(staticLinksByLabel.get(klicanaFunkcija));
+            } else {
+                temp = new ImcTEMP(frames.peek().FP);
+            }
+            SL = new ImcMEM(temp); //TODO: To here
+            */
+
             for(int i = 0; i < razlika; i++){
                 SL = new ImcMEM(SL);
             }

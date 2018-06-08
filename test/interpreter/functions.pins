@@ -1,0 +1,36 @@
+var a : integer;
+var b : integer;
+
+fun f1(x:integer, y:integer): integer = (
+    {local = add(x,y)},
+    putInt(local),
+    {local = sub(x,y)},
+    putInt(local),
+    10) {where var local:integer;
+               fun add(x:integer,y:integer):integer = (x+y);  #L0
+               fun sub(x:integer,y:integer):integer = (x-y)   #L1
+         };
+
+fun f2(x:integer):integer = (
+    {local = 33},
+    {temp = addLocal(66)},
+    putInt(temp),
+    {temp = addGlobal(66)},
+    putInt(temp),
+    10) {where var local:integer;
+               var temp:integer;
+               fun addLocal(x:integer):integer = (x+local);    #L2
+               fun addGlobal(x:integer):integer = (x+a)        #L3
+        };
+
+fun main(x:integer):integer =  (
+    {a = 10},
+    {b = 20},
+    f1(a,b),
+    f2(a),
+    777)
+
+#Tests:
+# - Gnezdene funkcije
+# - Gnezdene funkcije ki uporabljajo lokalne spr. starša in globalne spr.
+# Pričakovan izhod: 30, -10, 99, 76

@@ -68,7 +68,7 @@ public class FrmEvaluator implements Visitor {
         if(frame.sizeArgs > 0){
             frame.sizeArgs+=4;
         }
-                 
+
         //Okvir dodamo v slovar okvirjev
         FrmDesc.setFrame(acceptor, frame);
     }

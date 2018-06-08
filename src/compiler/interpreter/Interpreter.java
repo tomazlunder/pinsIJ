@@ -6,11 +6,7 @@ import compiler.*;
 import compiler.abstr.tree.AbsFunDef;
 import compiler.frames.*;
 import compiler.imcode.*;
-import compiler.seman.SymbDesc;
 import compiler.seman.SymbTable;
-import compiler.seman.TypeChecker;
-
-import java.awt.Label;
 
 public class Interpreter {
 
@@ -206,16 +202,36 @@ public class Interpreter {
             //stM(sp + offset, fp);
             //offset += 4;
 
-            for (ImcCode arg : instr.args) {
-                stM(sp + offset, execute(arg));
-                offset += 4;
+
+            //for (ImcCode arg : instr.args) {
+            //    stM(sp + offset, execute(arg));
+            //    offset += 4;
+            //}
+
+            int i = 0;
+            FrmTemp lol = ImcCodeGen.getStaticLinkByLabel(instr.label.name());
+            if(lol != null){
+                i++;
+                stM(sp, ldT(lol));
             }
 
-            //new Interpreter(compiler.lincode.CodeGenerator.framesByLabel.get(instr.label), (ImcSEQ) compiler.lincode.CodeGenerator.codesByLabel.get(instr.fun));
+            while(i < instr.args.size()){
+                offset = i * 4;
+                stM(sp+offset,execute(instr.args.get(i)));
+                i++;
+            }
+
+            /*
             AbsFunDef calledFunctionDef = (AbsFunDef) SymbTable.fnd(instr.label.name().substring(1));
             FrmFrame calledFunctionFrame = FrmDesc.getFrame(calledFunctionDef);
 
             new Interpreter(calledFunctionFrame, ImcCodeGen.linearCode.get(calledFunctionDef));
+            */
+            String calledFunctionLabel = instr.label.name();
+            FrmFrame calledFunctionFrame = ImcCodeGen.frmFrameByLabel.get(calledFunctionLabel);
+            ImcSEQ calledFunctionLinearCode = ImcCodeGen.linearCodeByLabel.get(calledFunctionLabel);
+            new Interpreter(calledFunctionFrame, calledFunctionLinearCode);
+
 
             //Vrnemo vrednost stack pointerja (tja vračajo funkcije rezultat)
             return ldM(sp);

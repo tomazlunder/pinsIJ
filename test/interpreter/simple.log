@@ -101,126 +101,145 @@ DATA CHUNK: label=_a size=4
 DATA CHUNK: label=_b size=4
 CODE CHUNK: label=_returnInput
   FRAME(returnInput: level=1,label=_returnInput,sizeLocs=0,sizeArgs=0,size=8,FP=T0,RV=T1)
-  MOVE
-    MEM
-      TEMP name=T1
-    ESEQ
-      SEQ
+  SEQ
+    MOVE
+      MEM
+        TEMP name=T1
       MEM
         BINOP op=+
           TEMP name=T0
           CONST value=4
 CODE CHUNK: label=_main
   FRAME(main: level=1,label=_main,sizeLocs=4,sizeArgs=8,size=20,FP=T2,RV=T3)
-  MOVE
-    MEM
-      TEMP name=T3
-    ESEQ
-      SEQ
-        EXP
-          ESEQ
-            MOVE
-              MEM
-                NAME label=_a
-              ESEQ
-                SEQ
-                  MOVE
-                    TEMP name=T4
-                    MEM
-                      NAME label=_a
-                  MOVE
-                    TEMP name=T5
-                    CONST value=5
-                  MOVE
-                    TEMP name=T4
-                    TEMP name=T5
-                TEMP name=T5
-            TEMP name=T5
-        EXP
-          ESEQ
-            MOVE
-              MEM
-                NAME label=_b
-              ESEQ
-                SEQ
-                  MOVE
-                    TEMP name=T6
-                    MEM
-                      NAME label=_b
-                  MOVE
-                    TEMP name=T7
-                    CONST value=10
-                  MOVE
-                    TEMP name=T6
-                    TEMP name=T7
-                TEMP name=T7
-            TEMP name=T7
-        EXP
-          ESEQ
-            MOVE
-              MEM
-                BINOP op=+
-                  TEMP name=T2
-                  CONST value=-4
-              ESEQ
-                SEQ
-                  MOVE
-                    TEMP name=T8
-                    MEM
-                      BINOP op=+
-                        TEMP name=T2
-                        CONST value=-4
-                  MOVE
-                    TEMP name=T9
-                    CONST value=15
-                  MOVE
-                    TEMP name=T8
-                    TEMP name=T9
-                TEMP name=T9
-            TEMP name=T9
-        EXP
-          CALL label=_Lsys::putInt
-            MEM
-              NAME label=_a
-        EXP
-          CALL label=_Lsys::putInt
-            MEM
-              NAME label=_b
-        EXP
-          CALL label=_Lsys::putInt
-            MEM
-              BINOP op=+
-                TEMP name=T2
-                CONST value=-4
-        EXP
-          ESEQ
-            MOVE
-              MEM
-                BINOP op=+
-                  TEMP name=T2
-                  CONST value=-4
-              ESEQ
-                SEQ
-                  MOVE
-                    TEMP name=T10
-                    MEM
-                      BINOP op=+
-                        TEMP name=T2
-                        CONST value=-4
-                  MOVE
-                    TEMP name=T11
-                    CALL label=_returnInput
-                      CONST value=1100110011
-                      CONST value=3
-                  MOVE
-                    TEMP name=T10
-                    TEMP name=T11
-                TEMP name=T11
-            TEMP name=T11
-        EXP
-          CALL label=_Lsys::putInt
-            MEM
-              BINOP op=+
-                TEMP name=T2
-                CONST value=-4
+  SEQ
+    MOVE
+      TEMP name=T4
+      MEM
+        NAME label=_a
+    MOVE
+      TEMP name=T5
+      CONST value=5
+    MOVE
+      TEMP name=T4
+      TEMP name=T5
+    MOVE
+      MEM
+        NAME label=_a
+      TEMP name=T5
+    EXP
+      TEMP name=T5
+    MOVE
+      TEMP name=T6
+      MEM
+        NAME label=_b
+    MOVE
+      TEMP name=T7
+      CONST value=10
+    MOVE
+      TEMP name=T6
+      TEMP name=T7
+    MOVE
+      MEM
+        NAME label=_b
+      TEMP name=T7
+    EXP
+      TEMP name=T7
+    MOVE
+      TEMP name=T8
+      MEM
+        BINOP op=+
+          TEMP name=T2
+          CONST value=-4
+    MOVE
+      TEMP name=T9
+      CONST value=15
+    MOVE
+      TEMP name=T8
+      TEMP name=T9
+    MOVE
+      MEM
+        BINOP op=+
+          TEMP name=T2
+          CONST value=-4
+      TEMP name=T9
+    EXP
+      TEMP name=T9
+    MOVE
+      TEMP name=T12
+      MEM
+        NAME label=_a
+    MOVE
+      TEMP name=T13
+      CALL label=_Lsys::putInt
+        TEMP name=T12
+    EXP
+      TEMP name=T13
+    MOVE
+      TEMP name=T14
+      MEM
+        NAME label=_b
+    MOVE
+      TEMP name=T15
+      CALL label=_Lsys::putInt
+        TEMP name=T14
+    EXP
+      TEMP name=T15
+    MOVE
+      TEMP name=T16
+      MEM
+        BINOP op=+
+          TEMP name=T2
+          CONST value=-4
+    MOVE
+      TEMP name=T17
+      CALL label=_Lsys::putInt
+        TEMP name=T16
+    EXP
+      TEMP name=T17
+    MOVE
+      TEMP name=T10
+      MEM
+        BINOP op=+
+          TEMP name=T2
+          CONST value=-4
+    MOVE
+      TEMP name=T18
+      CONST value=1100110011
+    MOVE
+      TEMP name=T19
+      CONST value=3
+    MOVE
+      TEMP name=T20
+      CALL label=_returnInput
+        TEMP name=T18
+        TEMP name=T19
+    MOVE
+      TEMP name=T11
+      TEMP name=T20
+    MOVE
+      TEMP name=T10
+      TEMP name=T11
+    MOVE
+      MEM
+        BINOP op=+
+          TEMP name=T2
+          CONST value=-4
+      TEMP name=T11
+    EXP
+      TEMP name=T11
+    MOVE
+      TEMP name=T21
+      MEM
+        BINOP op=+
+          TEMP name=T2
+          CONST value=-4
+    MOVE
+      TEMP name=T22
+      CALL label=_Lsys::putInt
+        TEMP name=T21
+    EXP
+      TEMP name=T22
+    MOVE
+      MEM
+        TEMP name=T3
       CONST value=3

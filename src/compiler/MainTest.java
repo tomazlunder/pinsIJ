@@ -40,10 +40,13 @@ public class MainTest {
         String sourceFileName = "test/" + fazaPrev + "/" + pravilnost + "/" + testName + ".pins";
         //sourceFileName = "test/sliva/tipi/test.pins";
         //sourceFileName = "test/v2/koda/test1.pins";
-        //sourceFileName = "test/interpreter/simple.pins";
-        sourceFileName = "test/interpreter/math_simple.pins";
-
         //sourceFileName = "test/intellij/seven/test.pins";
+
+        sourceFileName = "test/interpreter/simple.pins";
+        //sourceFileName = "test/interpreter/math_simple.pins";
+        //sourceFileName = "test/interpreter/functions.pins";
+
+
         boolean interpret = true;
         boolean interpretDbg = false;
 
