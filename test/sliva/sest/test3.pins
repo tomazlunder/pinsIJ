@@ -1,3 +1,5 @@
 fun f(i:integer,j:integer):integer =
   (i+j,-1-i,+1+j,k) {where var k:integer;var a:arr[10]integer;var z:integer};
-var i:integer
+var i:integer;
+
+fun main(i:integer):integer = 1

@@ -1,0 +1,98 @@
+AbsDefs 1:1-8:33:
+  AbsVarDef 1:1-1:14: s
+    #typed as STRING
+    #accesed as VAR(s: label=_s)
+    AbsAtomType 1:9-1:14: STRING
+      #typed as STRING
+  AbsFunDef 3:1-8:33: main
+    #typed as FUN(INTEGER:INTEGER)
+    #framed as FRAME(main: level=1,label=_main,sizeLocs=4,sizeArgs=5,size=17,FP=T0,RV=T1)
+    AbsPar 3:10-3:18: i
+      #typed as INTEGER
+      #accesed as PAR(i: offset=4)
+      AbsAtomType 3:12-3:18: INTEGER
+        #typed as INTEGER
+    AbsAtomType 3:21-3:27: INTEGER
+      #typed as INTEGER
+    AbsWhere 8:8-8:33:
+      #typed as INTEGER
+      AbsExprs 4:5-8:5:
+        #typed as INTEGER
+        AbsFunCall 4:5-4:16: getString
+          #typed as STRING
+          AbsVarName 4:15-4:15: s
+            #defined at 1:1-1:14
+            #typed as STRING
+        AbsFunCall 5:5-5:16: putString
+          #typed as VOID
+          AbsVarName 5:15-5:15: s
+            #defined at 1:1-1:14
+            #typed as STRING
+        AbsFunCall 6:5-6:20: getString
+          #typed as STRING
+          AbsVarName 6:15-6:19: local
+            #defined at 8:15-8:32
+            #typed as STRING
+        AbsFunCall 7:5-7:20: putString
+          #typed as VOID
+          AbsVarName 7:15-7:19: local
+            #defined at 8:15-8:32
+            #typed as STRING
+        AbsAtomConst 8:5-8:5: INTEGER(0)
+          #typed as INTEGER
+      AbsDefs 8:15-8:32:
+        AbsVarDef 8:15-8:32: local
+          #typed as STRING
+          #accesed as LOC(local: offset=-4)
+          AbsAtomType 8:27-8:32: STRING
+            #typed as STRING
+DATA CHUNK: label=_s size=4
+CODE CHUNK: label=_main
+  FRAME(main: level=1,label=_main,sizeLocs=4,sizeArgs=5,size=17,FP=T0,RV=T1)
+  SEQ
+    MOVE
+      TEMP name=T2
+      NAME label=_s
+    MOVE
+      TEMP name=T3
+      CALL label=_Lsys::getString
+        TEMP name=T2
+    EXP
+      TEMP name=T3
+    MOVE
+      TEMP name=T4
+      MEM
+        NAME label=_s
+    MOVE
+      TEMP name=T5
+      CALL label=_Lsys::putString
+        TEMP name=T4
+    EXP
+      TEMP name=T5
+    MOVE
+      TEMP name=T6
+      BINOP op=+
+        TEMP name=T0
+        CONST value=-4
+    MOVE
+      TEMP name=T7
+      CALL label=_Lsys::getString
+        TEMP name=T6
+    EXP
+      TEMP name=T7
+    MOVE
+      TEMP name=T8
+      MEM
+        BINOP op=+
+          TEMP name=T0
+          CONST value=-4
+    MOVE
+      TEMP name=T9
+      CALL label=_Lsys::putString
+        TEMP name=T8
+    EXP
+      TEMP name=T9
+    MOVE
+      MEM
+        TEMP name=T1
+      CONST value=0

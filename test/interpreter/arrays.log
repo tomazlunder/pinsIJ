@@ -1,0 +1,173 @@
+AbsDefs 1:1-9:6:
+  AbsVarDef 1:1-1:15: array
+    #typed as ARR(10,INTEGER)
+    #accesed as VAR(array: label=_array)
+    AbsArrType 1:13-1:15: [10]
+      #typed as ARR(10,INTEGER)
+      AbsAtomType 1:22-1:28: INTEGER
+        #typed as INTEGER
+  AbsFunDef 3:1-9:6: main
+    #typed as FUN(INTEGER:INTEGER)
+    #framed as FRAME(main: level=1,label=_main,sizeLocs=0,sizeArgs=5,size=13,FP=T0,RV=T1)
+    AbsPar 3:10-3:18: i
+      #typed as INTEGER
+      #accesed as PAR(i: offset=4)
+      AbsAtomType 3:12-3:18: INTEGER
+        #typed as INTEGER
+    AbsAtomType 3:21-3:27: INTEGER
+      #typed as INTEGER
+    AbsExprs 4:5-9:5:
+      #typed as INTEGER
+      AbsBinExpr 4:6-4:20: ASSIGN
+        #typed as INTEGER
+        AbsBinExpr 4:6-4:12: ARR
+          #typed as INTEGER
+          AbsVarName 4:6-4:10: array
+            #defined at 1:1-1:15
+            #typed as ARR(10,INTEGER)
+          AbsAtomConst 4:12-4:12: INTEGER(0)
+            #typed as INTEGER
+        AbsUnExpr 4:17-4:20: SUB
+          #typed as INTEGER
+          AbsAtomConst 4:18-4:20: INTEGER(100)
+            #typed as INTEGER
+      AbsBinExpr 5:6-5:20: ASSIGN
+        #typed as INTEGER
+        AbsBinExpr 5:6-5:12: ARR
+          #typed as INTEGER
+          AbsVarName 5:6-5:10: array
+            #defined at 1:1-1:15
+            #typed as ARR(10,INTEGER)
+          AbsAtomConst 5:12-5:12: INTEGER(1)
+            #typed as INTEGER
+        AbsUnExpr 5:17-5:20: SUB
+          #typed as INTEGER
+          AbsAtomConst 5:18-5:20: INTEGER(101)
+            #typed as INTEGER
+      AbsFunCall 6:5-6:13: putInt
+        #typed as VOID
+        AbsAtomConst 6:12-6:12: INTEGER(0)
+          #typed as INTEGER
+      AbsFunCall 7:5-7:20: putInt
+        #typed as VOID
+        AbsBinExpr 7:12-7:18: ARR
+          #typed as INTEGER
+          AbsVarName 7:12-7:16: array
+            #defined at 1:1-1:15
+            #typed as ARR(10,INTEGER)
+          AbsAtomConst 7:18-7:18: INTEGER(0)
+            #typed as INTEGER
+      AbsFunCall 8:5-8:20: putInt
+        #typed as VOID
+        AbsBinExpr 8:12-8:18: ARR
+          #typed as INTEGER
+          AbsVarName 8:12-8:16: array
+            #defined at 1:1-1:15
+            #typed as ARR(10,INTEGER)
+          AbsAtomConst 8:18-8:18: INTEGER(1)
+            #typed as INTEGER
+      AbsAtomConst 9:5-9:5: INTEGER(1)
+        #typed as INTEGER
+DATA CHUNK: label=_array size=40
+CODE CHUNK: label=_main
+  FRAME(main: level=1,label=_main,sizeLocs=0,sizeArgs=5,size=13,FP=T0,RV=T1)
+  SEQ
+    MOVE
+      TEMP name=T2
+      MEM
+        BINOP op=+
+          MEM
+            NAME label=_array
+          BINOP op=*
+            CONST value=0
+            CONST value=4
+    MOVE
+      TEMP name=T3
+      BINOP op=-
+        CONST value=0
+        CONST value=100
+    MOVE
+      TEMP name=T2
+      TEMP name=T3
+    MOVE
+      MEM
+        BINOP op=+
+          MEM
+            NAME label=_array
+          BINOP op=*
+            CONST value=0
+            CONST value=4
+      TEMP name=T3
+    EXP
+      TEMP name=T3
+    MOVE
+      TEMP name=T4
+      MEM
+        BINOP op=+
+          MEM
+            NAME label=_array
+          BINOP op=*
+            CONST value=1
+            CONST value=4
+    MOVE
+      TEMP name=T5
+      BINOP op=-
+        CONST value=0
+        CONST value=101
+    MOVE
+      TEMP name=T4
+      TEMP name=T5
+    MOVE
+      MEM
+        BINOP op=+
+          MEM
+            NAME label=_array
+          BINOP op=*
+            CONST value=1
+            CONST value=4
+      TEMP name=T5
+    EXP
+      TEMP name=T5
+    MOVE
+      TEMP name=T6
+      CONST value=0
+    MOVE
+      TEMP name=T7
+      CALL label=_Lsys::putInt
+        TEMP name=T6
+    EXP
+      TEMP name=T7
+    MOVE
+      TEMP name=T8
+      MEM
+        BINOP op=+
+          MEM
+            NAME label=_array
+          BINOP op=*
+            CONST value=0
+            CONST value=4
+    MOVE
+      TEMP name=T9
+      CALL label=_Lsys::putInt
+        TEMP name=T8
+    EXP
+      TEMP name=T9
+    MOVE
+      TEMP name=T10
+      MEM
+        BINOP op=+
+          MEM
+            NAME label=_array
+          BINOP op=*
+            CONST value=1
+            CONST value=4
+    MOVE
+      TEMP name=T11
+      CALL label=_Lsys::putInt
+        TEMP name=T10
+    EXP
+      TEMP name=T11
+    MOVE
+      MEM
+        TEMP name=T1
+      CONST value=1

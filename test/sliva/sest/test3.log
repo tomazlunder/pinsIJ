@@ -1,7 +1,7 @@
-AbsDefs 1:1-3:13:
+AbsDefs 1:1-6:0:
   AbsFunDef 1:1-2:77: f
     #typed as FUN(INTEGER,INTEGER:INTEGER)
-    #framed as FRAME(f: level=0,label=_f,sizeLocs=48,sizeArgs=0,size=56,FP=T0,RV=T1)
+    #framed as FRAME(f: level=1,label=_f,sizeLocs=48,sizeArgs=0,size=56,FP=T0,RV=T1)
     AbsPar 1:7-1:15: i
       #typed as INTEGER
       #accesed as PAR(i: offset=4)
@@ -9,7 +9,7 @@ AbsDefs 1:1-3:13:
         #typed as INTEGER
     AbsPar 1:17-1:25: j
       #typed as INTEGER
-      #accesed as PAR(j: offset=12)
+      #accesed as PAR(j: offset=8)
       AbsAtomType 1:19-1:25: INTEGER
         #typed as INTEGER
     AbsAtomType 1:28-1:34: INTEGER
@@ -70,40 +70,59 @@ AbsDefs 1:1-3:13:
     #accesed as VAR(i: label=_i)
     AbsAtomType 3:7-3:13: INTEGER
       #typed as INTEGER
+  AbsFunDef 5:1-6:0: main
+    #typed as FUN(INTEGER:INTEGER)
+    #framed as FRAME(main: level=1,label=_main,sizeLocs=0,sizeArgs=0,size=8,FP=T2,RV=T3)
+    AbsPar 5:10-5:18: i
+      #typed as INTEGER
+      #accesed as PAR(i: offset=4)
+      AbsAtomType 5:12-5:18: INTEGER
+        #typed as INTEGER
+    AbsAtomType 5:21-5:27: INTEGER
+      #typed as INTEGER
+    AbsAtomConst 5:31-5:31: INTEGER(1)
+      #typed as INTEGER
 CODE CHUNK: label=_f
-  FRAME(f: level=0,label=_f,sizeLocs=48,sizeArgs=0,size=56,FP=T0,RV=T1)
-  MOVE
-    ESEQ
-      SEQ
-        EXP
-          BINOP op=<=
-            MEM
-              BINOP op=<=
-                TEMP name=T0
-                CONST value=4
-            MEM
-              BINOP op=<=
-                TEMP name=T0
-                CONST value=12
-        EXP
-          BINOP op=>=
-            BINOP op=-
-              CONST value=0
-              CONST value=1
-            MEM
-              BINOP op=<=
-                TEMP name=T0
-                CONST value=4
-        EXP
-          BINOP op=<=
-            CONST value=1
-            MEM
-              BINOP op=<=
-                TEMP name=T0
-                CONST value=12
+  FRAME(f: level=1,label=_f,sizeLocs=48,sizeArgs=0,size=56,FP=T0,RV=T1)
+  SEQ
+    EXP
+      BINOP op=+
+        MEM
+          BINOP op=+
+            TEMP name=T0
+            CONST value=4
+        MEM
+          BINOP op=+
+            TEMP name=T0
+            CONST value=8
+    EXP
+      BINOP op=-
+        BINOP op=-
+          CONST value=0
+          CONST value=1
+        MEM
+          BINOP op=+
+            TEMP name=T0
+            CONST value=4
+    EXP
+      BINOP op=+
+        CONST value=1
+        MEM
+          BINOP op=+
+            TEMP name=T0
+            CONST value=8
+    MOVE
       MEM
-        BINOP op=<=
+        TEMP name=T1
+      MEM
+        BINOP op=+
           TEMP name=T0
           CONST value=-4
-    TEMP name=T1
 DATA CHUNK: label=_i size=4
+CODE CHUNK: label=_main
+  FRAME(main: level=1,label=_main,sizeLocs=0,sizeArgs=0,size=8,FP=T2,RV=T3)
+  SEQ
+    MOVE
+      MEM
+        TEMP name=T3
+      CONST value=1

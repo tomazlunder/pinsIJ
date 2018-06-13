@@ -250,11 +250,12 @@ public class ImcCodeGen implements Visitor {
             ImcCALL call = new ImcCALL(FrmLabel.newLabel("Lsys::"+acceptor.name));
             call.args.addAll(args); //Predefinirani funkciji dodamo argumente
 
-            if(acceptor.name.equals("getInt")){
+            if(acceptor.name.equals("getInt") || acceptor.name.equals("getString")){
                 if(!(acceptor.arg(0) instanceof AbsVarName)) Report.error("Argument of getInt must be local/global variable name.");
 
                 call.args.set(0, (ImcExpr) getVariableAddress((AbsVarName) acceptor.arg(0)));
             }
+
 
 
             code.put(acceptor,call);

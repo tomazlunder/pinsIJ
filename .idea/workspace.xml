@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb7e99d2-cd24-4109-b71b-80fc523394d9" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/interpreter/arrays.pins" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/interpreter/getString.pins" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/pins/compiler/MainTest.class" afterPath="$PROJECT_DIR$/out/production/pins/compiler/MainTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/pins/compiler/imcode/ImcCodeGen.class" afterPath="$PROJECT_DIR$/out/production/pins/compiler/imcode/ImcCodeGen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/pins/compiler/interpreter/Interpreter.class" afterPath="$PROJECT_DIR$/out/production/pins/compiler/interpreter/Interpreter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/MainTest.java" afterPath="$PROJECT_DIR$/src/compiler/MainTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/imcode/ImcCONST.java" afterPath="$PROJECT_DIR$/src/compiler/imcode/ImcCONST.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/imcode/ImcCodeGen.java" afterPath="$PROJECT_DIR$/src/compiler/imcode/ImcCodeGen.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/interpreter/Interpreter.java" afterPath="$PROJECT_DIR$/src/compiler/interpreter/Interpreter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/sliva/sest/test3.log" afterPath="$PROJECT_DIR$/test/sliva/sest/test3.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/sliva/sest/test3.pins" afterPath="$PROJECT_DIR$/test/sliva/sest/test3.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/interpreter/putstring.pins" afterPath="$PROJECT_DIR$/test/interpreter/putString.pins" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -98,31 +105,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/compiler/MainTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="putstring.pins" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/interpreter/putstring.pins">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="3" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbsBinExpr.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsBinExpr.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+            <state relative-caret-position="136">
+              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -131,11 +118,33 @@
       <file leaf-file-name="Interpreter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/compiler/interpreter/Interpreter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="253" column="41" lean-forward="false" selection-start-line="253" selection-start-column="41" selection-end-line="253" selection-end-column="41" />
+            <state relative-caret-position="315">
+              <caret line="280" column="32" lean-forward="true" selection-start-line="280" selection-start-column="32" selection-end-line="280" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#518#535#0" expanded="true" />
+                <element signature="e#1351#1368#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SynAn.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/compiler/synan/SynAn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2013">
+              <caret line="698" column="43" lean-forward="false" selection-start-line="698" selection-start-column="32" selection-end-line="698" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test3.pins" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/sliva/sest/test3.pins">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="59" lean-forward="false" selection-start-line="1" selection-start-column="59" selection-end-line="1" selection-end-column="59" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -143,18 +152,28 @@
       <file leaf-file-name="ImcCodeGen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcCodeGen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
-              <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+            <state relative-caret-position="861">
+              <caret line="258" column="0" lean-forward="false" selection-start-line="258" selection-start-column="0" selection-end-line="258" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImcCONST.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcCONST.java">
+      <file leaf-file-name="test3.log" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/sliva/sest/test3.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="75" lean-forward="false" selection-start-line="33" selection-start-column="75" selection-end-line="33" selection-end-column="75" />
+            <state relative-caret-position="544">
+              <caret line="56" column="34" lean-forward="false" selection-start-line="56" selection-start-column="27" selection-end-line="56" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="arrays.pins" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/interpreter/arrays.pins">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -171,8 +190,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sl</find>
-      <find>stM(</find>
       <find>static</find>
       <find>1001</find>
       <find>SL</find>
@@ -199,8 +216,10 @@
       <find>nasloviGlobalnih</find>
       <find>AbsAtom</find>
       <find>stM</find>
-      <find>ImcCONST</find>
       <find>AbsAtomC</find>
+      <find>AbsFunCall</find>
+      <find>ImcCONST</find>
+      <find>parseAtomEx</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -232,11 +251,14 @@
         <option value="$PROJECT_DIR$/test/interpreter/functions.pins" />
         <option value="$PROJECT_DIR$/test/interpreter/functions2.pins" />
         <option value="$PROJECT_DIR$/test/interpreter/loops.pins" />
-        <option value="$PROJECT_DIR$/src/compiler/MainTest.java" />
-        <option value="$PROJECT_DIR$/src/compiler/imcode/ImcCodeGen.java" />
-        <option value="$PROJECT_DIR$/src/compiler/interpreter/Interpreter.java" />
         <option value="$PROJECT_DIR$/src/compiler/imcode/ImcCONST.java" />
         <option value="$PROJECT_DIR$/test/interpreter/putstring.pins" />
+        <option value="$PROJECT_DIR$/test/interpreter/getString.pins" />
+        <option value="$PROJECT_DIR$/src/compiler/imcode/ImcCodeGen.java" />
+        <option value="$PROJECT_DIR$/src/compiler/interpreter/Interpreter.java" />
+        <option value="$PROJECT_DIR$/test/sliva/sest/test3.pins" />
+        <option value="$PROJECT_DIR$/src/compiler/MainTest.java" />
+        <option value="$PROJECT_DIR$/test/interpreter/arrays.pins" />
       </list>
     </option>
   </component>
@@ -268,7 +290,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -303,7 +324,26 @@
               <item name="pins" type="b2602c69:ProjectViewProjectNode" />
               <item name="pins" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="final" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pins" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pins" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="interpreter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pins" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pins" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="sliva" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pins" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pins" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="sliva" type="462c0819:PsiDirectoryNode" />
+              <item name="sest" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pins" type="b2602c69:ProjectViewProjectNode" />
@@ -323,8 +363,9 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -528,7 +569,8 @@
       <workItem from="1528369671069" duration="10690000" />
       <workItem from="1528453100621" duration="8494000" />
       <workItem from="1528480184576" duration="4514000" />
-      <workItem from="1528898961962" duration="2894000" />
+      <workItem from="1528898961962" duration="5600000" />
+      <workItem from="1528910182304" duration="1427000" />
     </task>
     <servers />
   </component>
@@ -562,7 +604,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59567000" />
+    <option name="totallyTimeSpent" value="63700000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -576,7 +618,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45042643" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34488273" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -642,25 +684,19 @@
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/compiler/interpreter/Interpreter.java</url>
-          <line>143</line>
-          <properties />
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/compiler/interpreter/Interpreter.java</url>
-          <line>196</line>
-          <properties />
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/compiler/imcode/ImcCodeGen.java</url>
-          <line>308</line>
+          <line>309</line>
           <properties />
           <option name="timeStamp" value="55" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/compiler/interpreter/Interpreter.java</url>
+          <line>150</line>
+          <properties />
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="56" />
+      <option name="time" value="59" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -672,94 +708,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/interpreter/simple.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2703">
-          <caret line="159" column="17" lean-forward="false" selection-start-line="159" selection-start-column="17" selection-end-line="159" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcEXP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcMOVE.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcESEQ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcSEQ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsVarDef.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="35" column="51" lean-forward="false" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsExprs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/v2/frame/test1.pins">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/interpreter/math_simple.log" />
-    <entry file="file://$PROJECT_DIR$/build/classes/compiler/frames/FrmFrame.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/seman/NameChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/seman/SymbTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1649">
-          <caret line="102" column="28" lean-forward="false" selection-start-line="102" selection-start-column="25" selection-end-line="102" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsFunDef.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="70" column="51" lean-forward="false" selection-start-line="70" selection-start-column="51" selection-end-line="70" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/seman/type/SemFunType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -847,14 +795,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/synan/SynAn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="64" column="32" lean-forward="false" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/interpreter/functions.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -882,25 +822,9 @@
         <state relative-caret-position="323">
           <caret line="19" column="11" lean-forward="false" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
           <folding>
-            <element signature="e#305#306#0" expanded="true" />
-            <element signature="e#328#329#0" expanded="true" />
+            <element signature="e#305#306#0" expanded="false" />
+            <element signature="e#328#329#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/interpreter/types.pins">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/interpreter/predefined.pins">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="6" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -924,7 +848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1703">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -948,7 +871,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -972,9 +894,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#711#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -983,8 +902,8 @@
         <state relative-caret-position="340">
           <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
           <folding>
-            <element signature="e#304#305#0" expanded="true" />
-            <element signature="e#329#330#0" expanded="true" />
+            <element signature="e#304#305#0" expanded="false" />
+            <element signature="e#329#330#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -993,9 +912,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#512#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1019,58 +935,185 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#493#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/MainTest.java">
+    <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcCONST.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/interpreter/putstring.pins">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/Scanner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="3" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+        <state relative-caret-position="290">
+          <caret line="861" column="0" lean-forward="false" selection-start-line="861" selection-start-column="0" selection-end-line="861" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/interpreter/predefined.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="6" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsBinExpr.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
+        <state relative-caret-position="306">
           <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/interpreter/getString.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/interpreter/putString.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/sliva/tipi/test1.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/sliva/tipi/test3.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/sliva/sest/test1.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/sliva/sest/test2.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/sliva/tipi/test1.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/sliva/tipi/test.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/sliva/tipi/test2.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/sliva/tipi/test4.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/interpreter/types.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/sliva/sest/test3.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="56" column="34" lean-forward="false" selection-start-line="56" selection-start-column="27" selection-end-line="56" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/synan/SynAn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2013">
+          <caret line="698" column="43" lean-forward="false" selection-start-line="698" selection-start-column="32" selection-end-line="698" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/sliva/sest/test3.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="59" lean-forward="false" selection-start-line="1" selection-start-column="59" selection-end-line="1" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/interpreter/arrays.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/interpreter/Interpreter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="253" column="41" lean-forward="false" selection-start-line="253" selection-start-column="41" selection-end-line="253" selection-end-column="41" />
+        <state relative-caret-position="315">
+          <caret line="280" column="32" lean-forward="true" selection-start-line="280" selection-start-column="32" selection-end-line="280" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#518#535#0" expanded="true" />
+            <element signature="e#1351#1368#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcCodeGen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+        <state relative-caret-position="861">
+          <caret line="258" column="0" lean-forward="false" selection-start-line="258" selection-start-column="0" selection-end-line="258" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcCONST.java">
+    <entry file="file://$PROJECT_DIR$/src/compiler/MainTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="75" lean-forward="false" selection-start-line="33" selection-start-column="75" selection-end-line="33" selection-end-column="75" />
+        <state relative-caret-position="136">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -1,0 +1,9 @@
+var array : arr [10] integer;
+
+fun main(i:integer):integer = (
+    {array[0] = -100},
+    {array[1] = -101},
+    putInt(0),
+    putInt(array[0]),
+    putInt(array[1]),
+    1)

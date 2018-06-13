@@ -1,5 +1,8 @@
 package compiler.interpreter;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;
 
 import compiler.*;
@@ -152,24 +155,21 @@ public class Interpreter {
                     return (((Integer) fstSubValue).intValue() * ((Integer) sndSubValue).intValue());
                 case ImcBINOP.DIV:
                     return (((Integer) fstSubValue).intValue() / ((Integer) sndSubValue).intValue());
-                //TODO: MOD LOGIC
-                //case ImcBINOP.MOD:
-                //	return (((Integer) fstSubValue).intValue() % ((Integer) sndSubValue).intValue());
-                        /*
-			case ImcBINOP.EQUs:
-				return (((String) fstSubValue).compareTo((String) sndSubValue)) == 0 ? 1 : 0;
-			case ImcBINOP.NEQs:
-				return (((String) fstSubValue).compareTo((String) sndSubValue)) != 0 ? 1 : 0;
-			case ImcBINOP.LTHs:
-				return (((String) fstSubValue).compareTo((String) sndSubValue)) < 0 ? 1 : 0;
-			case ImcBINOP.GTHs:
-				return (((String) fstSubValue).compareTo((String) sndSubValue)) > 0 ? 1 : 0;
-			case ImcBINOP.LEQs:
-				return (((String) fstSubValue).compareTo((String) sndSubValue)) <= 0 ? 1 : 0;
-			case ImcBINOP.GEQs:
-				return (((String) fstSubValue).compareTo((String) sndSubValue)) >= 0 ? 1 : 0;
-			}
-                        */
+                /*
+                case ImcBINOP.EQUs:
+                    return (((String) fstSubValue).compareTo((String) sndSubValue)) == 0 ? 1 : 0;
+                case ImcBINOP.NEQs:
+                    return (((String) fstSubValue).compareTo((String) sndSubValue)) != 0 ? 1 : 0;
+                case ImcBINOP.LTHs:
+                    return (((String) fstSubValue).compareTo((String) sndSubValue)) < 0 ? 1 : 0;
+                case ImcBINOP.GTHs:
+                    return (((String) fstSubValue).compareTo((String) sndSubValue)) > 0 ? 1 : 0;
+                case ImcBINOP.LEQs:
+                    return (((String) fstSubValue).compareTo((String) sndSubValue)) <= 0 ? 1 : 0;
+                case ImcBINOP.GEQs:
+                    return (((String) fstSubValue).compareTo((String) sndSubValue)) >= 0 ? 1 : 0;
+                }
+                */
             }
             Report.error("Internal error.");
             return null;
@@ -187,21 +187,24 @@ public class Interpreter {
             if (instr.label.name().equals("_Lsys::getInt")) {
                 Scanner scanner = new Scanner(System.in);
                 int input = scanner.nextInt();
+
                 execute(new ImcMOVE(new ImcMEM(((ImcCALL) instruction).args.get(0)),new ImcCONST(input)));
                 return 6666;
             }
             if (instr.label.name().equals("_Lsys::putString")) {
-                //System.out.println((String) ldM(sp + 4));
-                //return null;
-
                 stM(sp + 4, execute(instr.args.get(0)));
                 System.out.println((String) ldM(sp + 4));
+
                 return 777;
             }
             if (instr.label.name().equals("_Lsys::getString")) {
+                String input = null;
                 Scanner scanner = new Scanner(System.in);
-                stM((Integer) ldM(sp + 4), scanner.next());
-                return null;
+                System.out.println("DBG: input string pls...");
+                input = scanner.nextLine();
+
+                execute(new ImcMOVE(new ImcMEM(((ImcCALL) instruction).args.get(0)), new ImcCONST(input)));
+                return 7777;
             }
 
             //If the function is nested it sets its static link
@@ -244,7 +247,6 @@ public class Interpreter {
 
         if (instruction instanceof ImcCONST) {
             ImcCONST instr = (ImcCONST) instruction;
-            //TODO: STRING, LOGICAL, INT??
             //INT ali LOGICAL
             if(instr.value != null){
                 return new Integer(instr.value);
@@ -254,17 +256,6 @@ public class Interpreter {
                 return instr.stringValue;
             }
         }
-		/*
-		if (instruction instanceof ImcCONSTr) {
-			ImcCONSTr instr = (ImcCONSTr) instruction;
-			return new Float(instr.realValue);
-		}
-		
-		if (instruction instanceof ImcCONSTs) {
-			ImcCONSTs instr = (ImcCONSTs) instruction;
-			return new String(instr.stringValue);
-		}
-                */
 
         if (instruction instanceof ImcJUMP) {
             ImcJUMP instr = (ImcJUMP) instruction;

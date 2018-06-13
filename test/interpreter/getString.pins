@@ -1,0 +1,8 @@
+var s : string;
+
+fun main(i:integer):integer = (
+    getString(s),
+    putString(s),
+    getString(local),
+    putString(local),
+    0) {where var local : string}
