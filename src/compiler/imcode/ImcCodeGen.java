@@ -305,7 +305,8 @@ public class ImcCodeGen implements Visitor {
             code.put(acceptor, new ImcCONST(value));
         }
         else if(acceptor.type == AbsAtomConst.STR){
-            code.put(acceptor, new ImcLABEL(FrmLabel.newLabel()));
+            ImcCONST _const = new ImcCONST(acceptor.value);
+            code.put(acceptor, _const);
         }
     }
 

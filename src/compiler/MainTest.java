@@ -49,6 +49,7 @@ public class MainTest {
         //sourceFileName = "test/interpreter/loops.pins";
         //sourceFileName = "test/interpreter/types.pins";
         //sourceFileName = "test/interpreter/predefined.pins";
+        sourceFileName = "test/interpreter/putstring.pins";
 
 
 

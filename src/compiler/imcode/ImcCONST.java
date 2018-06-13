@@ -11,6 +11,7 @@ public class ImcCONST extends ImcExpr {
 
 	/** Vrednost.  */
 	public Integer value;
+	public String stringValue;
 
 	/**
 	 * Ustvari novo konstanto.
@@ -19,11 +20,18 @@ public class ImcCONST extends ImcExpr {
 	 */
 	public ImcCONST(Integer value) {
 		this.value = value;
+		this.stringValue = null;
+	}
+
+	public ImcCONST(String stringValue){
+		this.stringValue = stringValue;
+		this.value = null;
 	}
 
 	@Override
 	public void dump(int indent) {
-		Report.dump(indent, "CONST value=" + value.toString());
+		if(value != null) Report.dump(indent, "CONST value=" + value.toString());
+		else if(stringValue != null) Report.dump(indent, "CONST value= " + stringValue);
 	}
 
 	@Override

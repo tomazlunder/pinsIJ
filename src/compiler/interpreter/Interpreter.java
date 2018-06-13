@@ -178,6 +178,7 @@ public class Interpreter {
         if (instruction instanceof ImcCALL) {
             ImcCALL instr = (ImcCALL) instruction;
 
+            //If the function is predefined it is handled here
             if (instr.label.name().equals("_Lsys::putInt")) {
                 stM(sp + 4, execute(instr.args.get(0)));
                 System.out.println((Integer) ldM(sp + 4));
@@ -190,8 +191,12 @@ public class Interpreter {
                 return 6666;
             }
             if (instr.label.name().equals("_Lsys::putString")) {
+                //System.out.println((String) ldM(sp + 4));
+                //return null;
+
+                stM(sp + 4, execute(instr.args.get(0)));
                 System.out.println((String) ldM(sp + 4));
-                return null;
+                return 777;
             }
             if (instr.label.name().equals("_Lsys::getString")) {
                 Scanner scanner = new Scanner(System.in);
@@ -199,16 +204,8 @@ public class Interpreter {
                 return null;
             }
 
+            //If the function is nested it sets its static link
             int offset = 0;
-            //stM(sp + offset, fp);
-            //offset += 4;
-
-
-            //for (ImcCode arg : instr.args) {
-            //    stM(sp + offset, execute(arg));
-            //    offset += 4;
-            //}
-
             int i = 0;
             FrmTemp lol = ImcCodeGen.getStaticLinkByLabel(instr.label.name());
             if(lol != null){
@@ -216,18 +213,14 @@ public class Interpreter {
                 stM(sp, ldT(lol));
             }
 
+            //Fills the arguments
             while(i < instr.args.size()){
                 offset = i * 4;
                 stM(sp+offset,execute(instr.args.get(i)));
                 i++;
             }
 
-            /*
-            AbsFunDef calledFunctionDef = (AbsFunDef) SymbTable.fnd(instr.label.name().substring(1));
-            FrmFrame calledFunctionFrame = FrmDesc.getFrame(calledFunctionDef);
-
-            new Interpreter(calledFunctionFrame, ImcCodeGen.linearCode.get(calledFunctionDef));
-            */
+            //If the function is not predefined finds it's frame and linear code by it's label
             String calledFunctionLabel = instr.label.name();
             FrmFrame calledFunctionFrame = ImcCodeGen.frmFrameByLabel.get(calledFunctionLabel);
             ImcSEQ calledFunctionLinearCode = ImcCodeGen.linearCodeByLabel.get(calledFunctionLabel);
@@ -252,7 +245,14 @@ public class Interpreter {
         if (instruction instanceof ImcCONST) {
             ImcCONST instr = (ImcCONST) instruction;
             //TODO: STRING, LOGICAL, INT??
-            return new Integer(instr.value); //.intValue
+            //INT ali LOGICAL
+            if(instr.value != null){
+                return new Integer(instr.value);
+            }
+            //STRING
+            else if(instr.stringValue != null){
+                return instr.stringValue;
+            }
         }
 		/*
 		if (instruction instanceof ImcCONSTr) {
