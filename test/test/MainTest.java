@@ -44,6 +44,7 @@ public class MainTest {
 
         String sourceFileName;
         sourceFileName = "test/resources/success/simple.pins";
+        sourceFileName = "test/resources/success/stringArrays.pins";
 
         //sourceFileName = "test/resources/success/math.pins";
 

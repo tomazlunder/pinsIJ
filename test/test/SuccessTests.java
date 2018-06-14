@@ -77,7 +77,7 @@ public class SuccessTests extends Tests {
 
         String output = getOut();
         String expected = pre
-                + "10\n" + "20\n" + "30\n" + "'40str'\n";
+                + "10\n" + "20\n" + "30\n" + "40str\n";
 
         Assertions.assertEquals(expected,output);
     }
@@ -113,7 +113,7 @@ public class SuccessTests extends Tests {
 
         String output = getOut();
         String expected = pre
-                + "'const!'\n" + "'global!'\n" + "'local!'\n";
+                + "const!\n" + "global!\n" + "local!\n";
 
         Assertions.assertEquals(expected,output);
     }

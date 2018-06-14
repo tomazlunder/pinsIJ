@@ -11,12 +11,12 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 
-public class ManualTests extends Tests{
+public class InputTests extends Tests{
 
 
     @Test
     public void getInt() throws Exception{
-        String fileName = "test/resources/manual/getInt.pins";
+        String fileName = "test/resources/input/getInt.pins";
 
         captureOut();
 
@@ -35,7 +35,7 @@ public class ManualTests extends Tests{
 
     @Test
     public void getString() throws Exception{
-        String fileName = "test/resources/manual/getString.pins";
+        String fileName = "test/resources/input/getString.pins";
 
         captureOut();
 

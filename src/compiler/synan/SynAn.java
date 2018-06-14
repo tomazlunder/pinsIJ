@@ -790,7 +790,8 @@ public class SynAn {
             case Token.STR_CONST: //OK
                 dump("atom_expression -> str_constant'");
                 type = 2;
-                value = buffer.lexeme;
+                //value = buffer.lexeme;
+                value = buffer.lexeme.substring(1,buffer.lexeme.length()-1);
                 bufferSkip(1);
                 break;
             default:

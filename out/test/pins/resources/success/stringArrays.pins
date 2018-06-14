@@ -1,0 +1,20 @@
+var global : arr [3] string;
+
+fun main(i:integer):integer = (
+
+    putString('<Global>'),
+    {global[0] = 'O'},
+    {global[1] = 'hai'},
+    {global[2] = 'Mark!'},
+    putString(global[0]),
+    putString(global[1]),
+    putString(global[2]),
+
+    putString('<Local>'),
+    {local[0] = 'How'},
+    {local[1] = 'are'},
+    {local[2] = 'you?'},
+    putString(local[0]),
+    putString(local[1]),
+    putString(local[2]),
+    1) {where var local : arr [3] string}
