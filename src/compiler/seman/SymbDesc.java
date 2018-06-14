@@ -12,6 +12,13 @@ import compiler.seman.type.*;
  */
 public class SymbDesc {
 
+	//ONLY USE FOR CONSECUTIVE TESTING!
+	public static void reset(){
+		scope = new HashMap<>();
+		nameDef = new HashMap<>();
+		type = new HashMap<>();
+	}
+
 	/** Nivo vidnosti. */
 	private static HashMap<AbsTree, Integer> scope = new HashMap<AbsTree, Integer>();
 

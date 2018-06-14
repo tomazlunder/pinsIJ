@@ -337,7 +337,8 @@ public class TypeChecker implements Visitor {
             //NOT
             if(acceptor.oper == 4){
                 if(SymbDesc.getType(acceptor.expr) instanceof SemAtomType){
-                    if( ((SemAtomType) SymbDesc.getType(acceptor.expr)).sameStructureAs(LOGICAL)){
+                    SemAtomType semType = (SemAtomType) SymbDesc.getType(acceptor.expr);
+                    if( semType.sameStructureAs(LOGICAL) ){
                         SymbDesc.setType(acceptor, new SemAtomType(0));
                     }
                 }
@@ -485,7 +486,7 @@ public class TypeChecker implements Visitor {
         acceptor.elseBody.accept(this);
         
         //Condition mora biti tipa logical
-        if(globPrelet == 4){
+        if(globPrelet == 5){
             if(SymbDesc.getType(acceptor.cond) instanceof SemAtomType)
             {
                 if(SymbDesc.getType(acceptor.thenBody) instanceof SemAtomType && SymbDesc.getType(acceptor.elseBody) instanceof SemAtomType){

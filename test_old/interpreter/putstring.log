@@ -1,0 +1,131 @@
+AbsDefs 5:1-13:33:
+  AbsVarDef 5:1-5:19: global
+    #typed as STRING
+    #accesed as VAR(global: label=_global)
+    AbsAtomType 5:14-5:19: STRING
+      #typed as STRING
+  AbsFunDef 7:1-13:33: main
+    #typed as FUN(INTEGER:INTEGER)
+    #framed as FRAME(main: level=1,label=_main,sizeLocs=4,sizeArgs=5,size=17,FP=T0,RV=T1)
+    AbsPar 7:10-7:18: i
+      #typed as INTEGER
+      #accesed as PAR(i: offset=4)
+      AbsAtomType 7:12-7:18: INTEGER
+        #typed as INTEGER
+    AbsAtomType 7:21-7:27: INTEGER
+      #typed as INTEGER
+    AbsWhere 13:8-13:33:
+      #typed as INTEGER
+      AbsExprs 8:5-13:5:
+        #typed as INTEGER
+        AbsFunCall 8:5-8:23: putString
+          #typed as VOID
+          AbsAtomConst 8:16-8:22: STRING('const!')
+            #typed as STRING
+        AbsBinExpr 9:6-9:23: ASSIGN
+          #typed as STRING
+          AbsVarName 9:6-9:11: global
+            #defined at 5:1-5:19
+            #typed as STRING
+          AbsAtomConst 9:16-9:23: STRING('global!')
+            #typed as STRING
+        AbsFunCall 10:5-10:21: putString
+          #typed as VOID
+          AbsVarName 10:15-10:20: global
+            #defined at 5:1-5:19
+            #typed as STRING
+        AbsBinExpr 11:6-11:21: ASSIGN
+          #typed as STRING
+          AbsVarName 11:6-11:10: local
+            #defined at 13:15-13:32
+            #typed as STRING
+          AbsAtomConst 11:15-11:21: STRING('local!')
+            #typed as STRING
+        AbsFunCall 12:5-12:20: putString
+          #typed as VOID
+          AbsVarName 12:15-12:19: local
+            #defined at 13:15-13:32
+            #typed as STRING
+        AbsAtomConst 13:5-13:5: INTEGER(0)
+          #typed as INTEGER
+      AbsDefs 13:15-13:32:
+        AbsVarDef 13:15-13:32: local
+          #typed as STRING
+          #accesed as LOC(local: offset=-4)
+          AbsAtomType 13:27-13:32: STRING
+            #typed as STRING
+DATA CHUNK: label=_global size=4
+CODE CHUNK: label=_main
+  FRAME(main: level=1,label=_main,sizeLocs=4,sizeArgs=5,size=17,FP=T0,RV=T1)
+  SEQ
+    MOVE
+      TEMP name=T6
+      CONST value= 'const!'
+    MOVE
+      TEMP name=T7
+      CALL label=_Lsys::putString
+        TEMP name=T6
+    EXP
+      TEMP name=T7
+    MOVE
+      TEMP name=T2
+      MEM
+        NAME label=_global
+    MOVE
+      TEMP name=T3
+      CONST value= 'global!'
+    MOVE
+      TEMP name=T2
+      TEMP name=T3
+    MOVE
+      MEM
+        NAME label=_global
+      TEMP name=T3
+    EXP
+      TEMP name=T3
+    MOVE
+      TEMP name=T8
+      MEM
+        NAME label=_global
+    MOVE
+      TEMP name=T9
+      CALL label=_Lsys::putString
+        TEMP name=T8
+    EXP
+      TEMP name=T9
+    MOVE
+      TEMP name=T4
+      MEM
+        BINOP op=+
+          TEMP name=T0
+          CONST value=-4
+    MOVE
+      TEMP name=T5
+      CONST value= 'local!'
+    MOVE
+      TEMP name=T4
+      TEMP name=T5
+    MOVE
+      MEM
+        BINOP op=+
+          TEMP name=T0
+          CONST value=-4
+      TEMP name=T5
+    EXP
+      TEMP name=T5
+    MOVE
+      TEMP name=T10
+      MEM
+        BINOP op=+
+          TEMP name=T0
+          CONST value=-4
+    MOVE
+      TEMP name=T11
+      CALL label=_Lsys::putString
+        TEMP name=T10
+    EXP
+      TEMP name=T11
+    MOVE
+      MEM
+        TEMP name=T1
+      CONST value=0

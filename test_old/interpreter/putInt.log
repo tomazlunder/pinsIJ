@@ -1,0 +1,131 @@
+AbsDefs 1:1-9:34:
+  AbsVarDef 1:1-1:20: global
+    #typed as INTEGER
+    #accesed as VAR(global: label=_global)
+    AbsAtomType 1:14-1:20: INTEGER
+      #typed as INTEGER
+  AbsFunDef 3:1-9:34: main
+    #typed as FUN(INTEGER:INTEGER)
+    #framed as FRAME(main: level=1,label=_main,sizeLocs=4,sizeArgs=5,size=17,FP=T0,RV=T1)
+    AbsPar 3:10-3:18: i
+      #typed as INTEGER
+      #accesed as PAR(i: offset=4)
+      AbsAtomType 3:12-3:18: INTEGER
+        #typed as INTEGER
+    AbsAtomType 3:21-3:27: INTEGER
+      #typed as INTEGER
+    AbsWhere 9:8-9:34:
+      #typed as INTEGER
+      AbsExprs 4:5-9:5:
+        #typed as INTEGER
+        AbsBinExpr 4:6-4:15: ASSIGN
+          #typed as INTEGER
+          AbsVarName 4:6-4:11: global
+            #defined at 1:1-1:20
+            #typed as INTEGER
+          AbsAtomConst 4:15-4:15: INTEGER(6)
+            #typed as INTEGER
+        AbsBinExpr 5:6-5:14: ASSIGN
+          #typed as INTEGER
+          AbsVarName 5:6-5:10: local
+            #defined at 9:15-9:33
+            #typed as INTEGER
+          AbsAtomConst 5:14-5:14: INTEGER(9)
+            #typed as INTEGER
+        AbsFunCall 6:5-6:13: putInt
+          #typed as VOID
+          AbsAtomConst 6:12-6:12: INTEGER(3)
+            #typed as INTEGER
+        AbsFunCall 7:5-7:18: putInt
+          #typed as VOID
+          AbsVarName 7:12-7:17: global
+            #defined at 1:1-1:20
+            #typed as INTEGER
+        AbsFunCall 8:5-8:17: putInt
+          #typed as VOID
+          AbsVarName 8:12-8:16: local
+            #defined at 9:15-9:33
+            #typed as INTEGER
+        AbsAtomConst 9:5-9:5: INTEGER(1)
+          #typed as INTEGER
+      AbsDefs 9:15-9:33:
+        AbsVarDef 9:15-9:33: local
+          #typed as INTEGER
+          #accesed as LOC(local: offset=-4)
+          AbsAtomType 9:27-9:33: INTEGER
+            #typed as INTEGER
+DATA CHUNK: label=_global size=4
+CODE CHUNK: label=_main
+  FRAME(main: level=1,label=_main,sizeLocs=4,sizeArgs=5,size=17,FP=T0,RV=T1)
+  SEQ
+    MOVE
+      TEMP name=T2
+      MEM
+        NAME label=_global
+    MOVE
+      TEMP name=T3
+      CONST value=6
+    MOVE
+      TEMP name=T2
+      TEMP name=T3
+    MOVE
+      MEM
+        NAME label=_global
+      TEMP name=T3
+    EXP
+      TEMP name=T3
+    MOVE
+      TEMP name=T4
+      MEM
+        BINOP op=+
+          TEMP name=T0
+          CONST value=-4
+    MOVE
+      TEMP name=T5
+      CONST value=9
+    MOVE
+      TEMP name=T4
+      TEMP name=T5
+    MOVE
+      MEM
+        BINOP op=+
+          TEMP name=T0
+          CONST value=-4
+      TEMP name=T5
+    EXP
+      TEMP name=T5
+    MOVE
+      TEMP name=T6
+      CONST value=3
+    MOVE
+      TEMP name=T7
+      CALL label=_Lsys::putInt
+        TEMP name=T6
+    EXP
+      TEMP name=T7
+    MOVE
+      TEMP name=T8
+      MEM
+        NAME label=_global
+    MOVE
+      TEMP name=T9
+      CALL label=_Lsys::putInt
+        TEMP name=T8
+    EXP
+      TEMP name=T9
+    MOVE
+      TEMP name=T10
+      MEM
+        BINOP op=+
+          TEMP name=T0
+          CONST value=-4
+    MOVE
+      TEMP name=T11
+      CALL label=_Lsys::putInt
+        TEMP name=T10
+    EXP
+      TEMP name=T11
+    MOVE
+      MEM
+        TEMP name=T1
+      CONST value=1

@@ -13,6 +13,12 @@ public class SymbTable {
 	/** Trenutna globina nivoja gnezdenja. */
 	private static int scope = 0;
 
+	//ONLY USED FOR CONSECUTIVE TESTS... DO NOT USE IN THE PROGRAM!
+	public static void reset(){
+		mapping = new HashMap<>();
+		scope = 0;
+	}
+
 	/**
 	 * Preide na naslednji nivo gnezdenja.
 	 */

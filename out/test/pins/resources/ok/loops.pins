@@ -1,0 +1,20 @@
+#Tests:
+# - for loop (1,2,3,4,5)
+# - while loop (1,2,3,4,5)
+# Expected output: 1 2 3 4 5 1 2 3 4 5
+
+fun whileFun(x:integer, y:integer):integer = (
+    {a = x},
+    {while (a <= y) : (putInt(a), {a = a+1})},
+    0)
+    {where var a : integer};
+
+fun forFun(x:integer, y:integer):integer = (
+    {for a = x, y, 1 : putInt(a)},
+    1)
+    {where var a : integer};
+
+fun main(x:integer):integer = (
+    whileFun(1,5),
+    forFun(1,5),
+    1)

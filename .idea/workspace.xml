@@ -2,11 +2,158 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb7e99d2-cd24-4109-b71b-80fc523394d9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/pins/compiler/imcode/ImcCodeGen.class" afterPath="$PROJECT_DIR$/out/production/pins/compiler/imcode/ImcCodeGen.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/resources/ok/logical.pins" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/resources/ok/putInt.pins" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/resources/ok/putString.pins" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/resources/ok/types.pins" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test/UnitTests.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_old/interpreter/arrays.pins" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_old/interpreter/arrays2.pins" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_old/interpreter/functions.pins" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_old/interpreter/functions2.pins" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_old/interpreter/getInt.pins" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_old/interpreter/getString.pins" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_old/interpreter/logical.pins" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_old/interpreter/loops.pins" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_old/interpreter/math.pins" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_old/interpreter/putString.pins" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_old/interpreter/simple.pins" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_old/interpreter/types.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_old/interpreter/types.pins" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/pins/compiler/MainTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/pins/compiler/UnitTests.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/compiler/UnitTests.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/interpreter/getString.pins" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/interpreter/putString.pins" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/interpreter/types.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/interpreter/types.pins" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/pins/compiler/seman/SymbDesc.class" afterPath="$PROJECT_DIR$/out/production/pins/compiler/seman/SymbDesc.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/pins/compiler/seman/SymbTable.class" afterPath="$PROJECT_DIR$/out/production/pins/compiler/seman/SymbTable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/pins/compiler/seman/TypeChecker.class" afterPath="$PROJECT_DIR$/out/production/pins/compiler/seman/TypeChecker.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/imcode/ImcCodeGen.java" afterPath="$PROJECT_DIR$/src/compiler/imcode/ImcCodeGen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/interpreter/arrays2.log" afterPath="$PROJECT_DIR$/test/interpreter/arrays2.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/interpreter/arrays2.pins" afterPath="$PROJECT_DIR$/test/interpreter/arrays2.pins" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pins.iml" afterPath="$PROJECT_DIR$/pins.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/seman/SymbDesc.java" afterPath="$PROJECT_DIR$/src/compiler/seman/SymbDesc.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/seman/SymbTable.java" afterPath="$PROJECT_DIR$/src/compiler/seman/SymbTable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/seman/TypeChecker.java" afterPath="$PROJECT_DIR$/src/compiler/seman/TypeChecker.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/compiler/MainTest.java" afterPath="$PROJECT_DIR$/test/test/MainTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/abstr/pravilni/p1.pins" afterPath="$PROJECT_DIR$/test_old/pravilni/p1.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/abstr/pravilni/p2.pins" afterPath="$PROJECT_DIR$/test_old/pravilni/p2.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/abstr/pravilni/p3.pins" afterPath="$PROJECT_DIR$/test_old/pravilni/p3.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/abstr/pravilni/p4.pins" afterPath="$PROJECT_DIR$/test_old/pravilni/p4.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/intellij/seven/test.log" afterPath="$PROJECT_DIR$/test_old/seven/test.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/intellij/seven/test.pins" afterPath="$PROJECT_DIR$/test_old/seven/test.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/intellij/seven/test.pins.log_org" afterPath="$PROJECT_DIR$/test_old/seven/test.pins.log_org" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/interpreter/arrays.log" afterPath="$PROJECT_DIR$/test_old/interpreter/arrays.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/interpreter/arrays.pins" afterPath="$PROJECT_DIR$/test/resources/ok/arrays.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/interpreter/arrays2.log" afterPath="$PROJECT_DIR$/test_old/interpreter/arrays2.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/interpreter/arrays2.pins" afterPath="$PROJECT_DIR$/test/resources/ok/arrays2.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/interpreter/functions.log" afterPath="$PROJECT_DIR$/test_old/interpreter/functions.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/interpreter/functions.pins" afterPath="$PROJECT_DIR$/test/resources/ok/functions.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/interpreter/functions2.log" afterPath="$PROJECT_DIR$/test_old/interpreter/functions2.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/interpreter/functions2.pins" afterPath="$PROJECT_DIR$/test/resources/ok/functions2.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/interpreter/getString.log" afterPath="$PROJECT_DIR$/test_old/interpreter/getString.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/interpreter/loops.log" afterPath="$PROJECT_DIR$/test_old/interpreter/loops.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/interpreter/loops.pins" afterPath="$PROJECT_DIR$/test/resources/ok/loops.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/interpreter/math.log" afterPath="$PROJECT_DIR$/test_old/interpreter/math.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/interpreter/math.pins" afterPath="$PROJECT_DIR$/test/resources/ok/math.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/interpreter/predefined.log" afterPath="$PROJECT_DIR$/test_old/interpreter/predefined.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/interpreter/predefined.pins" afterPath="$PROJECT_DIR$/test_old/interpreter/predefined.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/interpreter/putstring.log" afterPath="$PROJECT_DIR$/test_old/interpreter/putstring.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/interpreter/simple.log" afterPath="$PROJECT_DIR$/test_old/interpreter/simple.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/interpreter/simple.pins" afterPath="$PROJECT_DIR$/test/resources/ok/simple.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/lexan/nepravilni/testF1.log" afterPath="$PROJECT_DIR$/test_old/lexan/nepravilni/testF1.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/lexan/nepravilni/testF1.pins" afterPath="$PROJECT_DIR$/test_old/lexan/nepravilni/testF1.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/lexan/nepravilni/testF2.log" afterPath="$PROJECT_DIR$/test_old/lexan/nepravilni/testF2.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/lexan/nepravilni/testF2.pins" afterPath="$PROJECT_DIR$/test_old/lexan/nepravilni/testF2.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/lexan/nepravilni/testF3.log" afterPath="$PROJECT_DIR$/test_old/lexan/nepravilni/testF3.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/lexan/nepravilni/testF3.pins" afterPath="$PROJECT_DIR$/test_old/lexan/nepravilni/testF3.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/lexan/nepravilni/testT1.log" afterPath="$PROJECT_DIR$/test_old/lexan/nepravilni/testT1.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/lexan/pravilni/testT1.log" afterPath="$PROJECT_DIR$/test_old/lexan/pravilni/testT1.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/lexan/pravilni/testT1.pins" afterPath="$PROJECT_DIR$/test_old/lexan/pravilni/testT1.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/lexan/pravilni/testT2.log" afterPath="$PROJECT_DIR$/test_old/lexan/pravilni/testT2.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/lexan/pravilni/testT2.pins" afterPath="$PROJECT_DIR$/test_old/lexan/pravilni/testT2.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/lexan/pravilni/testT3.pins" afterPath="$PROJECT_DIR$/test_old/lexan/pravilni/testT3.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/imena/nepravilni/n1.log" afterPath="$PROJECT_DIR$/test_old/seman/imena/nepravilni/n1.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/imena/nepravilni/n1.pins" afterPath="$PROJECT_DIR$/test_old/seman/imena/nepravilni/n1.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/imena/pravilni/testP1.log" afterPath="$PROJECT_DIR$/test_old/seman/imena/pravilni/testP1.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/imena/pravilni/testP1.pins" afterPath="$PROJECT_DIR$/test_old/seman/imena/pravilni/testP1.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/imena/pravilni/testP2.pins" afterPath="$PROJECT_DIR$/test_old/seman/imena/pravilni/testP2.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/imena/pravilni/tp1.pins" afterPath="$PROJECT_DIR$/test_old/seman/imena/pravilni/tp1.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/imena/tomaz/oddaja testov/n1.pins" afterPath="$PROJECT_DIR$/test_old/seman/imena/tomaz/oddaja testov/n1.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/imena/tomaz/oddaja testov/n2.pins" afterPath="$PROJECT_DIR$/test_old/seman/imena/tomaz/oddaja testov/n2.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/imena/tomaz/oddaja testov/n3.pins" afterPath="$PROJECT_DIR$/test_old/seman/imena/tomaz/oddaja testov/n3.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/imena/tomaz/oddaja testov/p1.pins" afterPath="$PROJECT_DIR$/test_old/seman/imena/tomaz/oddaja testov/p1.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/imena/tomaz/oddaja testov/testi04-tomaz.zip" afterPath="$PROJECT_DIR$/test_old/seman/imena/tomaz/oddaja testov/testi04-tomaz.zip" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/imena/tomaz/tn1.log" afterPath="$PROJECT_DIR$/test_old/seman/imena/tomaz/tn1.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/imena/tomaz/tn1.pins" afterPath="$PROJECT_DIR$/test_old/seman/imena/tomaz/tn1.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/imena/tomaz/tn2.log" afterPath="$PROJECT_DIR$/test_old/seman/imena/tomaz/tn2.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/imena/tomaz/tn2.pins" afterPath="$PROJECT_DIR$/test_old/seman/imena/tomaz/tn2.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/imena/tomaz/tn3.log" afterPath="$PROJECT_DIR$/test_old/seman/imena/tomaz/tn3.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/imena/tomaz/tn3.pins" afterPath="$PROJECT_DIR$/test_old/seman/imena/tomaz/tn3.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/imena/tomaz/tp1.log" afterPath="$PROJECT_DIR$/test_old/seman/imena/tomaz/tp1.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/imena/tomaz/tp1.pins" afterPath="$PROJECT_DIR$/test_old/seman/imena/tomaz/tp1.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/imena/tomaz/tp1_old.log" afterPath="$PROJECT_DIR$/test_old/seman/imena/tomaz/tp1_old.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/imena/tomaz/tp2.log" afterPath="$PROJECT_DIR$/test_old/seman/imena/tomaz/tp2.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/imena/tomaz/tp2.pins" afterPath="$PROJECT_DIR$/test_old/seman/imena/tomaz/tp2.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/tipi/tp1.log" afterPath="$PROJECT_DIR$/test_old/seman/tipi/tp1.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/tipi/tp1.pins" afterPath="$PROJECT_DIR$/test_old/seman/tipi/tp1.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/tipi/tp2.log" afterPath="$PROJECT_DIR$/test_old/seman/tipi/tp2.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/tipi/tp2.pins" afterPath="$PROJECT_DIR$/test_old/seman/tipi/tp2.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/seman/tipi/tp2_4.log" afterPath="$PROJECT_DIR$/test_old/seman/tipi/tp2_4.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/sliva/sest/test1.log" afterPath="$PROJECT_DIR$/test_old/sliva/sest/test1.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/sliva/sest/test1.pins" afterPath="$PROJECT_DIR$/test_old/sliva/sest/test1.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/sliva/sest/test2.log" afterPath="$PROJECT_DIR$/test_old/sliva/sest/test2.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/sliva/sest/test2.pins" afterPath="$PROJECT_DIR$/test_old/sliva/sest/test2.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/sliva/sest/test3.log" afterPath="$PROJECT_DIR$/test_old/sliva/sest/test3.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/sliva/sest/test3.pins" afterPath="$PROJECT_DIR$/test_old/sliva/sest/test3.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/sliva/tipi/REZULTATI PO TIPIH/test1.log" afterPath="$PROJECT_DIR$/test_old/sliva/tipi/REZULTATI PO TIPIH/test1.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/sliva/tipi/REZULTATI PO TIPIH/test2.log" afterPath="$PROJECT_DIR$/test_old/sliva/tipi/REZULTATI PO TIPIH/test2.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/sliva/tipi/REZULTATI PO TIPIH/test3.log" afterPath="$PROJECT_DIR$/test_old/sliva/tipi/REZULTATI PO TIPIH/test3.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/sliva/tipi/REZULTATI PO TIPIH/test4.log" afterPath="$PROJECT_DIR$/test_old/sliva/tipi/REZULTATI PO TIPIH/test4.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/sliva/tipi/test.log" afterPath="$PROJECT_DIR$/test_old/sliva/tipi/test.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/sliva/tipi/test.log.old" afterPath="$PROJECT_DIR$/test_old/sliva/tipi/test.log.old" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/sliva/tipi/test.pins" afterPath="$PROJECT_DIR$/test_old/sliva/tipi/test.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/sliva/tipi/test1.log" afterPath="$PROJECT_DIR$/test_old/sliva/tipi/test1.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/sliva/tipi/test1.log.old" afterPath="$PROJECT_DIR$/test_old/sliva/tipi/test1.log.old" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/sliva/tipi/test1.pins" afterPath="$PROJECT_DIR$/test_old/sliva/tipi/test1.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/sliva/tipi/test2.log" afterPath="$PROJECT_DIR$/test_old/sliva/tipi/test2.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/sliva/tipi/test2.log.old" afterPath="$PROJECT_DIR$/test_old/sliva/tipi/test2.log.old" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/sliva/tipi/test2.pins" afterPath="$PROJECT_DIR$/test_old/sliva/tipi/test2.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/sliva/tipi/test3.log" afterPath="$PROJECT_DIR$/test_old/sliva/tipi/test3.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/sliva/tipi/test3.log.old" afterPath="$PROJECT_DIR$/test_old/sliva/tipi/test3.log.old" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/sliva/tipi/test3.pins" afterPath="$PROJECT_DIR$/test_old/sliva/tipi/test3.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/sliva/tipi/test4.log" afterPath="$PROJECT_DIR$/test_old/sliva/tipi/test4.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/sliva/tipi/test4.pins" afterPath="$PROJECT_DIR$/test_old/sliva/tipi/test4.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/synan/nepravilni/n1.log" afterPath="$PROJECT_DIR$/test_old/synan/nepravilni/n1.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/synan/nepravilni/n1.pins" afterPath="$PROJECT_DIR$/test_old/synan/nepravilni/n1.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/synan/nepravilni/n2.log" afterPath="$PROJECT_DIR$/test_old/synan/nepravilni/n2.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/synan/nepravilni/n2.pins" afterPath="$PROJECT_DIR$/test_old/synan/nepravilni/n2.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/synan/nepravilni/n3.log" afterPath="$PROJECT_DIR$/test_old/synan/nepravilni/n3.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/synan/nepravilni/n3.pins" afterPath="$PROJECT_DIR$/test_old/synan/nepravilni/n3.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/synan/pravilni/n3.log" afterPath="$PROJECT_DIR$/test_old/synan/pravilni/n3.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/synan/pravilni/p1.log" afterPath="$PROJECT_DIR$/test_old/synan/pravilni/p1.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/synan/pravilni/p1.pins" afterPath="$PROJECT_DIR$/test_old/synan/pravilni/p1.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/synan/pravilni/p2.log" afterPath="$PROJECT_DIR$/test_old/synan/pravilni/p2.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/synan/pravilni/p2.pins" afterPath="$PROJECT_DIR$/test_old/synan/pravilni/p2.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/synan/pravilni/p3.log" afterPath="$PROJECT_DIR$/test_old/synan/pravilni/p3.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/synan/pravilni/p3.pins" afterPath="$PROJECT_DIR$/test_old/synan/pravilni/p3.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/v2/frame/test.log" afterPath="$PROJECT_DIR$/test_old/v2/frame/test.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/v2/frame/test.pins" afterPath="$PROJECT_DIR$/test_old/v2/frame/test.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/v2/frame/test1.log" afterPath="$PROJECT_DIR$/test_old/v2/frame/test1.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/v2/frame/test1.pins" afterPath="$PROJECT_DIR$/test_old/v2/frame/test1.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/v2/imena/test1.log" afterPath="$PROJECT_DIR$/test_old/v2/imena/test1.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/v2/imena/test1.pins" afterPath="$PROJECT_DIR$/test_old/v2/imena/test1.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/v2/koda/test.log" afterPath="$PROJECT_DIR$/test_old/v2/koda/test.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/v2/koda/test.pins" afterPath="$PROJECT_DIR$/test_old/v2/koda/test.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/v2/koda/test1.log" afterPath="$PROJECT_DIR$/test_old/v2/koda/test1.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/v2/koda/test1.pins" afterPath="$PROJECT_DIR$/test_old/v2/koda/test1.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/v2/tipi/test1.log" afterPath="$PROJECT_DIR$/test_old/v2/tipi/test1.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/v2/tipi/test1.pins" afterPath="$PROJECT_DIR$/test_old/v2/tipi/test1.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/v2/tipi/test12.log" afterPath="$PROJECT_DIR$/test_old/v2/tipi/test12.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/v2/tipi/test12.pins" afterPath="$PROJECT_DIR$/test_old/v2/tipi/test12.pins" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/v2/tipi/test2.log" afterPath="$PROJECT_DIR$/test_old/v2/tipi/test2.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/v2/tipi/test2.pins" afterPath="$PROJECT_DIR$/test_old/v2/tipi/test2.pins" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,113 +163,88 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DockManager">
+    <window id="17">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="simple.pins" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/test_old/interpreter/simple.pins">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="153">
+                    <caret line="9" column="36" lean-forward="false" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="math.pins" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/test_old/interpreter/math.pins">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="85">
+                    <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="functions.pins" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/test_old/interpreter/functions.pins">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="34">
+                    <caret line="2" column="53" lean-forward="false" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="functions2.pins" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/test_old/interpreter/functions2.pins">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="136">
+                    <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="loops.pins" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/test_old/interpreter/loops.pins">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="323">
+                    <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="types.pins" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/test_old/interpreter/types.pins">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="187">
+                    <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="logical.pins" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/test_old/interpreter/logical.pins">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="51">
+                    <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/compiler/MainTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="53" column="10" lean-forward="false" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Interpreter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/compiler/interpreter/Interpreter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#518#535#0" expanded="true" />
-                <element signature="e#1351#1368#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SynAn.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/compiler/synan/SynAn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="702" column="9" lean-forward="true" selection-start-line="702" selection-start-column="9" selection-end-line="702" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="arrays2.pins" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/interpreter/arrays2.pins">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="50" lean-forward="true" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbsBinExpr.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsBinExpr.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="56" column="51" lean-forward="false" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="arrays2.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/interpreter/arrays2.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImcCodeGen.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcCodeGen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="204" column="68" lean-forward="false" selection-start-line="204" selection-start-column="68" selection-end-line="204" selection-end-column="68" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbsFunDef.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsFunDef.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="742">
-              <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImcCALL.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcCALL.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="566">
-              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImcESEQ.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcESEQ.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -133,18 +255,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>funcall</find>
-      <find>while</find>
-      <find>ImcBINOP</find>
-      <find>for</find>
-      <find>call</find>
-      <find>absfor</find>
-      <find>VarName</find>
-      <find>AbsFor</find>
-      <find>com</find>
-      <find>Imc</find>
-      <find>ImcCALL</find>
-      <find>predef</find>
       <find>g</find>
       <find>absatomconst</find>
       <find>1</find>
@@ -163,7 +273,23 @@
       <find>AbsARr</find>
       <find>postFixExp</find>
       <find>AbsVarDef</find>
+      <find>NOT</find>
+      <find>not</find>
+      <find>log</find>
+      <find>SemIlle</find>
+      <find>SymbDesc</find>
+      <find>ins</find>
+      <find>static</find>
+      <find>SymbTable</find>
+      <find>test/re</find>
+      <find>test/interpreter</find>
+      <find>int</find>
+      <find>ok</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>test/resources/ok</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -179,30 +305,41 @@
         <option value="$PROJECT_DIR$/src/compiler/Main.java" />
         <option value="$PROJECT_DIR$/src/compiler/seman/NameChecker.java" />
         <option value="$PROJECT_DIR$/test/intellij/seven/test.log" />
-        <option value="$PROJECT_DIR$/src/compiler/seman/TypeChecker.java" />
         <option value="$PROJECT_DIR$/src/compiler/frames/FrmFrame.java" />
         <option value="$PROJECT_DIR$/test/interpreter/simple.log" />
         <option value="$PROJECT_DIR$/src/compiler/frames/FrmEvaluator.java" />
         <option value="$PROJECT_DIR$/test/interpreter/functions.log" />
-        <option value="$PROJECT_DIR$/src/compiler/UnitTests.java" />
         <option value="$PROJECT_DIR$/src/compiler/lexan/LexAn.java" />
         <option value="$PROJECT_DIR$/test/interpreter/math_simple.pins" />
         <option value="$PROJECT_DIR$/test/interpreter/math.pins" />
-        <option value="$PROJECT_DIR$/test/interpreter/types.pins" />
         <option value="$PROJECT_DIR$/test/interpreter/predefined.pins" />
-        <option value="$PROJECT_DIR$/test/interpreter/functions.pins" />
         <option value="$PROJECT_DIR$/test/interpreter/functions2.pins" />
         <option value="$PROJECT_DIR$/test/interpreter/loops.pins" />
         <option value="$PROJECT_DIR$/src/compiler/imcode/ImcCONST.java" />
         <option value="$PROJECT_DIR$/test/interpreter/putstring.pins" />
-        <option value="$PROJECT_DIR$/test/interpreter/getString.pins" />
         <option value="$PROJECT_DIR$/test/sliva/sest/test3.pins" />
         <option value="$PROJECT_DIR$/test/interpreter/simple.pins" />
-        <option value="$PROJECT_DIR$/test/interpreter/arrays.pins" />
         <option value="$PROJECT_DIR$/src/compiler/interpreter/Interpreter.java" />
-        <option value="$PROJECT_DIR$/src/compiler/MainTest.java" />
         <option value="$PROJECT_DIR$/src/compiler/imcode/ImcCodeGen.java" />
+        <option value="$PROJECT_DIR$/test/interpreter/types.pins" />
+        <option value="$PROJECT_DIR$/src/compiler/seman/TypeChecker.java" />
+        <option value="$PROJECT_DIR$/test/interpreter/logical.pins" />
+        <option value="$PROJECT_DIR$/src/compiler/seman/SymbTable.java" />
+        <option value="$PROJECT_DIR$/src/compiler/seman/SymbDesc.java" />
+        <option value="$PROJECT_DIR$/test/interpreter/functions.pins" />
+        <option value="$PROJECT_DIR$/test/interpreter/putInt.pins" />
+        <option value="$PROJECT_DIR$/test/interpreter/putString.pins" />
+        <option value="$PROJECT_DIR$/test/interpreter/getInt.pins" />
+        <option value="$PROJECT_DIR$/test/interpreter/getString.pins" />
         <option value="$PROJECT_DIR$/test/interpreter/arrays2.pins" />
+        <option value="$PROJECT_DIR$/src/compiler/MainTest.java" />
+        <option value="$PROJECT_DIR$/test/interpreter/arrays.pins" />
+        <option value="$PROJECT_DIR$/src/compiler/UnitTests.java" />
+        <option value="$PROJECT_DIR$/test/MainTest.java" />
+        <option value="$PROJECT_DIR$/test/java/UnitTests.java" />
+        <option value="$PROJECT_DIR$/test/java/MainTest.java" />
+        <option value="$PROJECT_DIR$/test/test/MainTest.java" />
+        <option value="$PROJECT_DIR$/test/test/UnitTests.java" />
       </list>
     </option>
   </component>
@@ -244,64 +381,7 @@
             </path>
             <path>
               <item name="pins" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pins" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pins" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pins" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="compiler" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pins" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pins" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="compiler" type="462c0819:PsiDirectoryNode" />
-              <item name="abstr" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pins" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pins" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pins" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pins" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="final" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pins" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pins" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="interpreter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pins" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pins" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="sliva" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pins" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pins" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="sliva" type="462c0819:PsiDirectoryNode" />
-              <item name="sest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pins" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pins" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="v2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pins" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pins" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="v2" type="462c0819:PsiDirectoryNode" />
-              <item name="frame" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -316,9 +396,19 @@
     <property name="nodejs_interpreter_path" value="E:/dev/NodeJS_8.9.3/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\IntelliJ projects\pins2018ij\pins\test_old" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Projects\IntelliJ projects\pins2018ij\pins\test\resources\ok" />
       <recent name="E:\Projects\IntelliJ projects\pins2018ij\pins\test\intellij\seven" />
     </key>
   </component>
@@ -334,11 +424,49 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MainTest">
+  <component name="RunManager" selected="JUnit.UnitTests (1)">
+    <configuration name="MainTest (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="java.MainTest" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="pins" />
+      <envs />
+    </configuration>
+    <configuration name="MainTest (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="test.MainTest" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="pins" />
+      <envs />
+    </configuration>
     <configuration name="MainTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="compiler.*" />
+          <option name="PATTERN" value="java.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -354,18 +482,18 @@
       <module name="pins" />
       <envs />
     </configuration>
-    <configuration name="UnitTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UnitTests (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="compiler.*" />
+          <option name="PATTERN" value="test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="pins" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="compiler" />
-      <option name="MAIN_CLASS_NAME" value="compiler.UnitTests" />
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.UnitTests" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -379,20 +507,20 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="UnitTests.basicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UnitTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="compiler.*" />
+          <option name="PATTERN" value="java.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="pins" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="compiler" />
-      <option name="MAIN_CLASS_NAME" value="compiler.UnitTests" />
-      <option name="METHOD_NAME" value="basicTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="java" />
+      <option name="MAIN_CLASS_NAME" value="java.UnitTests" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -484,16 +612,20 @@
       <properties />
       <listeners />
     </configuration>
-    <list size="3">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.MainTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.UnitTests.basicTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.UnitTests" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.UnitTests" />
+      <item index="2" class="java.lang.String" itemvalue="Application.MainTest (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Application.MainTest (2)" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.UnitTests (1)" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Application.MainTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.UnitTests.basicTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.UnitTests" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.UnitTests (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Application.MainTest (2)" />
+        <item index="2" class="java.lang.String" itemvalue="Application.MainTest (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Application.MainTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.UnitTests" />
       </list>
     </recent_temporary>
   </component>
@@ -515,67 +647,69 @@
       <workItem from="1528480184576" duration="4514000" />
       <workItem from="1528898961962" duration="5600000" />
       <workItem from="1528910182304" duration="6718000" />
-      <workItem from="1528966483461" duration="6315000" />
+      <workItem from="1528966483461" duration="13891000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UnitTests - 2018.06.08 at 13h 16m 22s.xml">
+    <history-entry file="UnitTests - 2018.06.14 at 16h 03m 10s.xml">
       <configuration name="UnitTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UnitTests_basicTest - 2018.06.08 at 13h 11m 42s.xml">
-      <configuration name="UnitTests.basicTest" configurationId="JUnit" />
+    <history-entry file="UnitTests - 2018.06.14 at 16h 04m 20s.xml">
+      <configuration name="UnitTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UnitTests_basicTest - 2018.06.08 at 13h 15m 38s.xml">
-      <configuration name="UnitTests.basicTest" configurationId="JUnit" />
+    <history-entry file="UnitTests - 2018.06.14 at 16h 04m 27s.xml">
+      <configuration name="UnitTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UnitTests_basicTest - 2018.06.08 at 13h 16m 02s.xml">
-      <configuration name="UnitTests.basicTest" configurationId="JUnit" />
+    <history-entry file="UnitTests - 2018.06.14 at 16h 04m 43s.xml">
+      <configuration name="UnitTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UnitTests_basicTest - 2018.06.08 at 13h 16m 06s.xml">
-      <configuration name="UnitTests.basicTest" configurationId="JUnit" />
+    <history-entry file="UnitTests - 2018.06.14 at 16h 08m 07s.xml">
+      <configuration name="UnitTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UnitTests_basicTest - 2018.06.08 at 13h 20m 00s.xml">
-      <configuration name="UnitTests.basicTest" configurationId="JUnit" />
+    <history-entry file="UnitTests_(1) - 2018.06.14 at 16h 15m 57s.xml">
+      <configuration name="UnitTests (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UnitTests_basicTest - 2018.06.08 at 13h 20m 33s.xml">
-      <configuration name="UnitTests.basicTest" configurationId="JUnit" />
+    <history-entry file="UnitTests_(1) - 2018.06.14 at 16h 16m 09s.xml">
+      <configuration name="UnitTests (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UnitTests_basicTest - 2018.06.08 at 13h 20m 37s.xml">
-      <configuration name="UnitTests.basicTest" configurationId="JUnit" />
+    <history-entry file="UnitTests_(1) - 2018.06.14 at 16h 17m 14s.xml">
+      <configuration name="UnitTests (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UnitTests_basicTest - 2018.06.08 at 13h 20m 41s.xml">
-      <configuration name="UnitTests.basicTest" configurationId="JUnit" />
+    <history-entry file="UnitTests_(1) - 2018.06.14 at 16h 17m 36s.xml">
+      <configuration name="UnitTests (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UnitTests_(1) - 2018.06.14 at 16h 18m 05s.xml">
+      <configuration name="UnitTests (1)" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75306000" />
+    <option name="totallyTimeSpent" value="82882000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22643554" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30916846" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23773988" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21588486" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21588486" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2112676" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2112676" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26918977" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53198296" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -604,7 +738,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2793177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28411514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21588486" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -623,30 +757,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/compiler/UnitTests.java</url>
-          <line>40</line>
-          <properties />
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/compiler/interpreter/Interpreter.java</url>
-          <line>201</line>
-          <properties />
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/compiler/interpreter/Interpreter.java</url>
-          <line>189</line>
-          <properties />
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/compiler/interpreter/Interpreter.java</url>
-          <line>182</line>
-          <properties />
-          <option name="timeStamp" value="66" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/compiler/imcode/ImcCodeGen.java</url>
           <line>198</line>
           <properties />
@@ -658,10 +768,25 @@
           <properties />
           <option name="timeStamp" value="77" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/compiler/seman/TypeChecker.java</url>
+          <line>489</line>
+          <properties />
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/test/test/UnitTests.java</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="78" />
+      <option name="time" value="86" />
     </breakpoint-manager>
     <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="SymbTable.mapping" language="JAVA" />
+      </configuration>
       <configuration name="Application">
         <watch expression="mems" language="JAVA" />
         <watch expression="((ImcTEMP)((ImcCALL) instruction).args.get(0)).temp" custom="compiler.imcode.ImcTEMP" />
@@ -674,224 +799,49 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/interpreter/functions.log">
+    <entry file="file://$PROJECT_DIR$/test_old/sliva/sest/test1.pins">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/classes/compiler/imcode/ImcCodeGen.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="161" column="23" lean-forward="true" selection-start-line="161" selection-start-column="23" selection-end-line="161" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/interpreter/math.pins">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/interpreter/functions.pins">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="53" lean-forward="false" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/interpreter/loops.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1703">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/interpreter/functions2.pins">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/interpreter/loops.pins">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/interpreter/predefined.log">
+    <entry file="file://$PROJECT_DIR$/test_old/sliva/sest/test2.pins">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/frames/FrmLabel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/classes/compiler/imcode/ImcLABEL.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcNAME.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-          <folding>
-            <element signature="e#304#305#0" expanded="false" />
-            <element signature="e#329#330#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/classes/compiler/imcode/ImcTEMP.class">
+    <entry file="file://$PROJECT_DIR$/test_old/sliva/tipi/test1.pins">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcTEMP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/frames/FrmTemp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/classes/compiler/imcode/ImcCONST.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcCONST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/Scanner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="861" column="0" lean-forward="false" selection-start-line="861" selection-start-column="0" selection-end-line="861" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/interpreter/predefined.pins">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="6" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/interpreter/getString.pins">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/interpreter/putString.pins">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/sliva/tipi/test1.log">
+    <entry file="file://$PROJECT_DIR$/test_old/sliva/tipi/test.pins">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/sliva/tipi/test3.pins">
+    <entry file="file://$PROJECT_DIR$/test_old/sliva/tipi/test2.pins">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/sliva/sest/test1.pins">
+    <entry file="file://$PROJECT_DIR$/test_old/sliva/tipi/test4.pins">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/sliva/sest/test2.pins">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/sliva/tipi/test1.pins">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/sliva/tipi/test.pins">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/sliva/tipi/test2.pins">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/sliva/tipi/test4.pins">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/interpreter/types.pins">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/sliva/sest/test3.log">
+    <entry file="file://$PROJECT_DIR$/test_old/sliva/sest/test3.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="952">
           <caret line="56" column="34" lean-forward="false" selection-start-line="56" selection-start-column="27" selection-end-line="56" selection-end-column="34" />
@@ -899,7 +849,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/sliva/sest/test3.pins">
+    <entry file="file://$PROJECT_DIR$/test_old/sliva/sest/test3.pins">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="59" lean-forward="false" selection-start-line="1" selection-start-column="59" selection-end-line="1" selection-end-column="59" />
@@ -928,8 +878,8 @@
         <state relative-caret-position="323">
           <caret line="19" column="11" lean-forward="false" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
           <folding>
-            <element signature="e#305#306#0" expanded="true" />
-            <element signature="e#328#329#0" expanded="true" />
+            <element signature="e#305#306#0" expanded="false" />
+            <element signature="e#328#329#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -950,34 +900,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsDefs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcEXP.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsFunDef.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/interpreter/simple.pins">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="36" lean-forward="false" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -1000,47 +926,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/interpreter/arrays.pins">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="42" lean-forward="true" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/MainTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="53" column="10" lean-forward="false" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsBinExpr.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="547">
           <caret line="56" column="51" lean-forward="false" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/synan/SynAn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="702" column="9" lean-forward="true" selection-start-line="702" selection-start-column="9" selection-end-line="702" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/interpreter/Interpreter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#518#535#0" expanded="true" />
-            <element signature="e#1351#1368#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1052,15 +942,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcCodeGen.java">
+    <entry file="file://$PROJECT_DIR$/src/compiler/synan/SynAn.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="204" column="68" lean-forward="false" selection-start-line="204" selection-start-column="68" selection-end-line="204" selection-end-column="68" />
+        <state relative-caret-position="250">
+          <caret line="711" column="31" lean-forward="true" selection-start-line="711" selection-start-column="31" selection-end-line="711" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/interpreter/arrays2.log">
+    <entry file="file://$PROJECT_DIR$/test_old/interpreter/arrays2.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
@@ -1068,20 +958,350 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/interpreter/arrays2.pins">
+    <entry file="file://$PROJECT_DIR$/test_old/interpreter/simple.pins">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="50" lean-forward="true" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+        <state relative-caret-position="153">
+          <caret line="9" column="36" lean-forward="false" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsIfThenElse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsExprs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/imcode/ImcCodeGen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="244" column="46" lean-forward="false" selection-start-line="244" selection-start-column="43" selection-end-line="244" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/seman/type/SemAtomType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="28" lean-forward="true" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
+          <folding>
+            <element signature="e#463#464#0" expanded="false" />
+            <element signature="e#486#487#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/classes/compiler/imcode/ImcCodeGen.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-26">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#13233#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/seman/TypeChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="342" column="21" lean-forward="false" selection-start-line="342" selection-start-column="21" selection-end-line="342" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/interpreter/Interpreter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="182" column="0" lean-forward="false" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#518#535#0" expanded="true" />
+            <element signature="e#1351#1368#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsWhere.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="34" column="51" lean-forward="false" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_old/interpreter/math.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsFunDef.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="742">
+          <caret line="70" column="51" lean-forward="false" selection-start-line="70" selection-start-column="51" selection-end-line="70" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/seman/NameChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_old/interpreter/functions.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="53" lean-forward="false" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_old/interpreter/functions2.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_old/interpreter/loops.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_old/interpreter/types.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/seman/SymbDesc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/seman/SymbTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/abstr/tree/AbsDefs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="742">
+          <caret line="52" column="51" lean-forward="false" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_old/interpreter/predefined.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="6" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_old/interpreter/logical.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/resources/ok/math.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_old/interpreter/arrays2.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="54" lean-forward="false" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/resources/temp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_old/interpreter/putInt.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_old/interpreter/putString.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_old/interpreter/getString.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_old/interpreter/getInt.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="34" lean-forward="false" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_old/interpreter/arrays.pins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test/MainTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test/UnitTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3915#4527#0" expanded="true" />
+            <element signature="e#4526#4527#0" expanded="true" />
+            <marker date="1528985878815" expanded="false" signature="8967:8978" ph=" { " />
+            <marker date="1528985878815" expanded="false" signature="9025:9031" ph=" }" />
+            <marker date="1528985878815" expanded="false" signature="9116:9127" ph=" { " />
+            <marker date="1528985878815" expanded="false" signature="9174:9180" ph=" }" />
+          </folding>
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>pins</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>

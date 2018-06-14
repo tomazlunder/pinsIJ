@@ -1,0 +1,13 @@
+#Tests:
+# -putString function with const, local and global variable
+# Expected output: 'const!' 'global!' 'local!'
+
+var global : string;
+
+fun main(i:integer):integer = (
+    putString('const!'),
+    {global = 'global!'},
+    putString(global),
+    {local = 'local!'},
+    putString(local),
+    0) {where var local : string}

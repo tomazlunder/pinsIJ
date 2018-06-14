@@ -1,0 +1,30 @@
+#Tests:
+# - f0: recursion, if then else
+# - f1: calling nested function (g2) and same scope function (f2)
+# - g2: calling outside function (f2) and same scope function (g1)
+# Expected output: 1 2 3 4 5 10 -100
+
+var a : integer;
+var b : integer;
+
+fun f0(x:integer):integer = (
+     {a = a + 1},
+     putInt(a),
+    { if (a < 5) then (f0(10)) else (putInt(10)) },
+    666);
+
+fun f1(x:integer):integer = (
+    putInt(f2(0) * g2(0)),
+    3)
+    { where
+        fun g1(x:integer):integer = (-1);
+        fun g2(x:integer):integer = (g1(0) * f2(0))
+     };
+
+fun f2(x:integer):integer = (10);
+
+fun main(x:integer):integer = (
+    {a = 0},
+    f0(0),
+    f1(0),
+    777)

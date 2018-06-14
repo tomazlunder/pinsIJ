@@ -1,0 +1,30 @@
+#Tests:
+# - Assign and usage of global variables
+# - Function calls
+# - predefined function putInt
+# - Basic math operations (+, -, *, /, %)
+# Expected output: 30 10 200 2 3
+
+var a : integer;
+var b : integer;
+
+fun add(x:integer, y:integer):integer = (x+y);
+
+fun sub(x:integer, y:integer):integer = (x-y);
+
+fun mul(x:integer, y:integer):integer = (x*y);
+
+fun div(x:integer, y:integer):integer = (x/y);
+
+fun mod(x:integer, y:integer):integer = (x%y);
+
+fun main(x:integer):integer = (
+    {a = 20},
+    {b = 10},
+    putInt(add(a,b)), #30
+    putInt(sub(a,b)), #10
+    putInt(mul(a,b)), #200
+    putInt(div(a,b)), #2
+    putInt(mod(13,10)), #3
+    777)
+

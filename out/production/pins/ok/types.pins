@@ -1,0 +1,24 @@
+#Tests:
+# - Type definitions (one and two level)
+# - Negation
+# - Some logical operations (>)
+# - Using "same" types interchangably
+# Expected output: 10 20 30 '40str'
+
+typ int2 : int;
+typ int : integer;
+typ log : logical;
+typ str : string;
+
+fun returnFalse(input:logical):log = ( false );
+
+fun main(x:int2):int = (
+    {if (returnFalse(true) == true) then putInt(0) else putInt(10)},
+    {if (returnFalse(false) == true) then putInt(0) else putInt(20)},
+    {local = 30},
+    {localString = '40str'},
+    putInt(local),
+    putString(localString),
+    local ) {where var local : int3; var localString : str};
+
+typ int3 : int2

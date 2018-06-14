@@ -1,0 +1,55 @@
+#Tests:
+# - If then else
+# - Condition logical expressions
+# Expected output: 1 1 1 ...
+
+fun main(x:integer):integer = (
+    #EQUAL ==
+    {if (3==3) then putInt(1) else putInt(0)},
+    {if (3==10) then putInt(0) else putInt(1)},
+
+    #NOT EQUAL !=
+    {if (3!=3) then putInt(0) else putInt(1)},
+    {if (3!=10) then putInt(1) else putInt(0)},
+
+    #GREATER
+    {if (3>10) then putInt(0) else putInt(1)},
+    {if (10>3) then putInt(1) else putInt(0)},
+    {if (10>10) then putInt(0) else putInt(1)},
+
+    #SMALLER
+    {if (3<10) then putInt(1) else putInt(0)},
+    {if (10<3) then putInt(0) else putInt(1)},
+    {if (10<10) then putInt(0) else putInt(1)},
+
+    #GREATER OR EQUAL
+    {if (3>=10) then putInt(0) else putInt(1)},
+    {if (10>=3) then putInt(1) else putInt(0)},
+    {if (10>=10) then putInt(1) else putInt(0)},
+
+    #SMALLER OR EQUAL
+    {if (3<=10) then putInt(1) else putInt(0)},
+    {if (10<=3) then putInt(0) else putInt(1)},
+    {if (10<=10) then putInt(1) else putInt(0)},
+
+    #SIMPLE NUMBER CONDITION
+    {if (3) then putInt(1) else putInt(0)},
+    {if (0) then putInt(0) else putInt(1)},
+
+    #SIMPLE LOGICAL CONDITION
+    {if (true) then putInt(1) else putInt(0)},
+    {if (false) then putInt(0) else putInt(1)},
+
+    #AND
+    {if (true & true) then putInt(1) else putInt(0)},
+    {if (true & false) then putInt(0) else putInt(1)},
+    {if (false & false) then putInt(0) else putInt(1)},
+    {if (true & true & true & true) then putInt(1) else putInt(0)},
+    {if (true & true & false & true) then putInt(0) else putInt(1)},
+
+    #OR
+    {if (true | true) then putInt(1) else putInt(0)},
+    {if (true | false) then putInt(1) else putInt(0)},
+    {if (false | false) then putInt(0) else putInt(1)},
+    {if (false | false | true | false) then putInt(1) else putInt(0)},
+    3)

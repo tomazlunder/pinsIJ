@@ -1,0 +1,22 @@
+#Tests:
+# - assign and usage of global and local variables
+# - predefined function putInt()
+# - function call and usage of parameter
+# Expected output: 5 10 15 3
+
+var a : integer;
+var b : integer;
+
+fun returnInput(x:integer):integer =
+	(x);
+
+fun main(i:integer):integer =
+	( {a = 5},
+	  {b = 10},
+	  {c = 15},
+	  putInt(a),
+	  putInt(b),
+	  putInt(c),
+	  {c = returnInput(3)},
+	  putInt(c),
+	  3) { where var c : integer}

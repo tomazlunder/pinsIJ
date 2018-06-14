@@ -1,0 +1,341 @@
+AbsDefs 8:1-24:15:
+  AbsTypeDef 8:1-8:14: int2
+    #typed as INTEGER
+    AbsTypeName 8:12-8:14: int
+      #defined at 9:1-9:17
+      #typed as INTEGER
+  AbsTypeDef 9:1-9:17: int
+    #typed as INTEGER
+    AbsAtomType 9:11-9:17: INTEGER
+      #typed as INTEGER
+  AbsTypeDef 10:1-10:17: log
+    #typed as LOGICAL
+    AbsAtomType 10:11-10:17: LOGICAL
+      #typed as LOGICAL
+  AbsTypeDef 11:1-11:16: str
+    #typed as STRING
+    AbsAtomType 11:11-11:16: STRING
+      #typed as STRING
+  AbsFunDef 13:1-13:47: returnFalse
+    #typed as FUN(LOGICAL:LOGICAL)
+    #framed as FRAME(returnFalse: level=1,label=_returnFalse,sizeLocs=0,sizeArgs=0,size=8,FP=T0,RV=T1)
+    AbsPar 13:17-13:29: input
+      #typed as LOGICAL
+      #accesed as PAR(input: offset=4)
+      AbsAtomType 13:23-13:29: LOGICAL
+        #typed as LOGICAL
+    AbsTypeName 13:32-13:34: log
+      #defined at 10:1-10:17
+      #typed as LOGICAL
+    AbsExprs 13:40-13:44:
+      #typed as LOGICAL
+      AbsAtomConst 13:40-13:44: LOGICAL(false)
+        #typed as LOGICAL
+  AbsFunDef 15:1-22:60: main
+    #typed as FUN(INTEGER:INTEGER)
+    #framed as FRAME(main: level=1,label=_main,sizeLocs=8,sizeArgs=8,size=24,FP=T2,RV=T3)
+    AbsPar 15:10-15:15: x
+      #typed as INTEGER
+      #accesed as PAR(x: offset=4)
+      AbsTypeName 15:12-15:15: int2
+        #defined at 8:1-8:14
+        #typed as INTEGER
+    AbsTypeName 15:18-15:20: int
+      #defined at 9:1-9:17
+      #typed as INTEGER
+    AbsWhere 22:13-22:60:
+      #typed as INTEGER
+      AbsExprs 16:5-22:9:
+        #typed as INTEGER
+        AbsIfThenElse 16:6-16:55:
+          #typed as VOID
+          AbsExprs 16:10-16:34:
+            #typed as LOGICAL
+            AbsBinExpr 16:10-16:34: EQU
+              #typed as LOGICAL
+              AbsFunCall 16:10-16:26: returnFalse
+                #defined at 13:1-13:47
+                #typed as LOGICAL
+                AbsAtomConst 16:22-16:25: LOGICAL(true)
+                  #typed as LOGICAL
+              AbsAtomConst 16:31-16:34: LOGICAL(true)
+                #typed as LOGICAL
+          AbsFunCall 16:42-16:50: putInt
+            #typed as VOID
+            AbsAtomConst 16:49-16:49: INTEGER(0)
+              #typed as INTEGER
+          AbsFunCall 16:57-16:66: putInt
+            #typed as VOID
+            AbsAtomConst 16:64-16:65: INTEGER(10)
+              #typed as INTEGER
+        AbsIfThenElse 17:6-17:56:
+          #typed as VOID
+          AbsExprs 17:10-17:35:
+            #typed as LOGICAL
+            AbsBinExpr 17:10-17:35: EQU
+              #typed as LOGICAL
+              AbsFunCall 17:10-17:27: returnFalse
+                #defined at 13:1-13:47
+                #typed as LOGICAL
+                AbsAtomConst 17:22-17:26: LOGICAL(false)
+                  #typed as LOGICAL
+              AbsAtomConst 17:32-17:35: LOGICAL(true)
+                #typed as LOGICAL
+          AbsFunCall 17:43-17:51: putInt
+            #typed as VOID
+            AbsAtomConst 17:50-17:50: INTEGER(0)
+              #typed as INTEGER
+          AbsFunCall 17:58-17:67: putInt
+            #typed as VOID
+            AbsAtomConst 17:65-17:66: INTEGER(20)
+              #typed as INTEGER
+        AbsBinExpr 18:6-18:15: ASSIGN
+          #typed as INTEGER
+          AbsVarName 18:6-18:10: local
+            #defined at 22:20-22:35
+            #typed as INTEGER
+          AbsAtomConst 18:14-18:15: INTEGER(30)
+            #typed as INTEGER
+        AbsBinExpr 19:6-19:26: ASSIGN
+          #typed as STRING
+          AbsVarName 19:6-19:16: localString
+            #defined at 22:38-22:58
+            #typed as STRING
+          AbsAtomConst 19:21-19:26: STRING('40str')
+            #typed as STRING
+        AbsFunCall 20:5-20:17: putInt
+          #typed as VOID
+          AbsVarName 20:12-20:16: local
+            #defined at 22:20-22:35
+            #typed as INTEGER
+        AbsFunCall 21:5-21:26: putString
+          #typed as VOID
+          AbsVarName 21:15-21:25: localString
+            #defined at 22:38-22:58
+            #typed as STRING
+        AbsVarName 22:5-22:9: local
+          #defined at 22:20-22:35
+          #typed as INTEGER
+      AbsDefs 22:20-22:58:
+        AbsVarDef 22:20-22:35: local
+          #typed as INTEGER
+          #accesed as LOC(local: offset=-4)
+          AbsTypeName 22:32-22:35: int3
+            #defined at 24:1-24:15
+            #typed as INTEGER
+        AbsVarDef 22:38-22:58: localString
+          #typed as STRING
+          #accesed as LOC(localString: offset=-8)
+          AbsTypeName 22:56-22:58: str
+            #defined at 11:1-11:16
+            #typed as STRING
+  AbsTypeDef 24:1-24:15: int3
+    #typed as INTEGER
+    AbsTypeName 24:12-24:15: int2
+      #defined at 8:1-8:14
+      #typed as INTEGER
+CODE CHUNK: label=_returnFalse
+  FRAME(returnFalse: level=1,label=_returnFalse,sizeLocs=0,sizeArgs=0,size=8,FP=T0,RV=T1)
+  SEQ
+    MOVE
+      MEM
+        TEMP name=T1
+      CONST value=0
+CODE CHUNK: label=_main
+  FRAME(main: level=1,label=_main,sizeLocs=8,sizeArgs=8,size=24,FP=T2,RV=T3)
+  SEQ
+    MOVE
+      TEMP name=T4
+      CONST value=1100110011
+    MOVE
+      TEMP name=T5
+      CONST value=1
+    MOVE
+      TEMP name=T22
+      TEMP name=T4
+    MOVE
+      TEMP name=T23
+      TEMP name=T5
+    MOVE
+      TEMP name=T24
+      CALL label=_returnFalse
+        TEMP name=T22
+        TEMP name=T23
+    MOVE
+      TEMP name=T6
+      TEMP name=T24
+    CJUMP labels=L1,L8
+      BINOP op===
+        TEMP name=T6
+        CONST value=1
+    LABEL label=L8
+    JUMP label=L3
+    LABEL label=L3
+    JUMP label=L0
+    LABEL label=L0
+    MOVE
+      TEMP name=T7
+      CONST value=10
+    MOVE
+      TEMP name=T25
+      TEMP name=T7
+    MOVE
+      TEMP name=T26
+      CALL label=_Lsys::putInt
+        TEMP name=T25
+    MOVE
+      TEMP name=T8
+      TEMP name=T26
+    EXP
+      TEMP name=T8
+    JUMP label=L2
+    LABEL label=L1
+    MOVE
+      TEMP name=T9
+      CONST value=0
+    MOVE
+      TEMP name=T27
+      TEMP name=T9
+    MOVE
+      TEMP name=T28
+      CALL label=_Lsys::putInt
+        TEMP name=T27
+    MOVE
+      TEMP name=T10
+      TEMP name=T28
+    EXP
+      TEMP name=T10
+    LABEL label=L2
+    MOVE
+      TEMP name=T11
+      CONST value=1100110011
+    MOVE
+      TEMP name=T12
+      CONST value=0
+    MOVE
+      TEMP name=T29
+      TEMP name=T11
+    MOVE
+      TEMP name=T30
+      TEMP name=T12
+    MOVE
+      TEMP name=T31
+      CALL label=_returnFalse
+        TEMP name=T29
+        TEMP name=T30
+    MOVE
+      TEMP name=T13
+      TEMP name=T31
+    CJUMP labels=L5,L9
+      BINOP op===
+        TEMP name=T13
+        CONST value=1
+    LABEL label=L9
+    JUMP label=L7
+    LABEL label=L7
+    JUMP label=L4
+    LABEL label=L4
+    MOVE
+      TEMP name=T14
+      CONST value=20
+    MOVE
+      TEMP name=T32
+      TEMP name=T14
+    MOVE
+      TEMP name=T33
+      CALL label=_Lsys::putInt
+        TEMP name=T32
+    MOVE
+      TEMP name=T15
+      TEMP name=T33
+    EXP
+      TEMP name=T15
+    JUMP label=L6
+    LABEL label=L5
+    MOVE
+      TEMP name=T16
+      CONST value=0
+    MOVE
+      TEMP name=T34
+      TEMP name=T16
+    MOVE
+      TEMP name=T35
+      CALL label=_Lsys::putInt
+        TEMP name=T34
+    MOVE
+      TEMP name=T17
+      TEMP name=T35
+    EXP
+      TEMP name=T17
+    LABEL label=L6
+    MOVE
+      TEMP name=T18
+      MEM
+        BINOP op=+
+          TEMP name=T2
+          CONST value=-4
+    MOVE
+      TEMP name=T19
+      CONST value=30
+    MOVE
+      TEMP name=T18
+      TEMP name=T19
+    MOVE
+      MEM
+        BINOP op=+
+          TEMP name=T2
+          CONST value=-4
+      TEMP name=T19
+    EXP
+      TEMP name=T19
+    MOVE
+      TEMP name=T20
+      MEM
+        BINOP op=+
+          TEMP name=T2
+          CONST value=-8
+    MOVE
+      TEMP name=T21
+      CONST value= '40str'
+    MOVE
+      TEMP name=T20
+      TEMP name=T21
+    MOVE
+      MEM
+        BINOP op=+
+          TEMP name=T2
+          CONST value=-8
+      TEMP name=T21
+    EXP
+      TEMP name=T21
+    MOVE
+      TEMP name=T36
+      MEM
+        BINOP op=+
+          TEMP name=T2
+          CONST value=-4
+    MOVE
+      TEMP name=T37
+      CALL label=_Lsys::putInt
+        TEMP name=T36
+    EXP
+      TEMP name=T37
+    MOVE
+      TEMP name=T38
+      MEM
+        BINOP op=+
+          TEMP name=T2
+          CONST value=-8
+    MOVE
+      TEMP name=T39
+      CALL label=_Lsys::putString
+        TEMP name=T38
+    EXP
+      TEMP name=T39
+    MOVE
+      MEM
+        TEMP name=T3
+      MEM
+        BINOP op=+
+          TEMP name=T2
+          CONST value=-4

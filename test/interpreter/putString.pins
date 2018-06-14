@@ -1,9 +1,0 @@
-var s : string;
-
-fun main(i:integer):integer = (
-    putString('helloWorld form a const!'),
-    {s = 'helloWorld from a global variable!'},
-    putString(s),
-    {local = 'helloWorld from a local variable!'},
-    putString(local),
-    0) {where var local : string}

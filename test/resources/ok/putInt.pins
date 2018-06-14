@@ -1,0 +1,13 @@
+#Tests:
+# - putInt function with a const, global and local variable
+# Expected output: 3 6 9
+
+var global : integer;
+
+fun main(i:integer):integer = (
+    {global = 6},
+    {local = 9},
+    putInt(3),
+    putInt(global),
+    putInt(local),
+    1) {where var local : integer}

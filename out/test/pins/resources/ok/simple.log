@@ -1,0 +1,245 @@
+AbsDefs 7:1-22:33:
+  AbsVarDef 7:1-7:15: a
+    #typed as INTEGER
+    #accesed as VAR(a: label=_a)
+    AbsAtomType 7:9-7:15: INTEGER
+      #typed as INTEGER
+  AbsVarDef 8:1-8:15: b
+    #typed as INTEGER
+    #accesed as VAR(b: label=_b)
+    AbsAtomType 8:9-8:15: INTEGER
+      #typed as INTEGER
+  AbsFunDef 10:1-11:8: returnInput
+    #typed as FUN(INTEGER:INTEGER)
+    #framed as FRAME(returnInput: level=1,label=_returnInput,sizeLocs=0,sizeArgs=0,size=8,FP=T0,RV=T1)
+    AbsPar 10:17-10:25: x
+      #typed as INTEGER
+      #accesed as PAR(x: offset=4)
+      AbsAtomType 10:19-10:25: INTEGER
+        #typed as INTEGER
+    AbsAtomType 10:28-10:34: INTEGER
+      #typed as INTEGER
+    AbsExprs 11:6-11:6:
+      #typed as INTEGER
+      AbsVarName 11:6-11:6: x
+        #defined at 10:17-10:25
+        #typed as INTEGER
+  AbsFunDef 13:1-22:33: main
+    #typed as FUN(INTEGER:INTEGER)
+    #framed as FRAME(main: level=1,label=_main,sizeLocs=4,sizeArgs=8,size=20,FP=T2,RV=T3)
+    AbsPar 13:10-13:18: i
+      #typed as INTEGER
+      #accesed as PAR(i: offset=4)
+      AbsAtomType 13:12-13:18: INTEGER
+        #typed as INTEGER
+    AbsAtomType 13:21-13:27: INTEGER
+      #typed as INTEGER
+    AbsWhere 22:10-22:33:
+      #typed as INTEGER
+      AbsExprs 14:7-22:7:
+        #typed as INTEGER
+        AbsBinExpr 14:8-14:12: ASSIGN
+          #typed as INTEGER
+          AbsVarName 14:8-14:8: a
+            #defined at 7:1-7:15
+            #typed as INTEGER
+          AbsAtomConst 14:12-14:12: INTEGER(5)
+            #typed as INTEGER
+        AbsBinExpr 15:8-15:13: ASSIGN
+          #typed as INTEGER
+          AbsVarName 15:8-15:8: b
+            #defined at 8:1-8:15
+            #typed as INTEGER
+          AbsAtomConst 15:12-15:13: INTEGER(10)
+            #typed as INTEGER
+        AbsBinExpr 16:8-16:13: ASSIGN
+          #typed as INTEGER
+          AbsVarName 16:8-16:8: c
+            #defined at 22:18-22:32
+            #typed as INTEGER
+          AbsAtomConst 16:12-16:13: INTEGER(15)
+            #typed as INTEGER
+        AbsFunCall 17:7-17:15: putInt
+          #typed as VOID
+          AbsVarName 17:14-17:14: a
+            #defined at 7:1-7:15
+            #typed as INTEGER
+        AbsFunCall 18:7-18:15: putInt
+          #typed as VOID
+          AbsVarName 18:14-18:14: b
+            #defined at 8:1-8:15
+            #typed as INTEGER
+        AbsFunCall 19:7-19:15: putInt
+          #typed as VOID
+          AbsVarName 19:14-19:14: c
+            #defined at 22:18-22:32
+            #typed as INTEGER
+        AbsBinExpr 20:8-20:25: ASSIGN
+          #typed as INTEGER
+          AbsVarName 20:8-20:8: c
+            #defined at 22:18-22:32
+            #typed as INTEGER
+          AbsFunCall 20:12-20:25: returnInput
+            #defined at 10:1-11:8
+            #typed as INTEGER
+            AbsAtomConst 20:24-20:24: INTEGER(3)
+              #typed as INTEGER
+        AbsFunCall 21:7-21:15: putInt
+          #typed as VOID
+          AbsVarName 21:14-21:14: c
+            #defined at 22:18-22:32
+            #typed as INTEGER
+        AbsAtomConst 22:7-22:7: INTEGER(3)
+          #typed as INTEGER
+      AbsDefs 22:18-22:32:
+        AbsVarDef 22:18-22:32: c
+          #typed as INTEGER
+          #accesed as LOC(c: offset=-4)
+          AbsAtomType 22:26-22:32: INTEGER
+            #typed as INTEGER
+DATA CHUNK: label=_a size=4
+DATA CHUNK: label=_b size=4
+CODE CHUNK: label=_returnInput
+  FRAME(returnInput: level=1,label=_returnInput,sizeLocs=0,sizeArgs=0,size=8,FP=T0,RV=T1)
+  SEQ
+    MOVE
+      MEM
+        TEMP name=T1
+      MEM
+        BINOP op=+
+          TEMP name=T0
+          CONST value=4
+CODE CHUNK: label=_main
+  FRAME(main: level=1,label=_main,sizeLocs=4,sizeArgs=8,size=20,FP=T2,RV=T3)
+  SEQ
+    MOVE
+      TEMP name=T4
+      MEM
+        NAME label=_a
+    MOVE
+      TEMP name=T5
+      CONST value=5
+    MOVE
+      TEMP name=T4
+      TEMP name=T5
+    MOVE
+      MEM
+        NAME label=_a
+      TEMP name=T5
+    EXP
+      TEMP name=T5
+    MOVE
+      TEMP name=T6
+      MEM
+        NAME label=_b
+    MOVE
+      TEMP name=T7
+      CONST value=10
+    MOVE
+      TEMP name=T6
+      TEMP name=T7
+    MOVE
+      MEM
+        NAME label=_b
+      TEMP name=T7
+    EXP
+      TEMP name=T7
+    MOVE
+      TEMP name=T8
+      MEM
+        BINOP op=+
+          TEMP name=T2
+          CONST value=-4
+    MOVE
+      TEMP name=T9
+      CONST value=15
+    MOVE
+      TEMP name=T8
+      TEMP name=T9
+    MOVE
+      MEM
+        BINOP op=+
+          TEMP name=T2
+          CONST value=-4
+      TEMP name=T9
+    EXP
+      TEMP name=T9
+    MOVE
+      TEMP name=T12
+      MEM
+        NAME label=_a
+    MOVE
+      TEMP name=T13
+      CALL label=_Lsys::putInt
+        TEMP name=T12
+    EXP
+      TEMP name=T13
+    MOVE
+      TEMP name=T14
+      MEM
+        NAME label=_b
+    MOVE
+      TEMP name=T15
+      CALL label=_Lsys::putInt
+        TEMP name=T14
+    EXP
+      TEMP name=T15
+    MOVE
+      TEMP name=T16
+      MEM
+        BINOP op=+
+          TEMP name=T2
+          CONST value=-4
+    MOVE
+      TEMP name=T17
+      CALL label=_Lsys::putInt
+        TEMP name=T16
+    EXP
+      TEMP name=T17
+    MOVE
+      TEMP name=T10
+      MEM
+        BINOP op=+
+          TEMP name=T2
+          CONST value=-4
+    MOVE
+      TEMP name=T18
+      CONST value=1100110011
+    MOVE
+      TEMP name=T19
+      CONST value=3
+    MOVE
+      TEMP name=T20
+      CALL label=_returnInput
+        TEMP name=T18
+        TEMP name=T19
+    MOVE
+      TEMP name=T11
+      TEMP name=T20
+    MOVE
+      TEMP name=T10
+      TEMP name=T11
+    MOVE
+      MEM
+        BINOP op=+
+          TEMP name=T2
+          CONST value=-4
+      TEMP name=T11
+    EXP
+      TEMP name=T11
+    MOVE
+      TEMP name=T21
+      MEM
+        BINOP op=+
+          TEMP name=T2
+          CONST value=-4
+    MOVE
+      TEMP name=T22
+      CALL label=_Lsys::putInt
+        TEMP name=T21
+    EXP
+      TEMP name=T22
+    MOVE
+      MEM
+        TEMP name=T3
+      CONST value=3
