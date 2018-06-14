@@ -51,4 +51,24 @@ public class InputTests extends Tests{
 
         Assertions.assertEquals(expected,output);
     }
+
+    @Test
+    public void getIntoArray() throws Exception{
+        String fileName = "test/resources/input/getIntoArray.pins";
+
+        captureOut();
+        this.intInputs = new LinkedList<>();
+        intInputs.add(55);
+
+        this.stringInputs = new LinkedList<>();
+        stringInputs.add("pet pet");
+        run(fileName);
+
+        String output = getOut();
+
+        String expected = pre
+                + "1\n" + "2\n" + "55\n" + "ena\n" + "dva\n" + "pet pet\n";
+
+        Assertions.assertEquals(expected,output);
+    }
 }

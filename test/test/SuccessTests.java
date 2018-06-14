@@ -144,4 +144,19 @@ public class SuccessTests extends Tests {
         Assertions.assertEquals(expected,output);
     }
 
+    @Test
+    public void stringArrays() throws Exception{
+        String fileName = "test/resources/success/stringArrays.pins";
+        captureOut();
+        run(fileName);
+
+        String output = getOut();
+        String expected = pre
+                + "<Global>\n" + "O\n" + "hai\n" + "Mark!\n"
+                + "<Local>\n" + "How\n" + "are\n" + "you?\n"
+                + "<2D>\n" + "00\n" + "01\n" + "10\n"+"11\n";
+
+        Assertions.assertEquals(expected,output);
+    }
+
 }

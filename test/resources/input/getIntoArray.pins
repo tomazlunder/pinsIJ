@@ -1,0 +1,25 @@
+#Tests:
+# - inserting integers and strings into arrays directly with getInt and getString
+# - inserting is tested on global and local arrays
+# Expected output: 1 2 input1 ena dva input2
+
+var globalInt : arr [3] integer;
+
+fun main(i:integer):integer = (
+    {globalInt[0] = 1},
+    {globalInt[1] = 2},
+    {globalInt[2] = 3},
+    getInt(globalInt[2]),
+    putInt(globalInt[0]),
+    putInt(globalInt[1]),
+    putInt(globalInt[2]),
+
+    {localString[0] = 'ena'},
+    {localString[1] = 'dva'},
+    {localString[2] = 'tri'},
+    getString(localString[2]),
+    putString(localString[0]),
+    putString(localString[1]),
+    putString(localString[2]),
+
+    1) {where var localString : arr [3] string}

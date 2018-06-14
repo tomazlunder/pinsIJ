@@ -1,4 +1,5 @@
 var global : arr [3] string;
+var global2D : arr [2] arr [3] string;
 
 fun main(i:integer):integer = (
 
@@ -17,4 +18,15 @@ fun main(i:integer):integer = (
     putString(local[0]),
     putString(local[1]),
     putString(local[2]),
+
+    putString('<2D>'),
+    {global2D[0][0] = '00'},
+    {global2D[0][1] = '01'},
+    {global2D[1][0] = '10'},
+    {global2D[1][1] = '11'},
+    putString(global2D[0][0]),
+    putString(global2D[0][1]),
+    putString(global2D[1][0]),
+    putString(global2D[1][1]),
+
     1) {where var local : arr [3] string}
