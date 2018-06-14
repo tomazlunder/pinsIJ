@@ -36,6 +36,7 @@ import compiler.frames.FrmVarAccess;
 import compiler.interpreter.Interpreter;
 import compiler.seman.SymbDesc;
 import compiler.seman.type.SemArrType;
+import compiler.seman.type.SemType;
 
 public class ImcCodeGen implements Visitor {
 
@@ -195,7 +196,13 @@ public class ImcCodeGen implements Visitor {
                 result = new ImcMEM(new ImcBINOP(ImcBINOP.ADD, (ImcExpr) baseAddress, new ImcBINOP(ImcBINOP.MUL, (ImcExpr) code.get(acceptor.expr2), new ImcCONST(sizeOfElement))));
             }
             else if (acceptor.expr1 instanceof AbsBinExpr){
+                SemArrType arrType = (SemArrType) SymbDesc.getType(acceptor.expr1);
+                int sizeOfElement = arrType.type.size();
 
+                ImcMEM beforeCode = (ImcMEM) code.get(acceptor.expr1);
+                ImcExpr noMEM = beforeCode.expr; //To je ubistvu nek binop
+
+                result = new ImcMEM(new ImcBINOP(ImcBINOP.ADD, noMEM, new ImcBINOP(ImcBINOP.MUL, (ImcExpr) code.get(acceptor.expr2), new ImcCONST(sizeOfElement))));
             }
         }
         //Assign

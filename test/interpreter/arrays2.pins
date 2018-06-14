@@ -1,6 +1,18 @@
-var array : arr [2] arr [4] integer;
+var global : arr [2] arr [3] integer;
 
 fun main(i:integer):integer = (
-    #{array[0][0] = 200},
-    {local[0][0] = -200},
-    1) {where var local : arr [3] arr [2] integer}
+    {local[0][0] = -100}, {local[0][1] = -101},{local[0][2] = -102},{local[0][3] = -103},{local[0][4] = -104},
+    {local[1][0] = -200}, {local[1][1] = -201},{local[1][2] = -202},{local[1][3] = -203},{local[1][4] = -204},
+    putInt(local[0][0]),
+    putInt(local[0][4]),
+    putInt(local[1][0]),
+    putInt(local[1][4]),
+
+    {global[0][0] = 100}, {global[0][1] = 101}, {global[0][2] = 102},
+    {global[1][0] = 200}, {global[1][1] = 201}, {global[1][2] = 202},
+    putInt(global[0][0]),
+    putInt(global[0][2]),
+    putInt(global[1][0]),
+    putInt(global[1][2]),
+
+    1) {where var local : arr [2] arr [5] integer}
