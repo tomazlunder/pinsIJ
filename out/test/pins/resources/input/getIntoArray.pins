@@ -1,3 +1,8 @@
+#Tests:
+# - inserting integers and strings into arrays directly with getInt and getString
+# - inserting is tested on global and local arrays
+# Expected output: 1 2 input1 ena dva input2
+
 var globalInt : arr [3] integer;
 
 fun main(i:integer):integer = (

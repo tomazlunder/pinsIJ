@@ -39,6 +39,9 @@ public abstract class Tests {
         SymbTable.reset();
         SymbDesc.reset();
 
+        Interpreter.integerTestInputs = null;
+        Interpreter.stringTestInputs = null;
+
         intInputs = new LinkedList<>();
         stringInputs = new LinkedList<>();
     }
@@ -120,10 +123,11 @@ public abstract class Tests {
 
             //If we have predefined inputs it runs the Interpreter with those settings
             if(!intInputs.isEmpty() || !stringInputs.isEmpty()){
-                new Interpreter(mainFrame, ImcCodeGen.linearCode.get(mainDef), intInputs, stringInputs);
-            } else {
-                new Interpreter(mainFrame, ImcCodeGen.linearCode.get(mainDef));
+                Interpreter.integerTestInputs = intInputs;
+                Interpreter.stringTestInputs = stringInputs;
             }
+
+            new Interpreter(mainFrame, ImcCodeGen.linearCode.get(mainDef));
         }
 
     }

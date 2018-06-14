@@ -44,7 +44,7 @@ public class MainTest {
 
         String sourceFileName;
         sourceFileName = "test/resources/success/simple.pins";
-        sourceFileName = "test/resources/success/stringArrays.pins";
+        //sourceFileName = "test/resources/success/stringArrays.pins";
 
         //sourceFileName = "test/resources/success/math.pins";
 
@@ -125,10 +125,9 @@ public class MainTest {
 
             //Če definicija ni funkcija (npr. globalana spremenljiva)
             if (!(mainDef instanceof AbsFunDef)) Report.error("Main mora biti funkcija.");
-            AbsFunDef mainFunDef = (AbsFunDef) mainDef;
 
             //Najde okvir funkcije main
-            FrmFrame mainFrame = FrmDesc.getFrame((AbsFunDef) mainDef);
+            FrmFrame mainFrame = FrmDesc.getFrame(mainDef);
 
             Interpreter.debug = interpretDbg;
 

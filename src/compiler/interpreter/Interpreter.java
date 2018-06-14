@@ -15,6 +15,10 @@ public class Interpreter {
 
     public static boolean debug = false;
 
+    /**
+     * INPUT OUTPUT CONTROL
+     * Uses Scanner(System.in) when running normally and input list if testing inputs.
+     */
     public static LinkedList<Integer> integerTestInputs = null;
     public static LinkedList<String> stringTestInputs = null;
 
@@ -41,12 +45,6 @@ public class Interpreter {
         }
     }
 
-    public Interpreter(FrmFrame frame, ImcSEQ code, LinkedList<Integer> intInputs, LinkedList<String> stringInputs) {
-        stringTestInputs = stringInputs;
-        integerTestInputs = intInputs;
-
-        new Interpreter(frame,code);
-    }
 
 	/*--- staticni del navideznega stroja ---*/
 

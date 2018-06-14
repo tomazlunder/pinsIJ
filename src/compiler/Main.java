@@ -1,5 +1,6 @@
 package compiler;
 
+import compiler.interpreter.Interpreter;
 import compiler.lexan.*;
 import compiler.synan.*;
 import compiler.abstr.*;
@@ -19,10 +20,10 @@ public class Main {
 	private static String sourceFileName;
 
 	/** Seznam vseh faz prevajalnika. */
-	private static String allPhases = "(lexan|synan|ast|seman|frames|imcode)";
+	private static String allPhases = "(lexan|synan|ast|seman|frames|imcode|inter)";
 
 	/** Doloca zadnjo fazo prevajanja, ki se bo se izvedla. */
-	private static String execPhase = "imcode";
+	private static String execPhase = "inter";
 
 	/** Doloca faze, v katerih se bodo izpisali vmesni rezultati. */
 	private static String dumpPhases = "imcode";
@@ -107,7 +108,26 @@ public class Main {
 			imcode.dump(imcodegen.chunks);
 			if (execPhase.equals("imcode")) break;
 
-			//TODO: ADD INTERPRETER SUPPORT IN MAIN
+			/*
+			 * INTERPRETER
+			 */
+			// najde definicijo funkcije main ali pa konča izvajanje, če definicije ne najde
+			AbsDef mainDef = SymbTable.fnd("main");
+
+			// če definicija ni funkcija (npr. globalana spremenljiva)
+			if (!(mainDef instanceof AbsFunDef)) Report.error("Main mora biti funkcija.");
+
+			// najde okvir funkcije main
+			FrmFrame mainFrame = FrmDesc.getFrame(mainDef);
+
+			// nastavi debug
+			if(dumpPhases.contains("inter")){Interpreter.debug = true;} else {Interpreter.debug = false;}
+
+			// argument main funkcije nastavimo na 0 (1000 - začetna vrednost FP, FP+4 naj bi bil prvi argument main funkcije)
+			Interpreter.stM(1000 + 4, new ImcCONST(0));
+
+			new Interpreter(mainFrame, ImcCodeGen.linearCode.get(mainDef));
+            if(execPhase.equals("inter")) break;
 
 			// Neznana faza prevajanja.
 			if (! execPhase.equals(""))
