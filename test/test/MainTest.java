@@ -64,7 +64,9 @@ public class MainTest {
         //sourceFileName = "test/resources/success/arrays.pins";
         //sourceFileName = "test/resources/success/arrays2.pins";
 
-        Report.openDumpFile(sourceFileName);
+        int index = sourceFileName.lastIndexOf("/");
+        String fileName = sourceFileName.substring(index + 1);
+        Report.openDumpFile("test/out/" + fileName);
 
         //Lexan - 0
         LexAn lexAn = new LexAn(sourceFileName, false);
