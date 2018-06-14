@@ -1,0 +1,53 @@
+AbsDefs 1:1-6:50:
+  AbsVarDef 1:1-1:15: array
+    #typed as ARR(2,ARR(4,INTEGER))
+    #accesed as VAR(array: label=_array)
+    AbsArrType 1:13-1:15: [2]
+      #typed as ARR(2,ARR(4,INTEGER))
+      AbsArrType 1:21-1:23: [4]
+        #typed as ARR(4,INTEGER)
+        AbsAtomType 1:29-1:35: INTEGER
+          #typed as INTEGER
+  AbsFunDef 3:1-6:50: main
+    #typed as FUN(INTEGER:INTEGER)
+    #framed as FRAME(main: level=1,label=_main,sizeLocs=24,sizeArgs=0,size=32,FP=T0,RV=T1)
+    AbsPar 3:10-3:18: i
+      #typed as INTEGER
+      #accesed as PAR(i: offset=4)
+      AbsAtomType 3:12-3:18: INTEGER
+        #typed as INTEGER
+    AbsAtomType 3:21-3:27: INTEGER
+      #typed as INTEGER
+    AbsWhere 6:8-6:50:
+      #typed as INTEGER
+      AbsExprs 5:5-6:5:
+        #typed as INTEGER
+        AbsBinExpr 5:6-5:23: ASSIGN
+          #typed as INTEGER
+          AbsBinExpr 5:6-5:15: ARR
+            #typed as INTEGER
+            AbsBinExpr 5:6-5:12: ARR
+              #typed as ARR(2,INTEGER)
+              AbsVarName 5:6-5:10: local
+                #defined at 6:15-6:29
+                #typed as ARR(3,ARR(2,INTEGER))
+              AbsAtomConst 5:12-5:12: INTEGER(0)
+                #typed as INTEGER
+            AbsAtomConst 5:15-5:15: INTEGER(0)
+              #typed as INTEGER
+          AbsUnExpr 5:20-5:23: SUB
+            #typed as INTEGER
+            AbsAtomConst 5:21-5:23: INTEGER(200)
+              #typed as INTEGER
+        AbsAtomConst 6:5-6:5: INTEGER(1)
+          #typed as INTEGER
+      AbsDefs 6:15-6:29:
+        AbsVarDef 6:15-6:29: local
+          #typed as ARR(3,ARR(2,INTEGER))
+          #accesed as LOC(local: offset=-24)
+          AbsArrType 6:27-6:29: [3]
+            #typed as ARR(3,ARR(2,INTEGER))
+            AbsArrType 6:35-6:37: [2]
+              #typed as ARR(2,INTEGER)
+              AbsAtomType 6:43-6:49: INTEGER
+                #typed as INTEGER

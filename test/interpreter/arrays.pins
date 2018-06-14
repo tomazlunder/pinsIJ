@@ -1,9 +1,18 @@
-var array : arr [10] integer;
+var array : arr [4] integer;
 
 fun main(i:integer):integer = (
-    {array[0] = -100},
-    {array[1] = -101},
+    {array[0] = -100}, {array[1] = -101}, {array[2] = -102}, {array[3] = -103},
+    {local[0] = -200}, {local[1] = -201}, {local[2] = -202}, {local[3] = -203},
     putInt(0),
     putInt(array[0]),
     putInt(array[1]),
-    1)
+    putInt(array[3]),
+    getInt(array[3]),
+    putInt(array[3]),
+    putInt(1),
+    putInt(local[0]),
+    putInt(local[1]),
+    putInt(local[3]),
+    getInt(local[3]),
+    putInt(local[3]),
+    1) {where var local : arr [4] integer}

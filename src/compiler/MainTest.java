@@ -51,7 +51,9 @@ public class MainTest {
         //sourceFileName = "test/interpreter/predefined.pins";
         //sourceFileName = "test/interpreter/putString.pins";
         //sourceFileName = "test/interpreter/getString.pins";
-        sourceFileName = "test/interpreter/arrays.pins";
+        //sourceFileName = "test/interpreter/arrays.pins";
+        sourceFileName = "test/interpreter/arrays2.pins";
+
         //sourceFileName = "test/sliva/sest/test3.pins";
 
 

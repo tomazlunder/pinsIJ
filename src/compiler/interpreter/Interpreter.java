@@ -186,6 +186,7 @@ public class Interpreter {
             }
             if (instr.label.name().equals("_Lsys::getInt")) {
                 Scanner scanner = new Scanner(System.in);
+                //System.out.println("DBG: input integer...");
                 int input = scanner.nextInt();
 
                 execute(new ImcMOVE(new ImcMEM(((ImcCALL) instruction).args.get(0)),new ImcCONST(input)));
@@ -200,7 +201,7 @@ public class Interpreter {
             if (instr.label.name().equals("_Lsys::getString")) {
                 String input = null;
                 Scanner scanner = new Scanner(System.in);
-                System.out.println("DBG: input string pls...");
+                //System.out.println("DBG: input string...");
                 input = scanner.nextLine();
 
                 execute(new ImcMOVE(new ImcMEM(((ImcCALL) instruction).args.get(0)), new ImcCONST(input)));

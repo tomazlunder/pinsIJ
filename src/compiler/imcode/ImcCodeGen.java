@@ -91,13 +91,11 @@ public class ImcCodeGen implements Visitor {
                
         FrmFrame functionFrame = FrmDesc.getFrame(acceptor);
         ImcMOVE move;
-        //move = new ImcMOVE((ImcExpr) code.get(acceptor.expr), new ImcTEMP(functionFrame.RV));
         move = new ImcMOVE(new ImcMEM(new ImcTEMP(functionFrame.RV)),(ImcExpr) code.get(acceptor.expr));
         ImcCodeChunk functionCodeChunk = new ImcCodeChunk(functionFrame, move);
         functionCodeChunk.lincode = move.linear();
         chunks.add(functionCodeChunk);
 
-        //TODO: Testing this
         if(frames.size() >= 1){
             staticLinksByLabel.put(functionFrame.label.name(), frames.peek().FP);
         }
@@ -118,7 +116,7 @@ public class ImcCodeGen implements Visitor {
             chunks.add(idc);
 
             nasloviGlobalnih.put(((FrmVarAccess) access).label.name(), globCounter);
-            globCounter+=4;
+            globCounter+=SymbDesc.getType(acceptor).size();
         } 
 
     }
@@ -138,9 +136,8 @@ public class ImcCodeGen implements Visitor {
             FrmLocAccess locAccess = (FrmLocAccess) access;
             // trenutni nivo - nivo definicije = razlika v nivojih (scope)
             //int razlika = scope - SymbDesc.getScope(locAccess.var);
-            int razlika = scope - locAccess.frame.level; //TODO: Testing this
-            
-            //ImcExpr leftSide = new ImcTEMP(locAccess.frame.FP); //TODO: Testing this
+            int razlika = scope - locAccess.frame.level;
+
             ImcExpr leftSide = new ImcTEMP(frames.peek().FP);
             for(int i = 0; i < razlika; i++){
                 leftSide = new ImcMEM(leftSide);
@@ -188,10 +185,18 @@ public class ImcCodeGen implements Visitor {
         }
         //ARR - dostop do elementa array-ja
         else if (acceptor.oper == 14){
-            AbsVarName arrayName = (AbsVarName) acceptor.expr1;
-            int sizeOfElement = ((SemArrType) SymbDesc.getType(SymbDesc.getNameDef(arrayName))).type.size();
-            
-            result = new ImcMEM(new ImcBINOP(ImcBINOP.ADD, (ImcExpr) code.get(acceptor.expr1), new ImcBINOP(ImcBINOP.MUL, (ImcExpr) code.get(acceptor.expr2), new ImcCONST(sizeOfElement))));
+            //TODO: Zbrisi ta if, else if ce ne bo nic s tega... problem dela naprimer array[0][0]...
+            if(acceptor.expr1 instanceof AbsVarName) {
+                AbsVarName arrayName = (AbsVarName) acceptor.expr1;
+                int sizeOfElement = ((SemArrType) SymbDesc.getType(SymbDesc.getNameDef(arrayName))).type.size();
+
+                ImcCode baseAddress = getVariableAddress(arrayName);
+
+                result = new ImcMEM(new ImcBINOP(ImcBINOP.ADD, (ImcExpr) baseAddress, new ImcBINOP(ImcBINOP.MUL, (ImcExpr) code.get(acceptor.expr2), new ImcCONST(sizeOfElement))));
+            }
+            else if (acceptor.expr1 instanceof AbsBinExpr){
+
+            }
         }
         //Assign
         else if(acceptor.oper == 15){
@@ -251,9 +256,21 @@ public class ImcCodeGen implements Visitor {
             call.args.addAll(args); //Predefinirani funkciji dodamo argumente
 
             if(acceptor.name.equals("getInt") || acceptor.name.equals("getString")){
-                if(!(acceptor.arg(0) instanceof AbsVarName)) Report.error("Argument of getInt must be local/global variable name.");
 
-                call.args.set(0, (ImcExpr) getVariableAddress((AbsVarName) acceptor.arg(0)));
+                if(acceptor.arg(0) instanceof AbsVarName) {
+                    call.args.set(0, (ImcExpr) getVariableAddress((AbsVarName) acceptor.arg(0)));
+                }
+                //Pisanje v array
+                else if (acceptor.arg(0) instanceof AbsBinExpr){
+                    //Ponavadi je array[st] branje iz pomnilnika, v primeru funkcij getInt in getString pisemo v pomnilnik, zato odstranimo mem
+                    ImcMEM dostop = (ImcMEM) code.get(acceptor.arg(0));
+                    ImcExpr naslov = dostop.expr;
+
+                    call.args.set(0, naslov);
+                }
+                else
+                Report.error("Argument of getInt must be local/global variable name (AbsVarName) or array (AbsBinExpr).");
+
             }
 
 

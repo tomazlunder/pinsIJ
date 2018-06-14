@@ -1,0 +1,6 @@
+var array : arr [2] arr [4] integer;
+
+fun main(i:integer):integer = (
+    #{array[0][0] = 200},
+    {local[0][0] = -200},
+    1) {where var local : arr [3] arr [2] integer}
