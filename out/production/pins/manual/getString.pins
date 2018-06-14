@@ -1,0 +1,13 @@
+#Tests:
+# - getString function (also requires putString)
+# Expected output: input1 input2
+
+var global : string;
+
+fun main(i:integer):integer = (
+    getString(global),
+    getString(local),
+
+    putString(global),
+    putString(local),
+    0) {where var local : string}

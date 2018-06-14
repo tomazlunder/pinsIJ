@@ -1,0 +1,13 @@
+#Tests:
+# - getInt function (also requires putInt)
+# Expected output: input1 input2
+
+var global : integer;
+
+fun main(i:integer):integer = (
+    getInt(global),
+    getInt(local),
+
+    putInt(global),
+    putInt(local),
+    1) {where var local : integer}

@@ -38,40 +38,30 @@ public class MainTest {
 
     //Faze:
     public static void main(String[] args) throws Exception {
-        String sourceFileName = "test/" + fazaPrev + "/" + pravilnost + "/" + testName + ".pins";
-        //sourceFileName = "test/sliva/tipi/test.pins";
-        //sourceFileName = "test/v2/koda/test1.pins";
-        //sourceFileName = "test/intellij/seven/test.pins";
-
-        sourceFileName = "test/resources/ok/simple.pins";
-        //sourceFileName = "test/resources/ok/math.pins";
-        //sourceFileName = "test/resources/ok/functions.pins";
-        //sourceFileName = "test/resources/ok/functions2.pins";
-
-        //sourceFileName = "test/resources/ok/loops.pins";
-        //sourceFileName = "test/resources/ok/types.pins";
-        //sourceFileName = "test/resources/ok/logical.pins";
-
-        //sourceFileName = "test/resources/ok/putInt.pins";
-        //sourceFileName = "test/resources/ok/getInt.pins";
-
-
-        //sourceFileName = "test/resources/ok/predefined.pins"; ---
-
-        //sourceFileName = "test/resources/ok/putString.pins";
-        //sourceFileName = "test/resources/ok/getString.pins";
-
-        //sourceFileName = "test/resources/ok/arrays.pins";
-        //sourceFileName = "test/resources/ok/arrays2.pins";
-
-        //sourceFileName = "test/sliva/sest/test3.pins"; ---
-
-
-
-
-
+        //Control variables
         boolean interpret = true;
         boolean interpretDbg = false;
+
+        String sourceFileName;
+        sourceFileName = "test/resources/success/simple.pins";
+
+        //sourceFileName = "test/resources/success/math.pins";
+
+        //sourceFileName = "test/resources/success/functions.pins";
+        //sourceFileName = "test/resources/success/functions2.pins";
+
+        //sourceFileName = "test/resources/success/loops.pins";
+        //sourceFileName = "test/resources/success/types.pins";
+        //sourceFileName = "test/resources/success/logical.pins";
+
+        //sourceFileName = "test/resources/success/putInt.pins";
+        //sourceFileName = "test/resources/success/getInt.pins";
+
+        //sourceFileName = "test/resources/success/putString.pins";
+        //sourceFileName = "test/resources/success/getString.pins";
+
+        //sourceFileName = "test/resources/success/arrays.pins";
+        //sourceFileName = "test/resources/success/arrays2.pins";
 
         Report.openDumpFile(sourceFileName);
 
@@ -103,13 +93,13 @@ public class MainTest {
         source.accept(new NameChecker());
         //semAn.dump(source);
         //Report.closeDumpFile();
-        System.out.printf("TEST: Seman imena ok\n");
+        System.out.printf("TEST: Seman imena success\n");
 
         //Seman tipi - 4
         source.accept(new TypeChecker());
         //semAn.dump(source);
 
-        System.out.printf("TEST: Seman tipi ok\n");
+        System.out.printf("TEST: Seman tipi success\n");
 
         // Klicni zapisi - 5
         Frames frames = new Frames(true);
@@ -146,6 +136,9 @@ public class MainTest {
 
             new Interpreter(mainFrame, ImcCodeGen.linearCode.get(mainDef));
         }
+
+        System.out.printf("TEST: Code successfully? interpreted :)\n");
+
 
         Report.closeDumpFile();
     }

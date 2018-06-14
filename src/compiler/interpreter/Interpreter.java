@@ -15,6 +15,39 @@ public class Interpreter {
 
     public static boolean debug = false;
 
+    public static LinkedList<Integer> integerTestInputs = null;
+    public static LinkedList<String> stringTestInputs = null;
+
+    private static int getNextInteger(){
+        if(integerTestInputs != null && !integerTestInputs.isEmpty()){
+            int toReturn = integerTestInputs.get(0);
+            integerTestInputs.remove(0);
+            return toReturn;
+        }
+        else {
+            Scanner scanner = new Scanner(System.in);
+            return scanner.nextInt();
+        }
+    }
+    private static String getNextString(){
+        if(stringTestInputs != null && !stringTestInputs.isEmpty()){
+            String toReturn = stringTestInputs.get(0);
+            stringTestInputs.remove(0);
+            return toReturn;
+        }
+        else {
+            Scanner scanner = new Scanner(System.in);
+            return scanner.nextLine();
+        }
+    }
+
+    public Interpreter(FrmFrame frame, ImcSEQ code, LinkedList<Integer> intInputs, LinkedList<String> stringInputs) {
+        stringTestInputs = stringInputs;
+        integerTestInputs = intInputs;
+
+        new Interpreter(frame,code);
+    }
+
 	/*--- staticni del navideznega stroja ---*/
 
     /**
@@ -185,9 +218,8 @@ public class Interpreter {
                 return 666;
             }
             if (instr.label.name().equals("_Lsys::getInt")) {
-                Scanner scanner = new Scanner(System.in);
                 //System.out.println("DBG: input integer...");
-                int input = scanner.nextInt();
+                int input = getNextInteger();
 
                 execute(new ImcMOVE(new ImcMEM(((ImcCALL) instruction).args.get(0)),new ImcCONST(input)));
                 return 6666;
@@ -199,10 +231,8 @@ public class Interpreter {
                 return 777;
             }
             if (instr.label.name().equals("_Lsys::getString")) {
-                String input = null;
-                Scanner scanner = new Scanner(System.in);
                 //System.out.println("DBG: input string...");
-                input = scanner.nextLine();
+                String input = getNextString();
 
                 execute(new ImcMOVE(new ImcMEM(((ImcCALL) instruction).args.get(0)), new ImcCONST(input)));
                 return 7777;
